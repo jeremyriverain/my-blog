@@ -3,7 +3,7 @@
     <div class="navbar-brand">
       <nuxt-link to="/" class="navbar-item has-text-weight-semibold">
         Geek
-        <img src="~/assets/lizard.svg" width="32" />
+        <img src="~/assets/images/lizard.svg" width="32" />
         Co
       </nuxt-link>
       <a
@@ -28,7 +28,3 @@
     </div>
   </nav>
 </template>
-
-<script>
-export default {}
-</script>

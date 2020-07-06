@@ -1,31 +1,18 @@
 <template>
   <div>
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Jérémy Riverain
-          </h1>
-          <h2 class="subtitle">
-            Fullstack developper
-          </h2>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div>
-          Experience
-        </div>
-        <div>Skills</div>
-      </div>
-    </section>
+    <IndexProfile />
+    <IndexWhyGeekco />
   </div>
 </template>
 
 <script>
+import IndexProfile from '~/components/IndexProfile'
+import IndexWhyGeekco from '~/components/IndexWhyGeekco'
 export default {
-  components: {}
+  components: {
+    IndexProfile,
+    IndexWhyGeekco
+  }
 }
 </script>
 
