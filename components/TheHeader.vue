@@ -1,17 +1,22 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <nuxt-link to="/" class="navbar-item has-text-weight-semibold">
+      <div
+        class="navbar-item has-text-weight-semibold cursor-pointer"
+        @click="$router.push('/')"
+      >
         Geek
         <img src="~/assets/images/lizard.svg" width="32" />
         Co
-      </nuxt-link>
+      </div>
       <a
         role="button"
         class="navbar-burger burger"
+        :class="{ 'is-active': isActive }"
         aria-label="menu"
         aria-expanded="false"
-        data-target="navbarBasicExample"
+        data-target="navbarMenu"
+        @click="isActive = !isActive"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -19,12 +24,48 @@
       </a>
     </div>
 
-    <div class="navbar-menu">
+    <div id="navbarMenu" class="navbar-menu" :class="{ 'is-active': isActive }">
       <div class="navbar-end">
-        <nuxt-link to="/projects" class="navbar-item">Projects</nuxt-link>
-        <nuxt-link to="/contact" class="navbar-item">Contact</nuxt-link>
-        <nuxt-link to="/posts" class="navbar-item">Posts</nuxt-link>
+        <nuxt-link
+          to="/"
+          class="navbar-item"
+          exact-active-class="active-menu-item"
+          >About me</nuxt-link
+        >
+        <nuxt-link
+          to="/projects"
+          class="navbar-item"
+          exact-active-class="active-menu-item"
+          >Projects</nuxt-link
+        >
+        <nuxt-link
+          to="/contact"
+          class="navbar-item"
+          exact-active-class="active-menu-item"
+          >Contact</nuxt-link
+        >
+        <nuxt-link
+          to="/posts"
+          class="navbar-item"
+          active-class="active-menu-item"
+          >Posts</nuxt-link
+        >
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isActive: false
+    }
+  }
+}
+</script>
+
+<style lang="sass" scoped>
+.active-menu-item
+  background: $primary
+</style>
