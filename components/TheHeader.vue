@@ -36,7 +36,7 @@
           to="/projects"
           class="navbar-item"
           exact-active-class="active-menu-item"
-          >Projects</nuxt-link
+          >Portfolio</nuxt-link
         >
         <nuxt-link
           to="/contact"
@@ -48,7 +48,7 @@
           to="/posts"
           class="navbar-item"
           active-class="active-menu-item"
-          >Posts</nuxt-link
+          >Blog</nuxt-link
         >
       </div>
     </div>
@@ -67,5 +67,5 @@ export default {
 
 <style lang="sass" scoped>
 .active-menu-item
-  background: $primary
+  background: #fafafa
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <section class="hero">
-    <div class="hero-body">
+  <section class="section">
+    <div class="container">
       <div :class="$style.container">
         <div>
           <p class="is-size-4 has-text-weight-bold">

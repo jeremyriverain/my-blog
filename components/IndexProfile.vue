@@ -22,23 +22,7 @@
               or progressive web apps.
             </div>
 
-            <div :class="$style.links">
-              <a :class="$style.link" href="https://github.com/jeremyriverain">
-                <img src="~/assets/images/github.svg" />
-              </a>
-              <a
-                :class="$style.link"
-                href="https://twitter.com/jeremy_riverain"
-              >
-                <img src="~/assets/images/twitter.svg" />
-              </a>
-              <a
-                :class="$style.link"
-                href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-riverain-789462168/"
-              >
-                <img src="~/assets/images/linkedin.svg" />
-              </a>
-            </div>
+            <social-links />
           </div>
         </div>
       </div>
@@ -46,11 +30,12 @@
   </section>
 </template>
 
-<style lang="sass" module>
-.links
-    margin-top: 0.7rem
-    .link + .link
-        margin-left: 0.3rem
-    .link img
-        width: 20px
-</style>
+<script>
+import SocialLinks from '~/components/SocialLinks'
+export default {
+  name: 'IndexProfile',
+  components: {
+    SocialLinks
+  }
+}
+</script>
