@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="container">
-      <div :class="$style.container">
-        <div>
+      <div class="container columns is-vcentered is-centered">
+        <div class="column is-two-thirds">
           <p class="is-size-4 has-text-weight-bold">
             Why Geekco ?
           </p>
@@ -19,7 +19,7 @@
           </p>
         </div>
 
-        <div>
+        <div class="column">
           <img
             src="https://via.placeholder.com/300x200"
             class="is-block"
@@ -32,14 +32,9 @@
 </template>
 
 <style lang="sass" module>
-.container
-    display: flex
-    justify-content: center
-    align-items: center
-    & * + *
-        margin-left: 0.5rem
 .body
     margin-top: 0.5rem
 .image
     height: auto
+    width: 100%
 </style>

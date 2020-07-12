@@ -7,9 +7,13 @@
         </div>
         <div class="column">
           <nuxt-link to="/" class="px-1 has-text-white">About me</nuxt-link>
-          <nuxt-link to="/" class="px-1 has-text-white">Portfolio</nuxt-link>
-          <nuxt-link to="/" class="px-1 has-text-white">Contact</nuxt-link>
-          <nuxt-link to="/" class="px-1 has-text-white">Blog</nuxt-link>
+          <nuxt-link to="/portfolio" class="px-1 has-text-white"
+            >Portfolio</nuxt-link
+          >
+          <nuxt-link to="/contact" class="px-1 has-text-white"
+            >Contact</nuxt-link
+          >
+          <nuxt-link to="/posts" class="px-1 has-text-white">Blog</nuxt-link>
         </div>
         <div class="column">
           <social-links light />

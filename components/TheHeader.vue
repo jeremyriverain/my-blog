@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div
         class="navbar-item has-text-weight-semibold cursor-pointer"
-        @click="$router.push('/')"
+        @click="onClickLogo"
       >
         Geek
         <img src="~/assets/images/lizard.svg" width="32" />
@@ -33,7 +33,7 @@
           >About me</nuxt-link
         >
         <nuxt-link
-          to="/projects"
+          to="/portfolio"
           class="navbar-item"
           exact-active-class="active-menu-item"
           >Portfolio</nuxt-link
@@ -60,6 +60,12 @@ export default {
   data() {
     return {
       isActive: false
+    }
+  },
+  methods: {
+    onClickLogo() {
+      this.isActive = false
+      this.$router.push('/')
     }
   }
 }

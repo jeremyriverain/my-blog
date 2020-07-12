@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Jérémy Riverain - Developer',
     meta: [
       {
         charset: 'utf-8'
@@ -16,7 +16,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
       }
     ],
     link: [
@@ -52,7 +52,12 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+     ['storyblok-nuxt', {
+           accessToken: 'oz3vPKJENrTYrk41UbgG0wtt',
+           cacheProvider: 'memory',
+           customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
+     }]
   ],
   /*
    ** Nuxt.js modules

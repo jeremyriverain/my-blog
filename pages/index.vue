@@ -9,6 +9,7 @@
 import IndexProfile from '~/components/IndexProfile'
 import IndexWhyGeekco from '~/components/IndexWhyGeekco'
 export default {
+  name: 'PageIndex',
   components: {
     IndexProfile,
     IndexWhyGeekco
