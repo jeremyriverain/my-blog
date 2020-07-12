@@ -73,5 +73,5 @@ export default {
 
 <style lang="sass" scoped>
 .active-menu-item
-  background: #fafafa
+  background: $dark
 </style>
