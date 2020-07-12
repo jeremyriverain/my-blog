@@ -30,24 +30,28 @@
           to="/"
           class="navbar-item"
           exact-active-class="active-menu-item"
+          @click.native="isActive = false"
           >About me</nuxt-link
         >
         <nuxt-link
           to="/portfolio"
           class="navbar-item"
           exact-active-class="active-menu-item"
+          @click.native="isActive = false"
           >Portfolio</nuxt-link
         >
         <nuxt-link
           to="/contact"
           class="navbar-item"
           exact-active-class="active-menu-item"
+          @click.native="isActive = false"
           >Contact</nuxt-link
         >
         <nuxt-link
           to="/posts"
           class="navbar-item"
           active-class="active-menu-item"
+          @click.native="isActive = false"
           >Blog</nuxt-link
         >
       </div>
@@ -72,6 +76,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.active-menu-item
-  background: $dark
+@media screen and (min-width: 1024px)
+  .active-menu-item
+    background: $dark
 </style>

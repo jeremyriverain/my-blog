@@ -21,7 +21,7 @@
               <a href="https://vuejs.org/" class="has-text-white">Vuejs</a
               >.<br />
               With those technologies, I made some websites, APIs, mobile apps
-              or progressive web apps.
+              and progressive web apps.
             </div>
 
             <social-links light />

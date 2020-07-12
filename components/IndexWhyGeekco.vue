@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="container columns is-vcentered is-centered">
-        <div class="column is-two-thirds">
+        <div class="column is-7-tablet">
           <p class="is-size-4 has-text-weight-bold">
             Why Geekco ?
           </p>
@@ -13,9 +13,9 @@
             autodidact.
           </p>
           <p :class="$style.body">
-            Actually, the gekco is the emblematic animal of this region.<br />
-            The name of this website is like a reminder for me. It reminds me
-            where my passion about programming began.
+            Actually, the gekco is the emblematic animal of this region. The
+            name of this website is like a reminder for me. It reminds me where
+            my passion about programming began.
           </p>
         </div>
 
