@@ -3,9 +3,8 @@
     <IndexProfile />
     <section class="section">
       <div class="container">
-        <div class="columns is-centered">
-          <Experiences class="column" />
-          <Skills class="column" />
+        <div class="columns">
+          <Experiences class="column is-6" />
         </div>
       </div>
     </section>
@@ -17,14 +16,12 @@
 import Experiences from '~/components/Experiences'
 import IndexProfile from '~/components/IndexProfile'
 import IndexWhyGeekco from '~/components/IndexWhyGeekco'
-import Skills from '~/components/Skills'
 export default {
   name: 'PageIndex',
   components: {
     Experiences,
     IndexProfile,
-    IndexWhyGeekco,
-    Skills
+    IndexWhyGeekco
   }
 }
 </script>

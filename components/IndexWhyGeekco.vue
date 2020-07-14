@@ -1,30 +1,26 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="container columns is-vcentered is-centered">
-        <div class="column is-7-tablet">
-          <p class="is-size-4 has-text-weight-bold">
-            Why Geekco ?
-          </p>
+      <div class="container columns">
+        <div class="column is-6-tablet">
+          <div class="is-flex">
+            <figure class="image is-32x32">
+              <img
+                src="~/assets/images/lizard.svg"
+                class="is-rounded"
+                :class="$style.image"
+              />
+            </figure>
+            <p class="is-size-4 has-text-weight-bold ml-2">
+              Why Geekco ?
+            </p>
+          </div>
           <p :class="$style.body">
             Well, I called this website Geekco because, few years ago, I spent
-            some time in Reunion Islands. <br />
-            This is where I started learning about programming, as an
-            autodidact.
+            some time in Reunion Islands. This is where I started learning about
+            programming, as an autodidact. Actually, the gekco is the emblematic
+            animal of this region.
           </p>
-          <p :class="$style.body">
-            Actually, the gekco is the emblematic animal of this region. The
-            name of this website is like a reminder for me. It reminds me where
-            my passion about programming began.
-          </p>
-        </div>
-
-        <div class="column">
-          <img
-            src="https://via.placeholder.com/300x200"
-            class="is-block"
-            :class="$style.image"
-          />
         </div>
       </div>
     </div>

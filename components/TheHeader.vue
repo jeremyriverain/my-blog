@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div
         class="navbar-item has-text-weight-semibold cursor-pointer"
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@media screen and (min-width: 1024px)
-  .active-menu-item
-    background: $dark
+// @media screen and (min-width: 1024px)
+//   .active-menu-item
+//     background: $dark
 </style>

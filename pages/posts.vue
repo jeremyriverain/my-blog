@@ -12,6 +12,11 @@
 export default {
   name: 'PagePosts',
   components: {},
+  head() {
+    return {
+      title: 'Blog about programming'
+    }
+  },
   asynData(context) {
     return context.app.$storyapi
       .get('cdn/stories?starts_with=posts/', {

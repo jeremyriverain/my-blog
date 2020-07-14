@@ -6,7 +6,8 @@
         <nuxt />
       </transition>
     </div>
-    <TheFooter />
+
+    <TheFooter class="mt-5" />
   </div>
 </template>
 

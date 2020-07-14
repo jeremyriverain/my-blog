@@ -1,5 +1,5 @@
 <template>
-  <article class="media">
+  <article class="media has-background-white-ter px-3 py-3">
     <figure class="media-left">
       <p class="image is-64x64">
         <img

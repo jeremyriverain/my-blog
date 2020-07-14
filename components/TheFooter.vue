@@ -1,45 +1,41 @@
 <template>
-  <footer class="footer has-background-dark" :class="$style.footer">
-    <div class="content has-text-centered has-text-white">
-      <div class="columns">
-        <div class="column">
-          &copy;2020 Developed by Jérémy Riverain
+  <div>
+    <footer class="footer" :class="$style.footer">
+      <div class="content has-text-centered">
+        <div class="columns">
+          <div class="column">
+            &copy;2020 Developed by Jérémy Riverain
+          </div>
+          <div class="column">
+            <nuxt-link to="/" class="px-1">About me</nuxt-link>
+            <nuxt-link to="/portfolio" class="px-1">Portfolio</nuxt-link>
+            <nuxt-link to="/contact" class="px-1">Contact</nuxt-link>
+            <nuxt-link to="/posts" class="px-1">Blog</nuxt-link>
+          </div>
+          <div class="column">
+            <social-links />
+          </div>
         </div>
-        <div class="column">
-          <nuxt-link to="/" class="px-1 has-text-white">About me</nuxt-link>
-          <nuxt-link to="/portfolio" class="px-1 has-text-white"
-            >Portfolio</nuxt-link
+        <p class="has-text-grey">
+          Made with
+          <a href="https://bulma.io/" class="is-underline has-text-grey"
+            >Bulma</a
           >
-          <nuxt-link to="/contact" class="px-1 has-text-white"
-            >Contact</nuxt-link
+          and
+          <a href="https://nuxtjs.org/" class="is-underline has-text-grey"
+            >Nuxt</a
+          >, hosted on
+          <a href="https://www.netlify.com/" class="is-underline has-text-grey"
+            >Netlify</a
           >
-          <nuxt-link to="/posts" class="px-1 has-text-white">Blog</nuxt-link>
-        </div>
-        <div class="column">
-          <social-links light />
-        </div>
+          <br />
+          <a href="https://jamstack.wtf/" class="is-underline has-text-grey"
+            >#JAMstack</a
+          >
+        </p>
       </div>
-      <p class="has-text-grey-light">
-        Made with
-        <a href="https://bulma.io/" class="is-underline has-text-grey-light"
-          >Bulma</a
-        >
-        and
-        <a href="https://nuxtjs.org/" class="is-underline has-text-grey-light"
-          >Nuxt</a
-        >, hosted on
-        <a
-          href="https://www.netlify.com/"
-          class="is-underline has-text-grey-light"
-          >Netlify</a
-        >
-        <br />
-        <a href="https://jamstack.wtf/" class="is-underline has-text-grey-light"
-          >#JAMstack</a
-        >
-      </p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <script>
@@ -53,5 +49,5 @@ export default {
 
 <style lang="sass" module>
 .footer
-  padding: 2rem 1.5rem
+  // padding: 1rem 2rem 1.5rem
 </style>

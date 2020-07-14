@@ -11,7 +11,12 @@
 <script>
 export default {
   name: 'PagePortfolio',
-  components: {}
+  components: {},
+  head() {
+    return {
+      title: 'Portfolio - Jérémy Riverain - Developer'
+    }
+  }
 }
 </script>
 
