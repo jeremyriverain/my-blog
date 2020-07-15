@@ -3,9 +3,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-two-fifths">
-          <div class="media is-block-mobile">
+          <div class="media">
             <figure class="media-left">
-              <p class="image is-64x64">
+              <p class="image is-48x48">
                 <img
                   src="~/assets/images/avatar.png"
                   alt="portrait Jérémy Riverain "

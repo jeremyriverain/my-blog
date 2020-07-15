@@ -16,7 +16,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+        content:
+          'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
       }
     ],
     link: [
@@ -43,7 +44,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/vuelidate.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -53,11 +54,14 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/style-resources',
-     ['storyblok-nuxt', {
-           accessToken: 'oz3vPKJENrTYrk41UbgG0wtt',
-           cacheProvider: 'memory',
-           customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
-     }]
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: 'oz3vPKJENrTYrk41UbgG0wtt',
+        cacheProvider: 'memory',
+        customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules
@@ -90,6 +94,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) { }
   }
 }
