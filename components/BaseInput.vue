@@ -15,6 +15,7 @@
         :class="error ? 'is-danger' : ''"
         :type="type"
         :inputmode="inputmode"
+        :name="name"
         @input="$emit('input', $event.target.value)"
       />
       <textarea
@@ -22,6 +23,7 @@
         :value="value"
         :class="error ? 'is-danger' : ''"
         class="textarea"
+        :name="name"
         @input="$emit('input', $event.target.value)"
       ></textarea>
 
@@ -49,6 +51,10 @@ export default {
       default: 'text'
     },
     label: {
+      type: String,
+      required: true
+    },
+    name: {
       type: String,
       required: true
     },
