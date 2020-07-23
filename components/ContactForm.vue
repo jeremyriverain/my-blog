@@ -1,5 +1,15 @@
 <template>
-  <form ref="form" novalidate netlify name="contact" @submit.prevent="onSubmit">
+  <form
+    ref="form"
+    novalidate
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    name="contact"
+    @submit.prevent="onSubmit"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+
     <base-input
       v-model.trim="$v.form.firstName.$model"
       label="First name"
@@ -124,6 +134,13 @@ export default {
     }
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     onSubmit() {
       console.log('on submit')
       this.$v.$touch()
@@ -131,7 +148,26 @@ export default {
         console.log('invalid')
       } else {
         console.log('valid')
-        this.$refs.form.submit()
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }
+        this.$axios
+          .post(
+            '/contact',
+            this.encode({
+              'form-name': 'contact',
+              ...this.form
+            }),
+            axiosConfig
+          )
+          .then((r) => {
+            console.log(r)
+            alert('success')
+          })
+          .catch((e) => {
+            console.log(e)
+            alert('error' + JSON.stringify(e))
+          })
       }
     }
   },
