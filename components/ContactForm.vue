@@ -1,5 +1,5 @@
 <template>
-  <form novalidate @submit.prevent="onSubmit">
+  <form ref="form" novalidate netlify name="contact" @submit.prevent="onSubmit">
     <base-input
       v-model.trim="$v.form.firstName.$model"
       label="First name"
@@ -131,6 +131,7 @@ export default {
         console.log('invalid')
       } else {
         console.log('valid')
+        this.$refs.form.submit()
       }
     }
   },
