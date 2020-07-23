@@ -20,10 +20,14 @@
           Made with
           <a href="https://bulma.io/" class="is-underline has-text-grey"
             >Bulma</a
-          >
-          and
+          >,
           <a href="https://nuxtjs.org/" class="is-underline has-text-grey"
             >Nuxt</a
+          >,
+          <a
+            href="https://www.storyblok.com/"
+            class="is-underline has-text-grey"
+            >Storyblok</a
           >, hosted on
           <a href="https://www.netlify.com/" class="is-underline has-text-grey"
             >Netlify</a
