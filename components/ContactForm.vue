@@ -149,7 +149,7 @@ export default {
       } else {
         console.log('valid')
         const axiosConfig = {
-          baseUrl: '/',
+          baseUrl: process.env.BASE_URL,
           header: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }
         this.$axios
