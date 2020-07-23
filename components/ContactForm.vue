@@ -133,6 +133,9 @@ export default {
       }
     }
   },
+  mounted() {
+    alert(process.env.BASE_URL)
+  },
   methods: {
     encode(data) {
       return Object.keys(data)
@@ -149,12 +152,11 @@ export default {
       } else {
         console.log('valid')
         const axiosConfig = {
-          baseUrl: process.env.BASE_URL,
           header: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }
         this.$axios
           .post(
-            '/contact',
+            process.env.BASE_URL + '/contact',
             this.encode({
               'form-name': 'contact',
               ...this.form
