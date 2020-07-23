@@ -178,7 +178,7 @@ export default {
         })
         console.log('payload', payload)
         this.$axios
-          .$post(process.env.BASE_URL + '/contact', payload, axiosConfig)
+          .$post(process.env.baseUrl + '/contact', payload, axiosConfig)
           .then((r) => {
             console.log(r)
             this.message.show++
@@ -187,7 +187,6 @@ export default {
           })
           .catch((e) => {
             console.log(e)
-            alert('error' + JSON.stringify(e))
             this.message.show++
             this.message.body = 'An error occured'
             this.message.color = 'is-danger'
