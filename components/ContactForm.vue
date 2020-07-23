@@ -21,7 +21,7 @@
         v-model.trim="$v.form.firstName.$model"
         label="First name"
         :error="$v.form.firstName.$dirty && $v.form.firstName.$invalid"
-        name="first-name"
+        name="firstName"
       >
         <template #error>
           <div v-if="!$v.form.firstName.required" class="help is-danger">
@@ -36,7 +36,7 @@
       <base-input
         v-model.trim="$v.form.lastName.$model"
         label="Last name"
-        name="last-name"
+        name="lastName"
         :error="$v.form.lastName.$dirty && $v.form.lastName.$invalid"
       >
         <template #error>
@@ -79,7 +79,7 @@
       <base-input
         v-model.trim="$v.form.phoneNumber.$model"
         label="Phone number"
-        name="phone-number"
+        name="phoneNumber"
         :error="$v.form.phoneNumber.$dirty && $v.form.phoneNumber.$invalid"
         inputmode="tel"
       >
