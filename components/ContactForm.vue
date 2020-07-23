@@ -134,7 +134,7 @@ export default {
     }
   },
   mounted() {
-    alert(process.env.baseUrl)
+    alert(process.env.BASE_URL)
   },
   methods: {
     encode(data) {
@@ -154,15 +154,13 @@ export default {
         const axiosConfig = {
           header: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }
+        const payload = this.encode({
+          'form-name': 'contact',
+          ...this.form
+        })
+        console.log('payload', payload)
         this.$axios
-          .post(
-            process.env.baseUrl + '/contact',
-            this.encode({
-              'form-name': 'contact',
-              ...this.form
-            }),
-            axiosConfig
-          )
+          .$post(process.env.BASE_URL + '/contact', payload, axiosConfig)
           .then((r) => {
             console.log(r)
             alert('success')
