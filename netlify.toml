@@ -1,0 +1,2 @@
+[build]
+  environment = { BASE_URL = "https://compassionate-johnson-e48a25.netlify.app" }

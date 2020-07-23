@@ -134,7 +134,7 @@ export default {
     }
   },
   mounted() {
-    alert(process.env.BASE_URL)
+    alert(process.env.baseUrl)
   },
   methods: {
     encode(data) {
@@ -156,7 +156,7 @@ export default {
         }
         this.$axios
           .post(
-            process.env.BASE_URL + '/contact',
+            process.env.baseUrl + '/contact',
             this.encode({
               'form-name': 'contact',
               ...this.form
