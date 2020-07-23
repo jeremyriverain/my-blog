@@ -20,7 +20,7 @@ export default {
   asynData(context) {
     return context.app.$storyapi
       .get('cdn/stories?starts_with=posts/', {
-        version: 'draft'
+        version: 'published'
       })
       .then((res) => {
         return res.data

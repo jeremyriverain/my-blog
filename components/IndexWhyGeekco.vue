@@ -4,6 +4,9 @@
       <div class="container columns">
         <div class="column is-6-tablet">
           <div class="is-flex">
+            <p class="is-size-4 has-text-weight-bold">
+              The reason I called my website Geek
+            </p>
             <figure class="image is-32x32">
               <img
                 src="~/assets/images/lizard.svg"
@@ -11,15 +14,15 @@
                 :class="$style.image"
               />
             </figure>
-            <p class="is-size-4 has-text-weight-bold ml-2">
-              Why Geekco ?
+            <p class="is-size-4 has-text-weight-bold">
+              co
             </p>
           </div>
           <p :class="$style.body">
-            Well, I called this website Geekco because, few years ago, I spent
-            some time in Reunion Islands. This is where I started learning about
-            programming, as an autodidact. Actually, the gekco is the emblematic
-            animal of this region.
+            It's because, few years ago, I spent some time in Reunion Islands.
+            This is where I started learning about programming, as an
+            autodidact. Actually, the gekco is the emblematic animal of this
+            island. It's a nod to my beginnings in this sector.
           </p>
         </div>
       </div>
