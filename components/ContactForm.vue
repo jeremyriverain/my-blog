@@ -183,7 +183,11 @@ export default {
             console.log(r)
             this.message.show++
             this.message.body =
-              'Thanks for your message. I will answer you as soon as possible.'
+              'Thank you. I will answer you as soon as possible.'
+            this.$v.$reset()
+            Object.keys(this.form).map((key) => {
+              this.form[key] = ''
+            })
           })
           .catch((e) => {
             console.log(e)
