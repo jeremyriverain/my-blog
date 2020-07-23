@@ -25,6 +25,11 @@ export default {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
+      },
+      {
+        // https://material.io/resources/icons/?icon=mail_outline&style=baseline
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
       }
     ]
   },

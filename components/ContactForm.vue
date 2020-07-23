@@ -1,66 +1,96 @@
 <template>
   <form novalidate @submit.prevent="onSubmit">
-    <div class="field">
-      <label class="label">First name</label>
-      <div class="control">
-        <input
-          v-model.trim="$v.form.firstName.$model"
-          class="input"
-          type="text"
-        />
-      </div>
-    </div>
-    <div class="field">
-      <label class="label">Last name</label>
-      <div class="control">
-        <input
-          v-model.trim="$v.form.lastName.$model"
-          class="input"
-          type="text"
-        />
-      </div>
-    </div>
+    <base-input
+      v-model.trim="$v.form.firstName.$model"
+      label="First name"
+      :error="$v.form.firstName.$dirty && $v.form.firstName.$invalid"
+    >
+      <template #error>
+        <div v-if="!$v.form.firstName.required" class="help is-danger">
+          This field is required
+        </div>
+        <div v-if="!$v.form.firstName.maxLength" class="help is-danger">
+          100 characters maximum
+        </div>
+      </template>
+    </base-input>
 
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control has-icons-left has-icons-right">
-        <input
-          v-model.trim="$v.form.email.$model"
-          class="input is-danger"
-          type="email"
-          inputmode="email"
-        />
+    <base-input
+      v-model.trim="$v.form.lastName.$model"
+      label="Last name"
+      :error="$v.form.lastName.$dirty && $v.form.lastName.$invalid"
+    >
+      <template #error>
+        <div v-if="!$v.form.lastName.required" class="help is-danger">
+          This field is required
+        </div>
+        <div v-if="!$v.form.lastName.maxLength" class="help is-danger">
+          100 characters maximum
+        </div>
+      </template>
+    </base-input>
+
+    <base-input
+      v-model.trim="$v.form.email.$model"
+      label="Email"
+      :error="$v.form.email.$dirty && $v.form.email.$invalid"
+      inputmode="email"
+    >
+      <template #left-icon>
         <span class="icon is-left is-small">
-          <!-- <ion-icon name="mail-outline"></ion-icon> -->
+          <span class="material-icons">
+            mail_outline
+          </span>
         </span>
-        <span class="icon is-right has-text-danger">
-          <!-- <ion-icon name="alert-circle-outline"></ion-icon> -->
+      </template>
+      <template #error>
+        <div v-if="!$v.form.email.required" class="help is-danger">
+          This field is required
+        </div>
+        <div v-if="!$v.form.email.email" class="help is-danger">
+          This email is invalid
+        </div>
+        <div v-if="!$v.form.email.maxLength" class="help is-danger">
+          150 characters maximum
+        </div>
+      </template>
+    </base-input>
+
+    <base-input
+      v-model.trim="$v.form.phoneNumber.$model"
+      label="Phone number"
+      :error="$v.form.phoneNumber.$dirty && $v.form.phoneNumber.$invalid"
+      inputmode="tel"
+    >
+      <template #left-icon>
+        <span class="icon is-left is-small">
+          <span class="material-icons">
+            smartphone
+          </span>
         </span>
-      </div>
-      <p class="help is-danger">This email is invalid</p>
-    </div>
+      </template>
+      <template #error>
+        <div v-if="!$v.form.phoneNumber.required" class="help is-danger">
+          This field is required
+        </div>
+        <div v-if="!$v.form.phoneNumber.maxLength" class="help is-danger">
+          150 characters maximum
+        </div>
+      </template>
+    </base-input>
 
-    <div class="field">
-      <label class="label">Phone number</label>
-      <div class="control">
-        <input
-          v-model.trim="$v.form.phoneNumber.$model"
-          class="input"
-          type="text"
-          inputmode="phone"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Message</label>
-      <div class="control">
-        <textarea
-          v-model.trim="$v.form.message.$model"
-          class="textarea"
-        ></textarea>
-      </div>
-    </div>
+    <base-input
+      v-model.trim="$v.form.message.$model"
+      label="Message"
+      type="textarea"
+      :error="$v.form.message.$dirty && $v.form.message.$invalid"
+    >
+      <template #error>
+        <div v-if="!$v.form.message.required" class="help is-danger">
+          This field is required
+        </div>
+      </template>
+    </base-input>
 
     <div class="field">
       <div class="control">
@@ -75,9 +105,13 @@
 <script>
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 
+import BaseInput from '~/components/BaseInput'
+
 export default {
   name: 'ContactForm',
-  components: {},
+  components: {
+    BaseInput
+  },
   data() {
     return {
       form: {
