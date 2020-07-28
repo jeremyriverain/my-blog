@@ -1,29 +1,20 @@
 <template>
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container">
-        <div>Posts</div>
-      </div>
+  <div class="section">
+    <div class="container">
+      <h1 class="is-size-4 has-text-weight-bold">{{ post.content.title }}</h1>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'PagePosts',
-  components: {},
-  head() {
-    return {
-      title: 'Blog about programming'
-    }
-  },
-  asynData(context) {
+  name: 'PagePost',
+  asyncData(context) {
     return context.app.$storyapi
-      .get('cdn/stories?starts_with=posts/', {
-        version: 'published'
-      })
+      .get('cdn/stories/posts/' + context.params.slug)
       .then((res) => {
-        return res.data
+        console.log(res.data)
+        return { post: res.data.story }
       })
       .catch((res) => {
         if (!res.response) {
@@ -40,8 +31,11 @@ export default {
           })
         }
       })
+  },
+  data() {
+    return {
+      post: {}
+    }
   }
 }
 </script>
-
-<style></style>

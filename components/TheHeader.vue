@@ -48,7 +48,7 @@
           >Contact</nuxt-link
         >
         <nuxt-link
-          to="/posts"
+          to="/blog"
           class="navbar-item"
           active-class="active-menu-item"
           @click.native="isActive = false"
