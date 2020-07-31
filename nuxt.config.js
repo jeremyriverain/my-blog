@@ -103,6 +103,7 @@ export default {
   ],
   markdownit: {
     injected: true,
+    breaks: true,
     use: ['markdown-it-highlightjs']
   },
   /*

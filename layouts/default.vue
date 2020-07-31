@@ -27,6 +27,8 @@ export default {
   display: flex
   flex-direction: column
   min-height: 100vh
+  max-width: 100vw
   .body
+    max-width: 100vw
     flex: 1 0 0%
 </style>

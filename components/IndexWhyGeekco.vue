@@ -5,17 +5,7 @@
         <div class="column is-6-tablet">
           <div class="is-flex">
             <p class="is-size-4 has-text-weight-bold">
-              The reason I called my website Geek
-            </p>
-            <figure class="image is-32x32">
-              <img
-                src="~/assets/images/lizard.svg"
-                class="is-rounded"
-                :class="$style.image"
-              />
-            </figure>
-            <p class="is-size-4 has-text-weight-bold">
-              co
+              The reason I called my website Geekco
             </p>
           </div>
           <p :class="$style.body">
