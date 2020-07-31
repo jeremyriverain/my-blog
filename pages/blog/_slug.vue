@@ -2,6 +2,7 @@
   <div class="section">
     <div class="container">
       <h1 class="is-size-4 has-text-weight-bold">{{ post.content.title }}</h1>
+      <div v-html="$md.render(post.content.teaser)" />
     </div>
   </div>
 </template>

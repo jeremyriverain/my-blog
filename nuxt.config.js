@@ -43,14 +43,33 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/main.sass'],
+  css: [
+    // { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    // { src: '~/node_modules/highlight.js/styles/monokai.css', lang: 'css' },
+    // {
+    //   src: '~/node_modules/highlight.js/styles/gruvbox-dark.css',
+    //   lang: 'css'
+    // },
+    // {
+    //   src: '~/node_modules/highlight.js/styles/dracula.css',
+    //   lang: 'css'
+    // },
+    {
+      src: '~/node_modules/highlight.js/styles/night-owl.css',
+      lang: 'css'
+    },
+    '~/assets/main.sass'
+  ],
   styleResources: {
     sass: './assets/vars/*.sass'
   },
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuelidate.js'],
+  plugins: [
+    '@/plugins/vuelidate.js'
+    //  '@/plugins/vuemarkdown.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -77,10 +96,15 @@ export default {
     // '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  markdownit: {
+    injected: true,
+    use: ['markdown-it-highlightjs']
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -100,7 +124,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) { }
+    extend(config, ctx) {}
   },
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
