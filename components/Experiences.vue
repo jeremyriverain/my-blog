@@ -10,12 +10,8 @@
 </template>
 
 <script>
-import ExperiencesItem from '~/components/ExperiencesItem'
 export default {
   name: 'Experiences',
-  components: {
-    ExperiencesItem
-  },
   data() {
     return {
       experiences: [

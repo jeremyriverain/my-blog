@@ -128,15 +128,8 @@
 <script>
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 
-import BaseInput from '~/components/BaseInput'
-import FlashMessage from '~/components/FlashMessage'
-
 export default {
   name: 'ContactForm',
-  components: {
-    BaseInput,
-    FlashMessage
-  },
   data() {
     return {
       form: {

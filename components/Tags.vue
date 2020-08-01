@@ -10,11 +10,7 @@
 </template>
 
 <script>
-import BaseTag from '~/components/BaseTag'
 export default {
-  components: {
-    BaseTag
-  },
   props: {
     tags: {
       type: Array,

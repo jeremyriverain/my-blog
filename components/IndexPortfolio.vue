@@ -21,12 +21,8 @@
 </template>
 
 <script>
-import ProjectList from '~/components/ProjectList'
 export default {
   name: 'IndexPortfolio',
-  components: {
-    ProjectList
-  },
   props: {
     projects: {
       type: Array,

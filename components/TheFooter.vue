@@ -17,7 +17,7 @@
               <social-links />
             </div>
           </div>
-          <p class="has-text-grey">
+          <p class="has-text-grey has-text-centered">
             Made with
             <a href="https://bulma.io/" class="is-underline has-text-grey"
               >Bulma</a
@@ -47,12 +47,7 @@
 </template>
 
 <script>
-import SocialLinks from '~/components/SocialLinks'
-export default {
-  components: {
-    SocialLinks
-  }
-}
+export default {}
 </script>
 
 <style lang="sass" module>
