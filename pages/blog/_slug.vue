@@ -1,6 +1,6 @@
 <template>
   <div class="section" :class="$style.post">
-    <div class="container">
+    <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
 
       <h1 class="is-size-4 has-text-weight-bold">{{ post.content.title }}</h1>
@@ -13,8 +13,20 @@
         />
       </div>
 
-      <div class="my-4" v-html="$md.render(post.content.teaser)" />
-      <div class="my-4" v-html="$md.render(post.content.body)" />
+      <div
+        class="my-4 has-text-justified"
+        v-html="$md.render(post.content.teaser)"
+      />
+      <div
+        class="my-4 has-text-justified"
+        v-html="$md.render(post.content.body)"
+      />
+
+      <post-resources
+        v-if="post.content.resources.length > 0"
+        class="mt-5"
+        :resources="post.content.resources"
+      />
     </div>
   </div>
 </template>
@@ -70,6 +82,8 @@ export default {
 </script>
 
 <style lang="sass" module>
+.container
+  max-width: 768px
 .post
   a
     text-decoration: underline

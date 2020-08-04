@@ -1,12 +1,20 @@
 <template>
   <div class="section">
-    <div class="container">
-      <h1 class="is-size-4 has-text-weight-bold">Posts</h1>
+    <div class="container mx-auto" :class="$style.container">
       <div>
-        <div v-for="post in posts" :key="post.id" :post="post">
-          <nuxt-link :to="'/blog/' + post.slug">
+        <div v-for="post in posts" :key="post.id" :post="post" class="mb-4">
+          <nuxt-link
+            :to="'/blog/' + post.slug"
+            class="is-size-4 has-text-weight-bold"
+          >
             {{ post.content.title }}
           </nuxt-link>
+
+          <div
+            v-if="post.content.body"
+            class="has-text-justified"
+            v-html="$md.render(post.content.teaser)"
+          />
         </div>
       </div>
     </div>
@@ -54,4 +62,7 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" module>
+.container
+  max-width: 768px
+</style>
