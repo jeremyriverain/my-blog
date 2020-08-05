@@ -88,5 +88,23 @@ export default {
   a
     text-decoration: underline
   p
-    margin-top: 1rem
+    margin-top: $size-normal
+    margin-bottom: $size-normal
+  h4
+    margin-top: $size-large
+    font-size: $size-5
+    font-weight: bold
+  h5
+    font-size: $size-6
+    font-weight: bold
+  pre
+    padding: 0
+    margin-top: $size-normal
+    margin-bottom: $size-normal
+  ul
+    padding-left: 1.8rem
+    margin-top: $size-normal
+    margin-bottom: $size-normal
+    li
+      list-style-type: square
 </style>

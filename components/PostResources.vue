@@ -4,7 +4,7 @@
       Resources
     </div>
     <div class="message-body has-text-black">
-      <ul>
+      <ul :class="$style.list">
         <li v-for="resource in resources" :key="resource._uid">
           <a :href="resource.value.url" target="_blank">{{ resource.label }}</a>
         </li>
@@ -23,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" module>
+ul.list
+  margin: 0
+  padding: 0
+</style>
