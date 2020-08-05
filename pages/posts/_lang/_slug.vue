@@ -32,17 +32,13 @@
 </template>
 
 <script>
-import Breadcrumb from '~/components/Breadcrumb'
-import Tags from '~/components/Tags'
 export default {
   name: 'PagePost',
-  components: {
-    Breadcrumb,
-    Tags
-  },
   asyncData(context) {
     return context.app.$storyapi
-      .get('cdn/stories/posts/' + context.params.slug)
+      .get(
+        'cdn/stories/posts/' + context.params.lang + '/' + context.params.slug
+      )
       .then((res) => {
         console.log(res.data)
         return { post: res.data.story }
@@ -68,7 +64,7 @@ export default {
       post: {},
       links: [
         { label: 'Homepage', value: '/', icon: 'home' },
-        { label: 'Blog', value: '/blog', icon: 'view_list' }
+        { label: 'Blog', value: '/posts', icon: 'view_list' }
       ]
     }
   },
@@ -76,6 +72,14 @@ export default {
     publishedAt() {
       const date = new Date(this.post.first_published_at)
       return date.toDateString()
+    }
+  },
+  head() {
+    return {
+      title: this.post.content.title,
+      htmlAttrs: {
+        lang: this.$route.params.lang
+      }
     }
   }
 }
@@ -94,9 +98,11 @@ export default {
     margin-top: $size-large
     font-size: $size-5
     font-weight: bold
+    text-align: left
   h5
     font-size: $size-6
     font-weight: bold
+    text-align: left
   pre
     padding: 0
     margin-top: $size-normal

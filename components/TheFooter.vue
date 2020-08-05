@@ -11,7 +11,7 @@
               <nuxt-link to="/" class="px-1">About me</nuxt-link>
               <nuxt-link to="/portfolio" class="px-1">Portfolio</nuxt-link>
               <nuxt-link to="/contact" class="px-1">Contact</nuxt-link>
-              <nuxt-link to="/blog" class="px-1">Blog</nuxt-link>
+              <nuxt-link to="/posts" class="px-1">Blog</nuxt-link>
             </div>
             <div class="column" :class="$style.right">
               <social-links />
