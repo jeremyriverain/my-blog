@@ -109,6 +109,9 @@ export default {
     breaks: true,
     use: ['markdown-it-highlightjs']
   },
+  sitemap: {
+    hostname: process.env.BASE_URL
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
