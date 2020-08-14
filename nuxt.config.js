@@ -1,3 +1,6 @@
+import dateTimeFormats from './i18n/dateTimeFormats'
+import messages from './i18n/messages'
+
 export default {
   target: 'static',
   mode: 'universal',
@@ -67,10 +70,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '@/plugins/vuelidate.js'
-    //  '@/plugins/vuemarkdown.js'
-  ],
+  plugins: ['@/plugins/vuelidate.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -98,9 +98,11 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    'nuxt-i18n',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+		'@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
   ],
   markdownit: {
     injected: true,
@@ -130,5 +132,18 @@ export default {
   },
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
+  i18n: {
+    // detectBrowserLanguage: false,
+    // locales: ['en', 'fr'],
+    // defaultLocale: 'en',
+    // strategy: 'no_prefix',
+    // parsePages: false,
+    vueI18nLoader: true,
+    vueI18n: {
+      fallbackLocale: 'en',
+      dateTimeFormats,
+      messages
+    }
   }
 }

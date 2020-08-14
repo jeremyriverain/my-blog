@@ -5,7 +5,9 @@
 
       <h1 class="is-size-4 has-text-weight-bold">{{ post.content.title }}</h1>
       <div>
-        <small class="has-text-italic">Published at {{ publishedAt }}</small>
+        <small class="has-text-italic is-capitalized"
+          >{{ $t('published_at', $route.params.lang) }} {{ publishedAt }}</small
+        >
         <tags
           v-if="post.tag_list.length > 0"
           class="mt-1"
@@ -27,6 +29,16 @@
         class="mt-5"
         :resources="post.content.resources"
       />
+
+      <post-pagination
+        v-if="
+          post.content.previous_page.length > 0 ||
+            post.content.next_page.length > 0
+        "
+        class="pt-4"
+        :next-page="post.content.next_page[0]"
+        :previous-page="post.content.previous_page[0]"
+      />
     </div>
   </div>
 </template>
@@ -34,6 +46,7 @@
 <script>
 export default {
   name: 'PagePost',
+  // scrollToTop: true,
   asyncData(context) {
     return context.app.$storyapi
       .get(
@@ -71,7 +84,7 @@ export default {
   computed: {
     publishedAt() {
       const date = new Date(this.post.first_published_at)
-      return date.toDateString()
+      return this.$d(date, 'short', this.$route.params.lang)
     }
   },
   head() {
@@ -94,15 +107,19 @@ export default {
   p
     margin-top: $size-normal
     margin-bottom: $size-normal
+  h3, h4, h5
+    font-weight: bold
+    text-align: left
+  h3
+    margin-top: $size-3
+    font-size: $size-3
+    line-height: 1.3
   h4
     margin-top: $size-large
     font-size: $size-5
-    font-weight: bold
-    text-align: left
   h5
+    margin-top: $size-large
     font-size: $size-6
-    font-weight: bold
-    text-align: left
   pre
     padding: 0
     margin-top: $size-normal
