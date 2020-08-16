@@ -79,10 +79,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '@/plugins/vuelidate.js',
-    '@/plugins/vue-lazyload.js'
-  ],
+  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -129,7 +126,12 @@ export default {
         sort_by: 'first_published_at:desc'
       })
 
-      return data.stories.map((story) => `${story.full_slug}`)
+      return data.stories.map((story) => {
+        return {
+          url: story.full_slug,
+          lastmod: story.published_at
+        }
+      })
     }
   },
   /*

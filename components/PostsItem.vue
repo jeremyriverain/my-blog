@@ -31,12 +31,6 @@
         />
       </div>
     </div>
-    <!--<posts-item-image
-      v-if="rightIcon"
-      class="media-right is-hidden-mobile"
-      :to="post.full_slug"
-      :image="post.content.image"
-      />-->
   </article>
 </template>
 
@@ -47,10 +41,6 @@ export default {
     post: {
       type: Object,
       required: true
-    },
-    rightIcon: {
-      type: Boolean,
-      default: false
     }
   },
   computed: {
