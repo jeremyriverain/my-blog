@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     lang() {
-      return this.post.full_slug.match(/\/en\//) !== -1 ? 'en' : 'fr'
+      return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
     },
     publishedAt() {
       const date = new Date(this.post.first_published_at)

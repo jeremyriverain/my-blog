@@ -81,6 +81,9 @@ export default {
     publishedAt() {
       const date = new Date(this.post.first_published_at)
       return this.$d(date, 'short', this.$route.params.lang)
+    },
+    lang() {
+      return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
     }
   },
   head() {
@@ -88,7 +91,45 @@ export default {
       title: this.post.content.title,
       htmlAttrs: {
         lang: this.$route.params.lang
-      }
+      },
+      meta: [
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          property: 'og:title',
+          content: this.post.content.title
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          property: 'og:description',
+          content: this.post.content.teaser
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          property: 'og:image',
+          content: this.post.content.image.filename
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          property: 'og:url',
+          content: this.$config.baseUrl + this.$route.fullPath
+        },
+        {
+          hid: 'og:locale',
+          name: 'og:locale',
+          property: 'og:locale',
+          content: this.lang
+        }
+      ]
     }
   }
 }

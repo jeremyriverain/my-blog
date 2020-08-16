@@ -32,6 +32,52 @@ export default {
         name: 'description',
         content:
           'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        property: 'og:title',
+        content: 'Jérémy Riverain - Developer'
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Geekco'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        property: 'og:description',
+        content:
+          'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+      },
+      {
+        hid: 'og:locale',
+        name: 'og:locale',
+        property: 'og:locale',
+        content: 'en'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        property: 'og:url',
+        content: process.env.BASE_URL
+      },
+      {
+        hid: 'profile:first_name',
+        property: 'profile:first_name',
+        content: 'Jérémy'
+      },
+      {
+        hid: 'profile:last_name',
+        property: 'profile:last_name',
+        content: 'Riverain'
+      },
+      {
+        hid: 'profile:gender',
+        property: 'profile:gender',
+        content: 'male'
       }
     ],
     link: [
