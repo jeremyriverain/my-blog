@@ -171,7 +171,7 @@ export default {
         })
         console.log('payload', payload)
         this.$axios
-          .$post(process.env.baseUrl + '/contact', payload, axiosConfig)
+          .$post(this.$config.baseUrl + '/contact', payload, axiosConfig)
           .then((r) => {
             console.log(r)
             this.message.show++

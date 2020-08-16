@@ -100,9 +100,7 @@ export default {
     '@nuxtjs/markdownit',
     'nuxt-i18n',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-		'@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
+    '@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
   ],
   markdownit: {
     injected: true,
@@ -111,6 +109,12 @@ export default {
   },
   sitemap: {
     hostname: process.env.BASE_URL
+    // routes: async () => {
+      // const { data } = await axios.get(
+        // 'https://jsonplaceholder.typicode.com/users'
+      // )
+      // return data.map((user) => `/users/${user.username}`)
+    // }
   },
   /*
    ** Axios module configuration
@@ -133,9 +137,10 @@ export default {
      */
     extend(config, ctx) {}
   },
-  env: {
+  publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
+  privateRuntimeConfig: {},
   i18n: {
     // detectBrowserLanguage: false,
     // locales: ['en', 'fr'],
