@@ -10,23 +10,12 @@
     </section>
 
     <index-portfolio :projects="stories" />
-    <index-why-geekco />
   </div>
 </template>
 
 <script>
-import Experiences from '~/components/Experiences'
-import IndexPortfolio from '~/components/IndexPortfolio'
-import IndexProfile from '~/components/IndexProfile'
-import IndexWhyGeekco from '~/components/IndexWhyGeekco'
 export default {
   name: 'PageIndex',
-  components: {
-    Experiences,
-    IndexPortfolio,
-    IndexProfile,
-    IndexWhyGeekco
-  },
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories?starts_with=projects/&per_page=4', {
