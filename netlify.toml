@@ -1,2 +1,122 @@
 [build]
   environment = { BASE_URL = "https://compassionate-johnson-e48a25.netlify.app" }
+
+[[redirects]]
+  from = "/blog/deployer-un-site-symfony3-sur-ovh"
+  to = "/posts/fr/deployer-un-site-symfony3-sur-ovh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/valider-simplement-un-numero-de-telephone-sur-symfony"
+  to = "/posts/fr/valider-simplement-un-numero-de-telephone-sur-symfony"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/comment-configurer-nginx-pour-activer-la-compression-gzip"
+  to = "/posts/fr/comment-configurer-nginx-pour-activer-la-compression-gzip"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/la-gestion-des-images-dans-un-projet-symfony"
+  to = "/posts/fr/la-gestion-des-images-dans-un-projet-symfony"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mini-serie-creation-d-un-espace-membre-sur-symfony-4-1-5"
+  to = "/posts/fr/mini-serie-creation-d-un-espace-membre-sur-symfony-4-1-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mini-serie-creation-d-un-espace-membre-sur-symfony-4-2-5"
+  to = "/posts/fr/mini-serie-creation-d-un-espace-membre-sur-symfony-4-2-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mini-serie-realisation-du-formulaire-d-inscription-partie-3-5"
+  to = "/posts/fr/mini-serie-realisation-du-formulaire-d-inscription-partie-3-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mini-serie-reinitialisation-du-mot-de-passe-partie-4-5"
+  to = "/posts/fr/mini-serie-reinitialisation-du-mot-de-passe-partie-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/bonus-creation-de-commandes-pour-gerer-les-membres-depuis-le-terminal-5-5"
+  to = "/posts/fr/bonus-creation-de-commandes-pour-gerer-les-membres-depuis-le-terminal-5-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/webpack-4-ma-configuration-pour-compiler-javascript-html-css-images-et-fonts"
+  to = "/posts/fr/webpack-4-ma-configuration-pour-compiler-javascript-html-css-images-et-fonts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/implementation-javascript-des-tabs-sur-bulma"
+  to = "/posts/fr/implementation-javascript-des-tabs-sur-bulma"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/creer-une-fonction-twig-personnalisee-sur-symfony-4"
+  to = "/posts/fr/creer-une-fonction-twig-personnalisee-sur-symfony-4"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/configurer-votre-vps-monte-sur-ubuntu-18-04-lors-de-sa-1ere-utilisation"
+  to = "/posts/fr/configurer-votre-vps-monte-sur-ubuntu-18-04-lors-de-sa-1ere-utilisation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/installez-votre-certificat-de-securite-en-quelques-minutes-seulement-grace-a-certbot"
+  to = "/posts/fr/installez-votre-certificat-de-securite-en-quelques-minutes-seulement-grace-a-certbot"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/deployer-automatiquement-votre-projet-symfony-grace-a-deployer-1-3"
+  to = "/posts/fr/deployer-automatiquement-votre-projet-symfony-grace-a-deployer-1-3"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/vuex-one-mutation-to-rule-them-all"
+  to = "/posts/en/vuex-one-mutation-to-rule-them-all"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/automatically-import-basecomponents-in-a-quasar-project"
+  to = "/posts/en/automatically-import-basecomponents-in-a-quasar-project"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/passer-des-arguments-a-un-getter-vuex"
+  to = "/posts/en/pass-arguments-to-a-vuex-getter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/definir-la-locale-de-symfony-depuis-une-application-tierce"
+  to = "/posts/en/how-can-you-translate-the-symfony-response-from-a-frontend-perspective"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/posts"
+  status = 301
+  force = true

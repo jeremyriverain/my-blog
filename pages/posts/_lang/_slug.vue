@@ -20,7 +20,7 @@
         v-html="$md.render(post.content.teaser)"
       />
       <div
-        class="my-4 has-text-justified"
+        class="my-4 has-text-justified content"
         v-html="$md.render(post.content.body)"
       />
 
@@ -113,7 +113,7 @@ export default {
   h3
     margin-top: $size-3
     font-size: $size-3
-    line-height: 1.3
+    line-height: 1.2
   h4
     margin-top: $size-large
     font-size: $size-5
@@ -125,9 +125,12 @@ export default {
     margin-top: $size-normal
     margin-bottom: $size-normal
   ul
-    padding-left: 1.8rem
+    padding-left: 1rem
     margin-top: $size-normal
     margin-bottom: $size-normal
     li
       list-style-type: square
+  blockquote
+    & > *
+      margin: 0
 </style>
