@@ -17,7 +17,7 @@
 export default {
   name: 'PageIndex',
   asyncData(context) {
-    return context.app.$storyblokApi
+    return context.app.$storyapi
       .get('cdn/stories?starts_with=projects/&per_page=4', {
         version: 'published'
       })

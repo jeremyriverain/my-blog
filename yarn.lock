@@ -9389,7 +9389,7 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-storyblok-js-client@^2.5.2:
+storyblok-js-client@^2.0.12, storyblok-js-client@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-2.5.2.tgz#37cc4017f173a59e57c1c061a380efb26441c468"
   integrity sha512-EfRrQS6XQTsjyaRtlxpbfgw1AVc3OHSP4UrkCUHYeCug7XtFxZGI9+iHPLyUBDny21WjancJ9YqrEGGAIUT/SA==
@@ -9397,6 +9397,19 @@ storyblok-js-client@^2.5.2:
     "@babel/runtime-corejs3" "^7.4.5"
     axios "^0.19.0"
     qs "^6.5.2"
+
+storyblok-nuxt@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/storyblok-nuxt/-/storyblok-nuxt-1.2.0.tgz#91154289701ee35bc390d6e7df151fdf07c2c4de"
+  integrity sha512-zZn9o5N7HwSIdocV4fMTtk9l5OpjJ89rEQhWDpwDnAUokGMKtw+qIjv4YhdKLTQDPZDorFGgg2msfBUgK0D1uw==
+  dependencies:
+    storyblok-js-client "^2.0.12"
+    storyblok-vue "^1.0.5"
+
+storyblok-vue@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/storyblok-vue/-/storyblok-vue-1.0.5.tgz#c9a82cc5be45c9c5af7d48477e69e207d60b5f38"
+  integrity sha512-xWnI7CY7DN+NBbG5PvdJ7cEDCjMSroIvppBfSYiM3HePoXiZSJ8X/CaLezJct2OxtchsArpbY/ZxghBseZCqtQ==
 
 stream-browserify@^2.0.1:
   version "2.0.2"

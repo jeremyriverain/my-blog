@@ -1,6 +1,14 @@
 import dateTimeFormats from './i18n/dateTimeFormats'
 import messages from './i18n/messages'
-import Storyblok from './storyblok-client'
+const StoryblokClient = require('storyblok-js-client')
+
+const Storyblok = new StoryblokClient({
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+  cache: {
+    clear: 'auto',
+    type: 'memory'
+  }
+})
 
 export default {
   target: 'static',
@@ -71,7 +79,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js',  '@/plugins/storyblok-api.js'],
+  plugins: [
+    '@/plugins/vuelidate.js',
+    '@/plugins/vue-lazyload.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -93,6 +104,14 @@ export default {
     '@nuxtjs/markdownit',
     'nuxt-i18n',
     '@nuxtjs/pwa',
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+        cacheProvider: 'memory',
+        customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
+      }
+    ],
     '@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
   ],
   markdownit: {
