@@ -170,7 +170,6 @@ export default {
           ...this.form
         })
         console.log('payload', payload)
-        alert(this.$config.baseUrl)
         this.$axios
           .$post(this.$config.baseUrl + '/contact', payload, axiosConfig)
           .then((r) => {
@@ -182,6 +181,7 @@ export default {
             Object.keys(this.form).map((key) => {
               this.form[key] = ''
             })
+            window.scrollTo(0, 0)
           })
           .catch((e) => {
             console.log(e)
