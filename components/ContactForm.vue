@@ -170,6 +170,7 @@ export default {
           ...this.form
         })
         console.log('payload', payload)
+        alert(this.$config.baseUrl)
         this.$axios
           .$post(this.$config.baseUrl + '/contact', payload, axiosConfig)
           .then((r) => {
