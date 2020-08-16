@@ -70,7 +70,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuelidate.js'],
+  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js'],
   /*
    ** Nuxt.js dev-modules
    */

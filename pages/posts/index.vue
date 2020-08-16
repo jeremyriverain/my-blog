@@ -2,20 +2,13 @@
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
       <div>
-        <div v-for="post in posts" :key="post.id" :post="post" class="mb-4">
-          <nuxt-link
-            :to="post.full_slug"
-            class="is-size-4 has-text-weight-bold"
-          >
-            {{ post.content.title }}
-          </nuxt-link>
-
-          <div
-            v-if="post.content.body"
-            class="has-text-justified"
-            v-html="$md.render(post.content.teaser)"
-          />
-        </div>
+        <posts-item
+          v-for="(post, i) in posts"
+          :key="post.id"
+          :post="post"
+          :right-icon="i % 2 === 0"
+          class="mb-4"
+        />
       </div>
     </div>
   </div>

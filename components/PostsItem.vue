@@ -1,0 +1,75 @@
+<template>
+  <article class="media">
+    <posts-item-image
+      class="media-left is-hidden-mobile"
+      :image="post.content.image"
+      :to="post.full_slug"
+    />
+    <div class="media-content">
+      <div class="content">
+        <h2 class="mb-1">
+          <nuxt-link
+            :to="post.full_slug"
+            class="is-size-4 has-text-weight-bold"
+            :class="$style.title"
+          >
+            <strong>{{ post.content.title }}</strong>
+          </nuxt-link>
+          <!--<strong>John Smith</strong> <small>@johnsmith</small>
+          <small>31m</small>-->
+        </h2>
+        <div class="is-flex my-1">
+          <small class="has-text-italic is-capitalized pt-1 pr-2"
+            >{{ $t('published_at', lang) }} {{ publishedAt }}</small
+          >
+          <tags v-if="post.tag_list.length > 0" :tags="post.tag_list" />
+        </div>
+        <div
+          v-if="post.content.body"
+          class="has-text-justified"
+          v-html="$md.render(post.content.teaser)"
+        />
+      </div>
+    </div>
+    <!--<posts-item-image
+      v-if="rightIcon"
+      class="media-right is-hidden-mobile"
+      :to="post.full_slug"
+      :image="post.content.image"
+      />-->
+  </article>
+</template>
+
+<script>
+export default {
+  name: 'PostsItem',
+  props: {
+    post: {
+      type: Object,
+      required: true
+    },
+    rightIcon: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    lang() {
+      return this.post.full_slug.match(/\/en\//) !== -1 ? 'en' : 'fr'
+    },
+    publishedAt() {
+      const date = new Date(this.post.first_published_at)
+      return this.$d(date, 'short', this.lang)
+    }
+  }
+}
+</script>
+
+<style lang="sass" module>
+.container
+  .image
+    max-width: 80px
+    height: auto
+  .title
+    line-height: 1.2
+</style>
