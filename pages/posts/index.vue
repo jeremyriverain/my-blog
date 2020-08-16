@@ -15,16 +15,16 @@
 </template>
 
 <script>
+import Storyblok from '~/storyblok-client'
 export default {
   name: 'PagePosts',
   components: {},
   asyncData(context) {
-    return context.app.$storyapi
-      .get('cdn/stories', {
-        version: 'published',
-        starts_with: 'posts/',
-        sort_by: 'first_published_at:desc'
-      })
+    return Storyblok.get('cdn/stories', {
+      version: 'published',
+      starts_with: 'posts/',
+      sort_by: 'first_published_at:desc'
+    })
       .then((res) => {
         return { posts: res.data.stories }
       })

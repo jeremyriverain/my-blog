@@ -40,14 +40,14 @@
 </template>
 
 <script>
+import Storyblok from '~/storyblok-client'
 export default {
   name: 'PagePost',
   // scrollToTop: true,
   asyncData(context) {
-    return context.app.$storyapi
-      .get(
-        'cdn/stories/posts/' + context.params.lang + '/' + context.params.slug
-      )
+    return Storyblok.get(
+      'cdn/stories/posts/' + context.params.lang + '/' + context.params.slug
+    )
       .then((res) => {
         console.log(res.data)
         return { post: res.data.story }

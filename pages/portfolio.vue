@@ -15,10 +15,9 @@ export default {
   name: 'PagePortfolio',
   components: { ProjectList },
   asyncData(context) {
-    return context.app.$storyapi
-      .get('cdn/stories?starts_with=projects/', {
-        version: 'published'
-      })
+    return context.app.$storyblokApi.get('cdn/stories?starts_with=projects/', {
+      version: 'published'
+    })
       .then((res) => {
         return res.data
       })

@@ -1,5 +1,6 @@
 import dateTimeFormats from './i18n/dateTimeFormats'
 import messages from './i18n/messages'
+import Storyblok from './storyblok-client'
 
 export default {
   target: 'static',
@@ -70,7 +71,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js'],
+  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js',  '@/plugins/storyblok-api.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -79,15 +80,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources',
-    [
-      'storyblok-nuxt',
-      {
-        accessToken: 'SIHeh8yM8kQ1OXnnDmNbLQtt',
-        cacheProvider: 'memory',
-        customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
-      }
-    ]
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Nuxt.js modules
@@ -108,13 +101,17 @@ export default {
     use: ['markdown-it-highlightjs']
   },
   sitemap: {
-    hostname: process.env.BASE_URL
-    // routes: async () => {
-      // const { data } = await axios.get(
-        // 'https://jsonplaceholder.typicode.com/users'
-      // )
-      // return data.map((user) => `/users/${user.username}`)
-    // }
+    hostname: process.env.BASE_URL,
+    routes: async () => {
+      const { data } = await Storyblok.get('cdn/stories', {
+        token: process.env.STORYBLOK_ACCESS_TOKEN,
+        version: 'published',
+        starts_with: 'posts/',
+        sort_by: 'first_published_at:desc'
+      })
+
+      return data.stories.map((story) => `${story.full_slug}`)
+    }
   },
   /*
    ** Axios module configuration
