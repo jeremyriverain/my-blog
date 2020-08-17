@@ -167,7 +167,7 @@ export default {
               name: 'Geekco',
               logo: {
                 '@type': 'ImageObject',
-                url: this.$config.baseUrl + '/logo.png'
+                url: this.$config.baseUrl + '/icon.png'
               }
             },
             description: this.post.content.meta_description
