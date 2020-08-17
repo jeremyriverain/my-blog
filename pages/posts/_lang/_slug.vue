@@ -106,7 +106,12 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.post.content.teaser
+          content: this.post.content.meta_description
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.content.meta_description
         },
         {
           hid: 'og:image',
