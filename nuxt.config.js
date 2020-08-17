@@ -35,34 +35,29 @@ export default {
       },
       {
         hid: 'og:title',
-        name: 'og:title',
         property: 'og:title',
         content: 'Jérémy Riverain - Developer'
       },
       {
         hid: 'og:site_name',
-        name: 'og:site_name',
         property: 'og:site_name',
         content: 'Geekco'
       },
       {
         hid: 'og:description',
-        name: 'og:description',
         property: 'og:description',
         content:
           'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
       },
       {
         hid: 'og:locale',
-        name: 'og:locale',
         property: 'og:locale',
         content: 'en'
       },
       {
         hid: 'og:image',
-        name: 'og:image',
         property: 'og:image',
-        content: 'https://a.storyblok.com/f/88570/1000x667/83839f4c1d/general_bg.jpg'
+        content: process.env.BASE_URL + '/jeremy_riverain.png'
       },
       {
         hid: 'og:url',
@@ -84,6 +79,11 @@ export default {
         hid: 'profile:gender',
         property: 'profile:gender',
         content: 'male'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: process.env.FB_APP_ID
       }
     ],
     link: [
