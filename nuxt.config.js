@@ -10,6 +10,10 @@ const Storyblok = new StoryblokClient({
   }
 })
 
+const title = 'Jérémy Riverain - Developer'
+const description =
+  'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+
 export default {
   target: 'static',
   mode: 'universal',
@@ -18,7 +22,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Jérémy Riverain - Developer',
+    title: title,
     meta: [
       {
         charset: 'utf-8'
@@ -30,13 +34,12 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+        content: description
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Jérémy Riverain - Developer'
+        content: title
       },
       {
         hid: 'og:site_name',
@@ -46,8 +49,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content:
-          'Jérémy Riverain, fullstack developer. Making websites, APIs, PWAs, mobile apps. Working a lot with PHP, Symfony, JS, Vuejs'
+        content: description
       },
       {
         hid: 'og:locale',
@@ -88,6 +90,36 @@ export default {
         hid: 'fb:app_id',
         property: 'fb:app_id',
         content: process.env.FB_APP_ID
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@jeremy_riverain'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@jeremy_riverain'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: title
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: description
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: process.env.BASE_URL + '/bg_post.jpg'
       }
     ],
     link: [

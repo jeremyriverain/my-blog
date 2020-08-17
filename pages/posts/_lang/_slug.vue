@@ -132,6 +132,16 @@ export default {
           hid: 'og:locale',
           property: 'og:locale',
           content: this.lang
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.post.content.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.post.content.meta_description
         }
       ]
     }
