@@ -119,7 +119,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: process.env.BASE_URL + '/bg_post.jpg'
+        content: process.env.BASE_URL + '/jeremy_riverain.png'
       }
     ],
     link: [
