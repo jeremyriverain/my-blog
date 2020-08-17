@@ -118,6 +118,11 @@ export default {
           content: this.post.content.image.filename
         },
         {
+          hid: 'article:published_time',
+          property: 'article:published_time',
+          content: this.post.published_at.split('T')[0]
+        },
+        {
           hid: 'og:url',
           name: 'og:url',
           property: 'og:url',
