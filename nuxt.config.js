@@ -227,5 +227,8 @@ export default {
       dateTimeFormats,
       messages
     }
+  },
+  router: {
+    trailingSlash: false
   }
 }

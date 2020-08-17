@@ -111,7 +111,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.post.content.image.filename
+          content: process.env.BASE_URL + '/bg_post.jpg'
         },
         {
           hid: 'article:published_time',
