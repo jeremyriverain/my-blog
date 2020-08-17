@@ -60,8 +60,12 @@ export default {
         content: process.env.BASE_URL + '/jeremy_riverain.png'
       },
       {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
         hid: 'og:url',
-        name: 'og:url',
         property: 'og:url',
         content: process.env.BASE_URL
       },

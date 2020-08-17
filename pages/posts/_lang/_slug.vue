@@ -95,25 +95,21 @@ export default {
       meta: [
         {
           hid: 'og:title',
-          name: 'og:title',
           property: 'og:title',
           content: this.post.content.title
         },
         {
           hid: 'og:type',
-          name: 'og:type',
           property: 'og:type',
           content: 'article'
         },
         {
           hid: 'og:description',
-          name: 'og:description',
           property: 'og:description',
           content: this.post.content.teaser
         },
         {
           hid: 'og:image',
-          name: 'og:image',
           property: 'og:image',
           content: this.post.content.image.filename
         },
@@ -124,13 +120,11 @@ export default {
         },
         {
           hid: 'og:url',
-          name: 'og:url',
           property: 'og:url',
           content: this.$config.baseUrl + this.$route.fullPath
         },
         {
           hid: 'og:locale',
-          name: 'og:locale',
           property: 'og:locale',
           content: this.lang
         }
