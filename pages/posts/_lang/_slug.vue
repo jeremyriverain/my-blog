@@ -116,12 +116,12 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: process.env.BASE_URL + '/bg_post.jpg'
+          content: this.$config.baseUrl + '/bg_post.jpg'
         },
         {
           hid: 'article:published_time',
           property: 'article:published_time',
-          content: this.post.published_at.split('T')[0]
+          content: this.post.first_published_at.split('T')[0]
         },
         {
           hid: 'og:url',
@@ -142,6 +142,38 @@ export default {
           hid: 'twitter:description',
           name: 'twitter:description',
           content: this.post.content.meta_description
+        }
+      ],
+      script: [
+        {
+          hid: 'structured_data',
+          json: {
+            '@context': 'http://schema.org',
+            '@type': 'NewsArticle',
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': this.$config.baseUrl + this.$route.fullPath
+            },
+            headline: this.post.content.title,
+            image: [this.$config.baseUrl + '/bg_post.jpg'],
+            datePublished: this.post.first_published_at,
+            dateModified: this.post.first_published_at,
+            author: {
+              '@type': 'Person',
+              name: 'Jérémy Riverain'
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Geekco',
+              logo: {
+                '@type': 'ImageObject',
+                url: this.$config.baseUrl + '/logo.png'
+              }
+            },
+            description: this.post.content.meta_description
+          },
+
+          type: 'application/ld+json'
         }
       ]
     }

@@ -119,7 +119,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: process.env.BASE_URL + '/jeremy_riverain.png'
+        content: process.env.BASE_URL + '/bg_post.jpg'
       }
     ],
     link: [
@@ -132,6 +132,29 @@ export default {
         // https://material.io/resources/icons/?icon=mail_outline&style=baseline
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+      }
+    ],
+    script: [
+      {
+        hid: 'structured_data',
+        json: {
+          '@context': 'http://schema.org',
+          '@type': 'Person',
+          givenName: 'Jérémy',
+          familyName: 'Riverain',
+          jobTitle: title,
+          description: description,
+          image: process.env.BASE_URL + '/jeremy_riverain.png',
+          url: process.env.BASE_URL,
+          sameAs: ['https://twitter.com/jeremy_riverain'],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+33769141322',
+            email: 'jeremy@geekco.fr',
+            contactType: 'Customer service'
+          }
+        },
+        type: 'application/ld+json'
       }
     ]
   },
