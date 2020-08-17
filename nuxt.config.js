@@ -63,7 +63,7 @@ export default {
         name: 'og:image',
         property: 'og:image',
         content: 'https://a.storyblok.com/f/88570/1000x667/83839f4c1d/general_bg.jpg'
-      }
+      },
       {
         hid: 'og:url',
         name: 'og:url',
