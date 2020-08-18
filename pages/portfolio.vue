@@ -1,10 +1,13 @@
 <template>
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="is-size-4 has-text-weight-bold">Portfolio</h1>
-        <project-list :projects="stories" />
-      </div>
+  <section class="section">
+    <div class="container mx-auto" :class="$style.container">
+      <h1 class="is-size-4 has-text-weight-bold">My portfolio</h1>
+      <p>
+        From web to mobile applications, essentially made with Vue.JS, Quasar,
+        Symfony or ApiPlatform. Check out some projects I contributed to.
+      </p>
+      <project-tags class="my-4" />
+      <project-list :projects="stories" />
     </div>
   </section>
 </template>
@@ -50,3 +53,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" module>
+.container
+  max-width: 768px
+</style>
