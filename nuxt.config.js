@@ -190,7 +190,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuelidate.js', '@/plugins/vue-lazyload.js'],
+  plugins: [
+    '@/plugins/vuelidate.js',
+    '@/plugins/vue-lazyload.js',
+    { src: '@/plugins/vue-ripple-directive', mode: 'client' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */

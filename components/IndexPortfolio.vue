@@ -8,7 +8,7 @@
           </div>
           <project-list :projects="projects" />
           <div class="has-text-centered">
-            <nuxt-link to="/portfolio" class="button is-outlined mt-4">
+            <nuxt-link to="/portfolio" class="button is-outlined mt-4" v-ripple>
               <span>
                 View more
               </span>

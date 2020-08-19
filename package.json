@@ -23,6 +23,7 @@
     "storyblok-js-client": "^2.5.2",
     "storyblok-nuxt": "^1.2.0",
     "vue-lazyload": "^1.3.3",
+    "vue-ripple-directive": "^2.0.1",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {

@@ -116,7 +116,7 @@
 
       <div class="field">
         <div class="control">
-          <button class="button is-primary is-rounded" type="submit">
+          <button v-ripple class="button is-primary is-rounded" type="submit">
             Send
           </button>
         </div>

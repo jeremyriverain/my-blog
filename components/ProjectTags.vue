@@ -1,13 +1,13 @@
 <template>
   <div class="tags">
-    <span class="tag is-dark">Show all</span>
-    <span class="tag">Web App</span>
-    <span class="tag">IOS</span>
-    <span class="tag">Android</span>
-    <span class="tag">Symfony</span>
-    <span class="tag">ApiPlatform</span>
-    <span class="tag">Vuejs</span>
-    <span class="tag">Quasar</span>
+    <span class="tag is-dark" v-ripple>Show all</span>
+    <span class="tag" v-ripple>Web App</span>
+    <span class="tag" v-ripple>IOS</span>
+    <span class="tag" v-ripple>Android</span>
+    <span class="tag" v-ripple>Symfony</span>
+    <span class="tag" v-ripple>ApiPlatform</span>
+    <span class="tag" v-ripple>Vuejs</span>
+    <span class="tag" v-ripple>Quasar</span>
   </div>
 </template>
 
