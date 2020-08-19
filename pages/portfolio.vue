@@ -6,8 +6,13 @@
         From web to mobile applications, essentially made with Vue.JS, Quasar,
         Symfony or ApiPlatform. Check out some projects I contributed to.
       </p>
-      <project-tags class="my-4" />
-      <project-list :projects="stories" />
+      <filter-tags
+        class="my-4"
+        :tags="tags"
+        :active-tag="activeTag"
+        @input="activeTag = $event"
+      />
+      <project-list :projects="projects" />
     </div>
   </section>
 </template>
@@ -17,33 +22,35 @@ import ProjectList from '~/components/ProjectList'
 export default {
   name: 'PagePortfolio',
   components: { ProjectList },
-  asyncData(context) {
-    return context.app.$storyapi
-      .get('cdn/stories?starts_with=projects/', {
+  async asyncData(context) {
+    const [projectsRes, tagsRes] = await Promise.all([
+      context.app.$storyapi.get('cdn/stories?starts_with=projects/', {
         version: 'published'
+      }),
+      context.app.$storyapi.get('cdn/tags', {
+        starts_with: 'projects/'
       })
-      .then((res) => {
-        return res.data
-      })
-      .catch((res) => {
-        if (!res.response) {
-          console.error(res)
-          context.error({
-            statusCode: 404,
-            message: 'Failed to receive content form api'
-          })
-        } else {
-          console.error(res.response.data)
-          context.error({
-            statusCode: res.response.status,
-            message: res.response.data
-          })
-        }
-      })
+    ])
+
+    return {
+      stories: projectsRes.data.stories,
+      tags: tagsRes.data.tags
+    }
   },
   data() {
     return {
-      stories: []
+      stories: [],
+      tags: [],
+      activeTag: null
+    }
+  },
+  computed: {
+    projects() {
+      if (!this.activeTag) {
+        return this.stories
+      }
+
+      return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
     }
   },
   head() {
