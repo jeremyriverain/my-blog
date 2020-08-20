@@ -17,6 +17,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.4.0",
     "bulma": "^0.9.0",
+    "lodash": "^4.17.20",
     "markdown-it-highlightjs": "^3.2.0",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.13.8",

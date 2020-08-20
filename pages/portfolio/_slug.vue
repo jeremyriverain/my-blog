@@ -1,28 +1,23 @@
 <template>
-  <div>
-    <index-profile />
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <experiences class="column is-6" />
-        </div>
-      </div>
-    </section>
-
-    <index-portfolio :projects="stories" />
+  <div class="section">
+    <div class="container mx-auto" :class="$style.container">
+      <h1 class="is-size-4 has-text-weight-bold">
+        {{ project.content.name }}
+      </h1>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PagePost',
+  // scrollToTop: true,
   asyncData(context) {
     return context.app.$storyapi
-      .get('cdn/stories?starts_with=projects/&per_page=8', {
-        version: 'published'
-      })
+      .get('cdn/stories/projects/' + context.params.slug)
       .then((res) => {
-        return res.data
+        console.log(res.data)
+        return { project: res.data.story }
       })
       .catch((res) => {
         if (!res.response) {
@@ -42,8 +37,18 @@ export default {
   },
   data() {
     return {
-      stories: []
+      project: {}
+    }
+  },
+  head() {
+    return {
+      title: this.project.content.name + ' | Portfolio Geekco'
     }
   }
 }
 </script>
+
+<style lang="sass" module>
+.container
+  max-width: 768px
+</style>

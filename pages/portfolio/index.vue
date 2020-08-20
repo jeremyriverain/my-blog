@@ -1,6 +1,7 @@
 <template>
   <section class="section">
-    <div class="container mx-auto" :class="$style.container">
+    <!--<div class="container mx-auto" :class="$style.container">-->
+    <div class="container mx-auto">
       <h1 class="is-size-4 has-text-weight-bold">My portfolio</h1>
       <p>
         From web to mobile applications, essentially made with Vue.JS, Quasar,

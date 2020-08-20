@@ -6,7 +6,7 @@
           <div class="is-size-4 has-text-weight-bold">
             Some projects to which I contributed
           </div>
-          <project-list :projects="projects" />
+          <project-list :projects="projects" class="mt-2" />
           <div class="has-text-centered">
             <nuxt-link v-ripple to="/portfolio" class="button is-outlined mt-4">
               <span>
