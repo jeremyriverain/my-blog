@@ -2,6 +2,7 @@
   <div>
     <div
       class="card cursor-pointer"
+      :class="$style.card"
       @click.prevent="$router.push('/portfolio/' + project.slug)"
     >
       <div class="card-content">
@@ -57,3 +58,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" module>
+.card
+    // min-height: 100%
+</style>
