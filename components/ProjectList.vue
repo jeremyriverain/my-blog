@@ -6,7 +6,6 @@
     class="masonry-container"
     fit-width
     horizontal-order
-    stagger="0.03s"
   >
     <project-item
       v-for="project in projects"
