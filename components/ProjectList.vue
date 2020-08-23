@@ -1,19 +1,22 @@
 <template>
-  <transition-group
-    name="list-complete"
-    tag="div"
-    class="columns is-mobile"
-    :class="$style.container"
-    style="flex-wrap:wrap"
+  <div
+    v-masonry
+    transition-duration=".5s"
+    item-selector=".item"
+    class="masonry-container"
+    fit-width
+    horizontal-order
+    stagger="0.03s"
   >
     <project-item
       v-for="project in projects"
       :key="project.id"
+      v-masonry-tile
       :project="project"
-      class="column is-3-desktop is-4-tablet is-6-mobile list-complete-item "
+      class="item py-1 px-1"
       :class="$style.item"
     />
-  </transition-group>
+  </div>
 </template>
 
 <script>
@@ -23,6 +26,14 @@ export default {
     projects: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {}
+  },
+  mounted() {
+    if (typeof this.$redrawVueMasonry === 'function') {
+      this.$redrawVueMasonry()
     }
   }
 }
@@ -47,7 +58,16 @@ export default {
 <style lang="sass" module>
 @media screen and (max-width:500px)
   .container
-    display: block !important
+    // display: block !important
     .item
-      width: 100% !important
+      // width: 100% !important
+.item
+	width: 25%
+	max-width: 100%
+@media screen and (max-width:768px)
+  .item
+    width: 50%
+@media screen and (max-width:500px)
+  .item
+    width: 100%
 </style>

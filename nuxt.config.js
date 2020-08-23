@@ -193,7 +193,8 @@ export default {
   plugins: [
     '@/plugins/vuelidate.js',
     '@/plugins/vue-lazyload.js',
-    { src: '@/plugins/vue-ripple-directive', mode: 'client' }
+    { src: '@/plugins/vue-ripple-directive', mode: 'client' },
+    { src: '~/plugins/vue-masonry', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
