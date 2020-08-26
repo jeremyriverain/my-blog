@@ -38,21 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.list-complete-item {
-  transition: all 0.5s;
-  /* display: inline-block;
-  margin-right: 10px; */
-}
-.list-complete-enter, .list-complete-leave-to
-/* .list-complete-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.list-complete-leave-active {
-  position: absolute;
-}
-</style>
+<style scoped></style>
 
 <style lang="sass" module>
 @media screen and (max-width:500px)
