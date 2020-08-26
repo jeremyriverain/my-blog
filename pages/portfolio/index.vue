@@ -56,7 +56,15 @@ export default {
   },
   head() {
     return {
-      title: 'Portfolio - Jérémy Riverain - Developer'
+      title: 'Portfolio - Jérémy Riverain - Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Portfolio of Jérémy Riverain, developer. Web and mobile applications, essentially made with Vue.JS, Quasar, Symfony or ApiPlatform'
+        }
+      ]
     }
   }
 }
