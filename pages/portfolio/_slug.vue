@@ -1,16 +1,33 @@
 <template>
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
-      <h1 class="is-size-4 has-text-weight-bold">
-        {{ project.content.name }}
-      </h1>
+      <article class="media mb-0">
+        <figure class="media-left">
+          <p class="image is-48x48">
+            <img
+              v-lazy="project.content.image.filename"
+              :alt="project.content.title + ' image'"
+            />
+          </p>
+        </figure>
+        <div class="media-content">
+          <h1 class="is-size-3 has-text-weight-bold">
+            {{ project.content.name }}
+          </h1>
+          <tags :tags="tags" />
+        </div>
+      </article>
+      <p class="is-size-4 mt-2">{{ project.content.short_description }}</p>
+
+      <project-carousel class="my-4" />
     </div>
   </div>
 </template>
 
 <script>
+import cloneDeep from 'lodash/cloneDeep'
 export default {
-  name: 'PagePost',
+  name: 'PagePortfolioItem',
   // scrollToTop: true,
   asyncData(context) {
     return context.app.$storyapi
@@ -38,6 +55,16 @@ export default {
   data() {
     return {
       project: {}
+    }
+  },
+  computed: {
+    tags() {
+      const tags = cloneDeep(this.project.tag_list)
+      tags.sort((a, b) => {
+        return a.localeCompare(b)
+      })
+
+      return tags
     }
   },
   head() {
