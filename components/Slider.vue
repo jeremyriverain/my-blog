@@ -1,14 +1,16 @@
 <template>
-  <carousel v-if="slides.length > 0" :per-page="1">
-    <slide v-for="slide in slides" :key="slide._uid">
-      <figure>
-        <img v-lazy="slide.image.filename" :alt="slide.image.alt" />
-        <figcaption v-if="slide.image.title" class="has-text-centered">
-          <small>{{ slide.image.title }}</small>
-        </figcaption>
-      </figure>
-    </slide>
-  </carousel>
+  <client-only>
+    <agile v-if="slides.length > 0" :per-page="1" :nav-buttons="false" fade>
+      <div v-for="slide in slides" :key="slide._uid">
+        <figure>
+          <img v-lazy="slide.image.filename" :alt="slide.image.alt" />
+          <figcaption v-if="slide.image.title" class="has-text-centered">
+            <small>{{ slide.image.title }}</small>
+          </figcaption>
+        </figure>
+      </div>
+    </agile>
+  </client-only>
 </template>
 
 <script>

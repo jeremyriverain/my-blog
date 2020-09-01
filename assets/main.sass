@@ -31,3 +31,32 @@ a:focus-within
 
 pre
   padding: 1.25rem 0rem
+
+// VueAgile styles
+.agile
+	&__dots
+		top: 20px
+		flex-direction: column
+		right: 20px
+		position: absolute
+
+	&__dot
+		margin: 4px 0
+
+		button
+			background-color: transparent
+			border: 1px solid #fff
+			cursor: pointer
+			display: block
+			height: 10px
+			font-size: 0
+			line-height: 0
+			margin: 0
+			padding: 0
+			transition-duration: .3s
+			width: 10px
+
+		&--current,
+		&:hover
+			button
+				background-color: #fff

@@ -195,7 +195,7 @@ export default {
     '@/plugins/vue-lazyload.js',
     { src: '@/plugins/vue-ripple-directive', mode: 'client' },
     { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~/plugins/vue-carousel', ssr: false }
+    { src: '~/plugins/vue-agile' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -267,6 +267,7 @@ export default {
         }
       }
     },
+    transpile: ['vue-agile'],
     /*
      ** You can extend webpack config here
      */
