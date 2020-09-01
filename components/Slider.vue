@@ -3,7 +3,7 @@
     <agile v-if="slides.length > 0" :per-page="1" :nav-buttons="false" fade>
       <div v-for="slide in slides" :key="slide._uid">
         <figure>
-          <img v-lazy="slide.image.filename" :alt="slide.image.alt" />
+          <slider-image :image="slide.image" />
           <figcaption v-if="slide.image.title" class="has-text-centered">
             <small>{{ slide.image.title }}</small>
           </figcaption>

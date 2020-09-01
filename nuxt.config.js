@@ -191,6 +191,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    '@/plugins/filters/transform-image.js',
     '@/plugins/vuelidate.js',
     '@/plugins/vue-lazyload.js',
     { src: '@/plugins/vue-ripple-directive', mode: 'client' },
