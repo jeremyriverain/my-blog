@@ -19,7 +19,11 @@
       </article>
       <p class="is-size-4 mt-2">{{ project.content.short_description }}</p>
 
-      <project-carousel class="my-4" />
+      <slider
+        v-if="hasCarousel"
+        class="my-4"
+        :carousel="project.content.carousel"
+      />
     </div>
   </div>
 </template>
@@ -58,6 +62,10 @@ export default {
     }
   },
   computed: {
+    hasCarousel() {
+      const carousel = this.project.content.carousel
+      return Array.isArray(carousel) && carousel[0].slides.length > 0
+    },
     tags() {
       const tags = cloneDeep(this.project.tag_list)
       tags.sort((a, b) => {
