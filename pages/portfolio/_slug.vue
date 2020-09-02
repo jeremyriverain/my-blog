@@ -93,18 +93,18 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.post.content.short_description
+          content: this.project.content.short_description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.post.content.short_description
+          content: this.project.content.short_description
         },
         {
           hid: 'og:image',
           property: 'og:image',
           // content: this.$config.baseUrl + '/bg_post.jpg'
-          content: this.content.image.filename
+          content: this.project.content.image.filename
         },
         {
           hid: 'og:url',
@@ -124,7 +124,7 @@ export default {
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: this.post.content.short_description
+          content: this.project.content.short_description
         }
       ]
     }
