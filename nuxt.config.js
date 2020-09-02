@@ -283,6 +283,7 @@ export default {
       exclude: ['/**']
     },
     {
+      hostname: process.env.BASE_URL,
       path: '/sitemapindex.xml',
       sitemaps: [
         {
