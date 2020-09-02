@@ -73,11 +73,60 @@ export default {
       })
 
       return tags
+    },
+    title() {
+      return this.project.content.name + ' | Portfolio Geekco'
     }
   },
   head() {
     return {
-      title: this.project.content.name + ' | Portfolio Geekco'
+      title: this.title,
+      htmlAttrs: {
+        lang: 'en'
+      },
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.post.content.short_description
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.content.short_description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          // content: this.$config.baseUrl + '/bg_post.jpg'
+          content: this.content.image.filename
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: this.$config.baseUrl + this.$route.fullPath
+        },
+        {
+          hid: 'og:locale',
+          property: 'og:locale',
+          content: 'en'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.post.content.short_description
+        }
+      ]
     }
   }
 }
