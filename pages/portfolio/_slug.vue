@@ -103,8 +103,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          // content: this.$config.baseUrl + '/bg_post.jpg'
-          content: this.project.content.image.filename
+          content: this.$config.baseUrl + '/bg_post.jpg'
         },
         {
           hid: 'og:url',
