@@ -1,6 +1,7 @@
 <template>
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
+      <breadcrumb :links="links" class="has-text-right" />
       <article class="media mb-0">
         <figure class="media-left">
           <p class="image is-48x48">
@@ -58,7 +59,11 @@ export default {
   },
   data() {
     return {
-      project: {}
+      project: {},
+      links: [
+        { label: 'Homepage', value: '/', icon: 'home' },
+        { label: 'Portfolio', value: '/portfolio', icon: 'view_list' }
+      ]
     }
   },
   computed: {

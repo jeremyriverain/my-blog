@@ -1,6 +1,12 @@
 <template>
   <client-only>
-    <agile v-if="slides.length > 0" :per-page="1" :nav-buttons="false" fade>
+    <agile
+      v-if="slides.length > 0"
+      :per-page="1"
+      :nav-buttons="false"
+      fade
+      :class="{ 'single-slide': slides.length === 1 }"
+    >
       <div v-for="slide in slides" :key="slide._uid">
         <figure>
           <slider-image :image="slide.image" />

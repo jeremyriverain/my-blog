@@ -34,14 +34,14 @@ pre
   padding: 1.25rem 0rem
 
 // VueAgile styles
-.agile
-	&__dots
+.agile:not(.single-slide)
+	.agile__dots
 		top: 20px
 		flex-direction: column
 		right: 20px
 		position: absolute
 
-	&__dot
+	.agile__dot
 		margin: 4px 0
 
 		button
@@ -61,3 +61,5 @@ pre
 		&:hover
 			button
 				background-color: #fff
+.agile.single-slide .agile__dot button
+  display: none
