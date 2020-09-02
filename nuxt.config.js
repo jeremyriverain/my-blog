@@ -227,31 +227,76 @@ export default {
         customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
       }
     ],
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
   ],
+  robots: {
+    Sitemap: process.env.BASE_URL + '/sitemapindex.xml'
+  },
   markdownit: {
     injected: true,
     breaks: true,
     use: ['markdown-it-highlightjs']
   },
-  sitemap: {
-    hostname: process.env.BASE_URL,
-    routes: async () => {
-      const { data } = await Storyblok.get('cdn/stories', {
-        token: process.env.STORYBLOK_ACCESS_TOKEN,
-        version: 'published',
-        starts_with: 'posts/',
-        sort_by: 'first_published_at:desc'
-      })
+  sitemap: [
+    {
+      hostname: process.env.BASE_URL,
+      path: '/sitemap.xml'
+    },
+    {
+      hostname: process.env.BASE_URL,
+      path: '/sitemap-posts.xml',
+      routes: async () => {
+        const { data } = await Storyblok.get('cdn/stories', {
+          token: process.env.STORYBLOK_ACCESS_TOKEN,
+          version: 'published',
+          starts_with: 'posts/',
+          sort_by: 'first_published_at:desc'
+        })
 
-      return data.stories.map((story) => {
-        return {
-          url: story.full_slug,
-          lastmod: story.published_at
+        return data.stories.map((story) => {
+          return {
+            url: story.full_slug,
+            lastmod: story.published_at
+          }
+        })
+      },
+      exclude: ['/**']
+    },
+    {
+      hostname: process.env.BASE_URL,
+      path: '/sitemap-portfolio.xml',
+      routes: async () => {
+        const { data } = await Storyblok.get('cdn/stories', {
+          token: process.env.STORYBLOK_ACCESS_TOKEN,
+          version: 'published',
+          starts_with: 'projects/'
+        })
+
+        return data.stories.map((story) => {
+          return {
+            url: story.full_slug,
+            lastmod: story.published_at
+          }
+        })
+      },
+      exclude: ['/**']
+    },
+    {
+      path: '/sitemapindex.xml',
+      sitemaps: [
+        {
+          path: '/sitemap.xml'
+        },
+        {
+          path: '/sitemap-posts.xml'
+        },
+        {
+          path: '/sitemap-portfolio.xml'
         }
-      })
+      ]
     }
-  },
+  ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
