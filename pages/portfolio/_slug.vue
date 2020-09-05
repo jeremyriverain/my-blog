@@ -18,11 +18,12 @@
           <tags :tags="tags" />
         </div>
       </article>
-      <p class="is-size-4 mt-2">{{ project.content.short_description }}</p>
+      <p class="my-2 is-size-5">{{ project.content.short_description }}</p>
 
+      <portfolio-links class="my-2" />
       <slider
         v-if="hasCarousel"
-        class="my-4"
+        class="my-2"
         :carousel="project.content.carousel"
       />
     </div>

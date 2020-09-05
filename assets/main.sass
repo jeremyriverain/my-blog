@@ -33,33 +33,25 @@ a:focus-within
 pre
   padding: 1.25rem 0rem
 
+.media-content
+  overflow: visible !important
+
 // VueAgile styles
-.agile:not(.single-slide)
-	.agile__dots
-		top: 20px
-		flex-direction: column
-		right: 20px
+.agile
+	.agile__nav-button
+		background: transparent
+		border: none
+		color: #fff
+		cursor: pointer
+		font-size: 24px
+		height: 100%
 		position: absolute
+		top: 0
+		transition-duration: .3s
+		width: 80px
 
-	.agile__dot
-		margin: 4px 0
+		&--prev
+			left: 0
 
-		button
-			background-color: transparent
-			border: 1px solid #fff
-			cursor: pointer
-			display: block
-			height: 10px
-			font-size: 0
-			line-height: 0
-			margin: 0
-			padding: 0
-			transition-duration: .3s
-			width: 10px
-
-		&--current,
-		&:hover
-			button
-				background-color: #fff
-.agile.single-slide .agile__dot button
-  display: none
+		&--next
+			right: 0
