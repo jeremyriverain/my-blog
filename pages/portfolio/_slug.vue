@@ -20,11 +20,23 @@
       </article>
       <p class="my-2 is-size-5">{{ project.content.short_description }}</p>
 
-      <portfolio-links class="my-2" />
+      <portfolio-links
+        v-if="hasAnyLink"
+        class="my-2"
+        :app-link="appLink"
+        :apple-store-link="appleStoreLink"
+        :play-store-link="playStoreLink"
+      />
       <slider
         v-if="hasCarousel"
         class="my-2"
         :carousel="project.content.carousel"
+      />
+
+      <content-section
+        v-if="project.content.long_description"
+        :content="$md.render(project.content.long_description)"
+        class="my-2"
       />
     </div>
   </div>
@@ -32,6 +44,8 @@
 
 <script>
 import cloneDeep from 'lodash/cloneDeep'
+import get from 'lodash/get'
+
 export default {
   name: 'PagePortfolioItem',
   // scrollToTop: true,
@@ -70,7 +84,28 @@ export default {
   computed: {
     hasCarousel() {
       const carousel = this.project.content.carousel
-      return Array.isArray(carousel) && carousel[0].slides.length > 0
+      return Array.isArray(carousel) && carousel.length > 0
+    },
+    appLink() {
+      return get(this.project.content, 'app_link.url', null)
+    },
+    hasAppLink() {
+      return this.appLink && this.appLink.length > 0
+    },
+    appleStoreLink() {
+      return get(this.project.content, 'apple_store_link.url', null)
+    },
+    hasAppleStoreLink() {
+      return this.appleStoreLink && this.appleStoreLink.length > 0
+    },
+    playStoreLink() {
+      return get(this.project.content, 'play_store_link.url', null)
+    },
+    hasPlayStoreLink() {
+      return this.playStoreLink && this.playStoreLink.length > 0
+    },
+    hasAnyLink() {
+      return this.hasAppLink || this.hasAppleStoreLink || this.hasPlayStoreLink
     },
     tags() {
       const tags = cloneDeep(this.project.tag_list)

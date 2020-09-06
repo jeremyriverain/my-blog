@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <button class="button mx-1 my-1">
+    <a v-if="appLink" :href="appLink" target="_blank" class="button mx-1 my-1">
       <span class="icon">
         <span class="material-icons">
           launch
@@ -9,12 +9,22 @@
       <span>
         Visit website
       </span>
-    </button>
-    <div :class="$style.stores">
-      <a href="#" :class="$style.store" class="mx-1 my-1"
+    </a>
+    <div v-if="appleStoreLink || playStoreLink" :class="$style.stores">
+      <a
+        v-if="appleStoreLink"
+        :href="appleStoreLink"
+        target="_blank"
+        :class="$style.store"
+        class="mx-1 my-1"
         ><img width="140" src="/apple-store.svg" alt="link download app"
       /></a>
-      <a href="#" :class="$style.store" class="mx-1 my-1"
+      <a
+        v-if="playStoreLink"
+        :href="playStoreLink"
+        target="_blank"
+        :class="$style.store"
+        class="mx-1 my-1"
         ><img width="160" src="/play-store.png" alt="link download app"
       /></a>
     </div>
@@ -23,7 +33,18 @@
 
 <script>
 export default {
-  name: 'PortfolioLinks'
+  name: 'PortfolioLinks',
+  props: {
+    appLink: {
+      type: String
+    },
+    appleStoreLink: {
+      type: String
+    },
+    playStoreLink: {
+      type: String
+    }
+  }
 }
 </script>
 

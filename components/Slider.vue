@@ -51,14 +51,14 @@ export default {
       }
     }
   },
-  computed: {
-    slides() {
-      return this.carousel[0].slides
-    }
-  },
   data() {
     return {
       currentSlide: 0
+    }
+  },
+  computed: {
+    slides() {
+      return this.carousel[0].slides
     }
   }
 }
