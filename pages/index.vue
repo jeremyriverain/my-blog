@@ -9,6 +9,7 @@
       </div>
     </section>
 
+    <index-technologies :technologies="technologies" />
     <index-portfolio :projects="stories" />
   </div>
 </template>
@@ -17,12 +18,26 @@
 export default {
   name: 'PageIndex',
   asyncData(context) {
-    return context.app.$storyapi
-      .get('cdn/stories?starts_with=projects/&per_page=8', {
+    const stories = context.app.$storyapi.get(
+      'cdn/stories?starts_with=projects/&per_page=8',
+      {
         version: 'published'
-      })
-      .then((res) => {
-        return res.data
+      }
+    )
+
+    const technologies = context.app.$storyapi.get(
+      'cdn/stories?starts_with=technologies/',
+      {
+        version: 'published'
+      }
+    )
+
+    return Promise.all([stories, technologies])
+      .then((r) => {
+        return {
+          stories: r[0].data.stories,
+          technologies: r[1].data.stories
+        }
       })
       .catch((res) => {
         if (!res.response) {

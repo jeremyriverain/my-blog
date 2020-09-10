@@ -34,7 +34,7 @@
           >About me</nuxt-link
         >
         <nuxt-link
-          to="/portfolio"
+          to="/projects"
           class="navbar-item"
           exact-active-class="active-menu-item"
           @click.native="isActive = false"

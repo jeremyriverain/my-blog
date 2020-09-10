@@ -12,7 +12,7 @@
       :key="project.id"
       v-masonry-tile
       :project="project"
-      class="item py-1 px-1"
+      class="item py-2 px-2"
       :class="$style.item"
     />
   </div>

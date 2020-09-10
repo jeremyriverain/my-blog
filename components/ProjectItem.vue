@@ -3,7 +3,7 @@
     <div
       class="card cursor-pointer"
       :class="$style.card"
-      @click.prevent="$router.push('/portfolio/' + project.slug)"
+      @click.prevent="$router.push('/projects/' + project.slug)"
     >
       <div class="card-content">
         <article class="media mb-0">
@@ -16,7 +16,7 @@
             </p>
           </figure>
           <div class="media-content">
-            <nuxt-link :to="'/portfolio/' + project.slug">
+            <nuxt-link :to="'/projects/' + project.slug">
               <strong class="is-uppercase">
                 {{ project.content.name }}
               </strong>
@@ -32,7 +32,7 @@
         <nuxt-link
           v-ripple
           class="card-footer-item"
-          :to="'/portfolio/' + project.slug"
+          :to="'/projects/' + project.slug"
         >
           <small>+ Read more</small>
         </nuxt-link>

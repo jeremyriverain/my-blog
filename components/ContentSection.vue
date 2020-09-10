@@ -1,8 +1,8 @@
 <template>
   <div
     :class="$style.content"
-    v-html="content"
     class="has-text-justified content"
+    v-html="content"
   />
 </template>
 

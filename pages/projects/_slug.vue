@@ -77,7 +77,7 @@ export default {
       project: {},
       links: [
         { label: 'Homepage', value: '/', icon: 'home' },
-        { label: 'Portfolio', value: '/portfolio', icon: 'view_list' }
+        { label: 'Portfolio', value: '/projects', icon: 'view_list' }
       ]
     }
   },
