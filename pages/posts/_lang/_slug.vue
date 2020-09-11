@@ -3,7 +3,9 @@
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
 
-      <h1 class="is-size-4 has-text-weight-bold">{{ post.content.title }}</h1>
+      <h1 class="is-size-4 has-text-weight-bold title-black-block">
+        {{ post.content.title }}
+      </h1>
       <div class="is-flex my-1">
         <small class="has-text-italic is-capitalized pt-1 pr-2"
           >{{ $t('published_at', $route.params.lang) }} {{ publishedAt }}</small

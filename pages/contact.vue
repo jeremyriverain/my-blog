@@ -33,7 +33,7 @@
           <h1 class="is-size-4 has-text-weight-bold title-black-block">
             Contact
           </h1>
-          <contact-form />
+          <contact-form class="mt-3" />
         </div>
       </div>
     </div>
