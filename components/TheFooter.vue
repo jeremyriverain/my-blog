@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer class="footer" :class="$style.footer">
+    <footer class="footer has-background-white-ter" :class="$style.footer">
       <div class="container">
         <div class="content">
           <div class="columns">
