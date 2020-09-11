@@ -88,7 +88,7 @@ export default {
   &:after
     content: ''
     position: absolute
-    left: 10px
+    left: 12px
     right: 0
     bottom: 10px
     // height: 1px
