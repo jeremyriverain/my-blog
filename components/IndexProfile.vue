@@ -10,8 +10,10 @@
           </div>
 
           <div class="column is-5-tablet">
-            <h1 class="is-size-4 has-text-weight-bold">
-              Jérémy Riverain
+            <h1 class="is-size-5 has-text-weight-bold mb-1 title-black-block">
+              <span>
+                Jérémy Riverain
+              </span>
             </h1>
             <div>
               Fullstack Developper, working a lot with PHP, Javascript,
@@ -36,3 +38,5 @@ export default {
   name: 'IndexProfile'
 }
 </script>
+
+<style lang="sass" module></style>

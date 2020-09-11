@@ -2,8 +2,10 @@
   <section class="section">
     <!--<div class="container mx-auto" :class="$style.container">-->
     <div class="container mx-auto">
-      <h1 class="is-size-4 has-text-weight-bold">My portfolio</h1>
-      <p>
+      <h1 class="is-size-4 has-text-weight-bold title-black-block">
+        My portfolio
+      </h1>
+      <p class="mt-3">
         From web to mobile applications, essentially made with Vue.JS, Quasar,
         Symfony or ApiPlatform. Check out some projects I contributed to.
       </p>

@@ -3,10 +3,10 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="is-size-4 has-text-weight-bold">
+          <h2 class="is-size-4 has-text-weight-bold underlined">
             Some projects to which I contributed
-          </div>
-          <project-list :projects="projects" class="mt-2" />
+          </h2>
+          <project-list :projects="projects" class="mt-3" />
           <div class="has-text-centered">
             <nuxt-link v-ripple to="/projects" class="button is-outlined mt-4">
               <span>

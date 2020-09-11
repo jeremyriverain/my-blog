@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="column ">
-          <h1 class="title">Contact</h1>
+          <h1 class="title text-primary title-black-block">Contact</h1>
           <contact-form />
         </div>
       </div>

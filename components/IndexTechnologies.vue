@@ -3,9 +3,9 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="is-size-4 has-text-weight-bold">
+          <h2 class="is-size-4 has-text-weight-bold underlined">
             Technologies I like to work with
-          </div>
+          </h2>
 
           <!--<div
             class="columns is-mobile is-multiline my-3 is-centered"

@@ -80,7 +80,25 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-// @media screen and (min-width: 1024px)
-//   .active-menu-item
-//     background: $dark
+.active-menu-item
+  position:  relative
+  // display: flex
+  // justify-content: center
+  // align-items: center
+  &:after
+    content: ''
+    position: absolute
+    left: 10px
+    right: 0
+    bottom: 10px
+    // height: 1px
+    width: 70%
+    max-width: 80px
+    // background: $dark
+    height: 2px
+    background: rgb(80,191,148);
+    background: linear-gradient(90deg, rgba(80,191,148,1) 32%, rgba(255,255,255,1) 100%);
+    @media screen and (min-width: 1024px)
+      margin: 0 auto
+      left: 0
 </style>

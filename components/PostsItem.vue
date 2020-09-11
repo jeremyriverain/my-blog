@@ -10,7 +10,7 @@
         <h2 class="mb-1">
           <nuxt-link
             :to="post.full_slug"
-            class="is-size-4 has-text-weight-bold"
+            class="is-size-4 has-text-weight-bold text-primary"
             :class="$style.title"
           >
             <strong>{{ post.content.title }}</strong>
