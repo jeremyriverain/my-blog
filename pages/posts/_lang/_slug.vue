@@ -3,7 +3,7 @@
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
 
-      <h1 class="is-size-4 has-text-weight-bold title-black-block">
+      <h1 class="is-size-4 has-text-weight-bold">
         {{ post.content.title }}
       </h1>
       <div class="is-flex my-1">
