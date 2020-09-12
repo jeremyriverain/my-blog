@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h2 class="is-size-4 has-text-weight-bold mb-4 underlined">Experience</h2>
+    <div class="mb-4">
+      <h2 class="is-size-4 has-text-weight-bold underlined">Experience</h2>
+      <small>My experience as a programmer</small>
+    </div>
     <ExperiencesItem
       v-for="(experience, i) in experiences"
       :key="i"
