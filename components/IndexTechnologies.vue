@@ -4,8 +4,11 @@
       <div class="columns">
         <div class="column">
           <h2 class="is-size-4 has-text-weight-bold underlined">
-            Technologies I like to work with
+            Technologies
           </h2>
+          <small class="is-italic">
+            Technologies I like to work with
+          </small>
 
           <!--<div
             class="columns is-mobile is-multiline my-3 is-centered"
