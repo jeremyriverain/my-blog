@@ -11,16 +11,18 @@
         class="has-text-centered is-hidden-tablet"
         :class="$style.image"
       >
-        <img
-          v-lazy="
-            filename.replace(
-              /%filter%/,
-              'fit-in/200x200/filters:fill(transparent):format(png)'
-            )
-          "
-          :alt="post.content.image.alt"
-          class="mb-1"
-        />
+        <div>
+          <img
+            v-lazy="
+              filename.replace(
+                /%filter%/,
+                'fit-in/200x200/filters:fill(transparent):format(png)'
+              )
+            "
+            :alt="post.content.image.alt"
+            class="mb-1"
+          />
+        </div>
       </div>
       <div class="content">
         <h2 class="mb-1 mt-0">
@@ -79,6 +81,7 @@ export default {
   display: flex
   justify-content: center
   img
-    max-width: 80px
-    height: auto
+    max-width: 80px!important
+    width: 80px!important
+    height: auto!important
 </style>
