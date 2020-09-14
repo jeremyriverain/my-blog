@@ -1,5 +1,5 @@
 [build]
-  environment = { BASE_URL = "https://compassionate-johnson-e48a25.netlify.app" }
+  environment = { BASE_URL = "https://geekco.netlify.app" }
 
 [[redirects]]
   from = "/blog/deployer-un-site-symfony3-sur-ovh"
