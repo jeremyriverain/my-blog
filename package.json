@@ -29,6 +29,7 @@
     "vue-masonry": "^0.11.8",
     "vue-ripple-directive": "^2.0.1",
     "vue-slick-carousel": "^1.0.6",
+    "vue-typed-js": "^0.1.2",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {

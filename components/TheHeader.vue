@@ -1,17 +1,17 @@
 <template>
-  <nav
-    class="navbar has-background-white-ter"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div
         class="navbar-item has-text-weight-semibold cursor-pointer"
         @click="onClickLogo"
       >
-        Geek
+        <span class="has-text-white">
+          Geek
+        </span>
         <img src="~/assets/images/lizard.svg" width="32" />
-        Co
+        <span class="has-text-white">
+          Co
+        </span>
       </div>
       <a
         role="button"

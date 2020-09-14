@@ -2,13 +2,13 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <div class="columns is-vcentered">
+        <div class="columns">
           <div
             class="column is-narrow is-mobile is-12-mobile"
             :class="$style.imageContainer"
           >
             <div :class="$style.image">
-              <img src="~/assets/images/avatar.png" />
+              <img src="~/assets/images/avatar.png" style="border-radius:8px" />
             </div>
           </div>
 
@@ -16,14 +16,25 @@
             class="column is-5-tablet is-12-mobile"
             :class="$style.textContainer"
           >
-            <h1 class="is-size-5 has-text-weight-bold mb-1 title-black-block">
+            <vue-typed-js
+              :back-speed="50"
+              :strings="[
+                'Jérémy Riverain',
+                'Fullstack developer',
+                'Jérémy Riverain'
+              ]"
+            >
+              <h1
+                class="is-size-5 has-text-weight-bold mb-1 title-black-block typing"
+              ></h1>
+            </vue-typed-js>
+            <!-- <h1 class="is-size-5 has-text-weight-bold mb-1 title-black-block">
               <span>
                 Jérémy Riverain
               </span>
-            </h1>
+            </h1> -->
             <div>
-              Fullstack Developper, working a lot with PHP, Javascript,
-              especially
+              Working a lot with PHP, Javascript, especially
               <a href="https://symfony.com/">Symfony</a>
               and
               <a href="https://vuejs.org/">Vuejs</a>.<br />
@@ -41,7 +52,15 @@
 
 <script>
 export default {
-  name: 'IndexProfile'
+  name: 'IndexProfile',
+  data() {
+    return {
+      strings: [
+        'Fullstack Developper, working a lot with PHP, Javascript, especially <a href="https://symfony.com/">Symfony</a> and <a href="https://vuejs.org/">Vuejs</a>.',
+        'With those technologies, I made some websites, APIs, mobile apps and progressive web apps.'
+      ]
+    }
+  }
 }
 </script>
 

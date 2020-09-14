@@ -22,7 +22,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: title,
+    title,
     meta: [
       {
         charset: 'utf-8'
@@ -143,7 +143,7 @@ export default {
           givenName: 'Jérémy',
           familyName: 'Riverain',
           jobTitle: title,
-          description: description,
+          description,
           image: process.env.BASE_URL + '/jeremy_riverain.png',
           url: process.env.BASE_URL,
           sameAs: ['https://twitter.com/jeremy_riverain'],
@@ -194,6 +194,7 @@ export default {
     '@/plugins/filters/transform-image.js',
     '@/plugins/vuelidate.js',
     '@/plugins/vue-lazyload.js',
+    '@/plugins/vue-typed-js.js',
     { src: '@/plugins/vue-ripple-directive', mode: 'client' },
     { src: '~/plugins/vue-masonry', ssr: false },
     { src: '~/plugins/vue-agile' }
