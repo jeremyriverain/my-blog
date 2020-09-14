@@ -8,7 +8,7 @@
       <div class="card-content" style="min-height:80px">
         <article class="media mb-0">
           <figure class="media-left">
-            <p class="image is-48x48">
+            <p class="image is-64x64">
               <img
                 v-lazy="project.content.image.filename"
                 :alt="project.content.title + ' image'"

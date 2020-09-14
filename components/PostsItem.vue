@@ -7,7 +7,24 @@
     />
     <div class="media-content">
       <div class="content">
-        <h2 class="mb-1">
+        <div
+          v-if="post.content.image"
+          class="has-text-centered is-hidden-tablet mr-3 my-1"
+          :class="$style.image"
+          style="float:left"
+        >
+          <img
+            v-lazy="
+              filename.replace(
+                /%filter%/,
+                'fit-in/200x200/filters:fill(transparent):format(png)'
+              )
+            "
+            :alt="post.content.image.alt"
+            class="mx-auto"
+          />
+        </div>
+        <h2 class="mb-1 mt-0">
           <nuxt-link
             :to="post.full_slug"
             class="is-size-4 has-text-weight-bold text-primary"
@@ -47,6 +64,9 @@ export default {
     lang() {
       return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
     },
+    filename() {
+      return this.$options.filters.transformImage(this.post.content.image)
+    },
     publishedAt() {
       const date = new Date(this.post.first_published_at)
       return this.$d(date, 'short', this.lang)
@@ -56,10 +76,9 @@ export default {
 </script>
 
 <style lang="sass" module>
-.container
-  .image
-    max-width: 80px
-    height: auto
-  .title
-    line-height: 1.2
+.image
+  max-width: 70px
+  height: auto
+  display: flex
+  justify-content: center
 </style>

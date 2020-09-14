@@ -21,15 +21,20 @@
               smart-backspace
               auto-insert-css
               content-type="html"
-              :strings="[
-                'Hello world !',
-                '<span class=\'is-size-4\'>I\'m Jérémy Riverain</span>'
-              ]"
+              strings-element="#typed-strings"
             >
               <h1
                 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
               ></h1
             ></vue-typed-js>
+
+            <h1
+              id="typed-strings"
+              class="is-size-3 has-text-weight-bold mb-1 title-black-block is-invisible"
+            >
+              <span>Hello world !</span>
+              <span class="is-size-4">I'm Jérémy Riverain</span>
+            </h1>
 
             <div>
               Fullstack developer, working a lot with PHP, Javascript,
