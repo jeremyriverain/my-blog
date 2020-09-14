@@ -2,7 +2,24 @@
   <div class="section" :class="$style.post">
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
-
+      <div
+        v-if="post.content.image"
+        class="has-text-centered is-hidden-tablet"
+        :class="$style.image"
+      >
+        <div>
+          <img
+            v-lazy="
+              filename.replace(
+                /%filter%/,
+                'fit-in/200x200/filters:fill(transparent):format(png)'
+              )
+            "
+            :alt="post.content.image.alt"
+            class="mb-1"
+          />
+        </div>
+      </div>
       <h1 class="is-size-4 has-text-weight-bold">
         {{ post.content.title }}
       </h1>
@@ -83,6 +100,9 @@ export default {
     },
     lang() {
       return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
+    },
+    filename() {
+      return this.$options.filters.transformImage(this.post.content.image)
     }
   },
   head() {
@@ -215,4 +235,11 @@ export default {
   // blockquote
     // & > *
       // margin: 0
+.image
+  display: flex
+  justify-content: center
+  img
+    max-width: 80px!important
+    width: 80px!important
+    height: auto!important
 </style>

@@ -20,7 +20,8 @@
               )
             "
             :alt="post.content.image.alt"
-            class="mb-1"
+            class="mb-1 cursor-pointer"
+            @click="$router.push(post.full_slug)"
           />
         </div>
       </div>
