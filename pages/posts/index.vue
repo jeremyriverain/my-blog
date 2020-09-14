@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section mt-5">
     <div class="container mx-auto" :class="$style.container">
       <div>
         <posts-item

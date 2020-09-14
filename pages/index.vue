@@ -1,16 +1,9 @@
 <template>
   <div>
     <index-profile />
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <experiences class="column is-6" />
-        </div>
-      </div>
-    </section>
-
-    <index-technologies :technologies="technologies" />
-    <index-portfolio :projects="stories" />
+    <index-experiences class="my-3" />
+    <index-technologies :technologies="technologies" class="my-3" />
+    <index-portfolio :projects="stories" class="my-3" />
   </div>
 </template>
 

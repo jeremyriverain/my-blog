@@ -1,15 +1,20 @@
 <template>
   <div class="section">
     <div class="container">
-      <div class="columns">
+      <div class="columns" :class="$style.container">
+        <div>
+          <div class="has-background-dark px-3 py-3 has-text-white">
+            <div class="is-size-5 has-text-weight-bold">
+              /** Technologies I like to work with */
+            </div>
+            <h2 class="is-size-3 has-text-weight-bold has-text-white">
+              let
+              <span class="has-text-primary">technologies</span> = () => return
+              [
+            </h2>
+          </div>
+        </div>
         <div class="column">
-          <h2 class="is-size-4 has-text-weight-bold underlined">
-            Technologies
-          </h2>
-          <small class="is-italic">
-            Technologies I like to work with
-          </small>
-
           <!--<div
             class="columns is-mobile is-multiline my-3 is-centered"
             :class="$style.technologies"
@@ -56,17 +61,12 @@ export default {
 </script>
 
 <style lang="sass" module>
-// .technologies
-  // @media screen and (max-width: 400px)
-    // display: block!important
-    // .technology
-      // width: 100%
-      // max-width: 300px
-      // margin-left: auto
-      // margin-right: auto
+.container
+  @media screen and (max-width:1215px)
+    display: block!important
 
 .item
-	width: 25%
+	width: calc(100%/3)
 	max-width: 100%
 @media screen and (max-width:768px)
   .item

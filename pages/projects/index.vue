@@ -2,9 +2,17 @@
   <section class="section">
     <!--<div class="container mx-auto" :class="$style.container">-->
     <div class="container mx-auto">
-      <h1 class="is-size-4 has-text-weight-bold title-black-block">
-        My portfolio
-      </h1>
+      <vue-typed-js
+        :back-speed="50"
+        smart-backspace
+        auto-insert-css
+        content-type="html"
+        :strings="['My portfolio']"
+      >
+        <h1
+          class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+        ></h1
+      ></vue-typed-js>
       <p class="mt-3">
         From web to mobile applications, essentially made with Vue.JS, Quasar,
         Symfony or ApiPlatform. Check out some projects I contributed to.

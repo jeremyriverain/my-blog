@@ -47,7 +47,7 @@ export default {
     .item
       // width: 100% !important
 .item
-	width: 25%
+	width: calc(100%/3)
 	max-width: 100%
 @media screen and (max-width:768px)
   .item

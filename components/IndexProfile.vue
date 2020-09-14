@@ -3,38 +3,37 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns">
-          <div
-            class="column is-narrow is-mobile is-12-mobile"
+          <!-- <div
+            class="column is-narrow is-mobile is-hidden-mobile"
             :class="$style.imageContainer"
           >
             <div :class="$style.image">
-              <img src="~/assets/images/avatar.png" style="border-radius:8px" />
+              <img src="~/assets/images/avatar.png" />
             </div>
-          </div>
+          </div> -->
 
           <div
-            class="column is-5-tablet is-12-mobile"
+            class="column is-6-tablet is-12-mobile"
             :class="$style.textContainer"
           >
             <vue-typed-js
               :back-speed="50"
+              smart-backspace
+              auto-insert-css
+              content-type="html"
               :strings="[
-                'Jérémy Riverain',
-                'Fullstack developer',
-                'Jérémy Riverain'
+                'Hello world !',
+                '<span class=\'is-size-4\'>I\'m Jérémy Riverain</span>'
               ]"
             >
               <h1
-                class="is-size-5 has-text-weight-bold mb-1 title-black-block typing"
-              ></h1>
-            </vue-typed-js>
-            <!-- <h1 class="is-size-5 has-text-weight-bold mb-1 title-black-block">
-              <span>
-                Jérémy Riverain
-              </span>
-            </h1> -->
+                class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+              ></h1
+            ></vue-typed-js>
+
             <div>
-              Working a lot with PHP, Javascript, especially
+              Fullstack developer, working a lot with PHP, Javascript,
+              especially
               <a href="https://symfony.com/">Symfony</a>
               and
               <a href="https://vuejs.org/">Vuejs</a>.<br />
