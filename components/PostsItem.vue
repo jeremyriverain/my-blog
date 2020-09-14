@@ -6,24 +6,23 @@
       :to="post.full_slug"
     />
     <div class="media-content">
+      <div
+        v-if="post.content.image"
+        class="has-text-centered is-hidden-tablet"
+        :class="$style.image"
+      >
+        <img
+          v-lazy="
+            filename.replace(
+              /%filter%/,
+              'fit-in/200x200/filters:fill(transparent):format(png)'
+            )
+          "
+          :alt="post.content.image.alt"
+          class="mb-1"
+        />
+      </div>
       <div class="content">
-        <div
-          v-if="post.content.image"
-          class="has-text-centered is-hidden-tablet mr-3 my-1"
-          :class="$style.image"
-          style="float:left"
-        >
-          <img
-            v-lazy="
-              filename.replace(
-                /%filter%/,
-                'fit-in/200x200/filters:fill(transparent):format(png)'
-              )
-            "
-            :alt="post.content.image.alt"
-            class="mx-auto"
-          />
-        </div>
         <h2 class="mb-1 mt-0">
           <nuxt-link
             :to="post.full_slug"
@@ -77,8 +76,9 @@ export default {
 
 <style lang="sass" module>
 .image
-  max-width: 70px
-  height: auto
   display: flex
   justify-content: center
+  img
+    max-width: 80px
+    height: auto
 </style>
