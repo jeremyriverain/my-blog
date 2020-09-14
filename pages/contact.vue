@@ -33,17 +33,12 @@
           <!-- <h1 class="is-size-4 has-text-weight-bold title-black-block">
             Contact
           </h1> -->
-          <vue-typed-js
-            :back-speed="50"
-            smart-backspace
-            auto-insert-css
-            content-type="html"
-            :strings="['Contact']"
+
+          <h1
+            class="is-size-4 has-text-weight-bold mb-1 typing title-black-block"
           >
-            <h1
-              class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
-            ></h1
-          ></vue-typed-js>
+            Contact
+          </h1>
           <contact-form class="mt-3" />
         </div>
       </div>
