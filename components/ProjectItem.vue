@@ -5,7 +5,7 @@
       :class="$style.card"
       @click.prevent="$router.push('/projects/' + project.slug)"
     >
-      <div class="card-content" style="min-height:80px">
+      <div class="card-content" style="min-height:90px">
         <article class="media mb-0">
           <figure class="media-left">
             <p class="image is-64x64">
