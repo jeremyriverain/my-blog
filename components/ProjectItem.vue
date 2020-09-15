@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-aos="fade-left">
     <div
       class="card cursor-pointer"
       :class="$style.card"
@@ -8,7 +8,7 @@
       <div class="card-content" style="min-height:90px">
         <article class="media mb-0">
           <figure class="media-left">
-            <p class="image is-64x64">
+            <p class="image is-48x48">
               <img
                 v-lazy="project.content.image.filename"
                 :alt="project.content.name + ' logo'"
@@ -64,6 +64,6 @@ export default {
 .card
     // min-height: 100%
 .image
-  height: 64px
-  object-fit: contain
+  // height: 64px
+  // object-fit: contain
 </style>

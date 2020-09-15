@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-right">
+  <div>
     <div class="has-background-dark px-3 py-3 has-text-white">
       <div class="is-size-5 has-text-weight-bold">/** {{ subtitle }} */</div>
       <h2 class="is-size-3 has-text-weight-bold has-text-white">

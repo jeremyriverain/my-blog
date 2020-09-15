@@ -15,9 +15,11 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
   name: 'PagePosts',
   components: {},
+  mixins: [aosMixin],
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories', {

@@ -1,5 +1,5 @@
 <template>
-  <article class="media">
+  <article class="media" data-aos="fade-left">
     <posts-item-image
       class="media-left is-hidden-mobile"
       :image="post.content.image"

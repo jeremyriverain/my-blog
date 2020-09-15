@@ -31,10 +31,12 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 import ProjectList from '~/components/ProjectList'
 export default {
   name: 'PagePortfolio',
   components: { ProjectList },
+  mixins: [aosMixin],
   async asyncData(context) {
     const [projectsRes, tagsRes] = await Promise.all([
       context.app.$storyapi.get('cdn/stories?starts_with=projects/', {
