@@ -7,7 +7,7 @@
           <span class="has-text-primary">experiences</span> = () => return [
         </geek-title>
 
-        <experiences class="column is-6" data-aos="fade-left" />
+        <experiences class="column is-6" data-aos="fade-up" />
       </div>
     </div>
   </section>

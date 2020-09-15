@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-left">
+  <div data-aos="fade-up">
     <div
       class="card cursor-pointer"
       :class="$style.card"
