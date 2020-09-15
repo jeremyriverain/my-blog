@@ -22,6 +22,7 @@
     "markdown-it-highlightjs": "^3.2.0",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.13.8",
+    "nuxt-matomo": "^1.2.3",
     "storyblok-js-client": "^2.5.2",
     "storyblok-nuxt": "^1.2.0",
     "vue-agile": "^1.1.3",

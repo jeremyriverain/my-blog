@@ -14,6 +14,7 @@
                   imgResized(300) +
                   ' 300w'
               "
+              sizes="80px"
               width="80px"
               style="height:60px;width:auto"
               :alt="technology.content.image.alt"

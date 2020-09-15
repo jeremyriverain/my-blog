@@ -4,7 +4,7 @@
       <p class="image is-64x64">
         <img
           v-if="experience.image"
-          :src="require('~/assets/images/' + experience.image)"
+          v-lazy="require('~/assets/images/' + experience.image)"
         />
       </p>
     </figure>
