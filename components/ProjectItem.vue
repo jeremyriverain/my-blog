@@ -11,7 +11,8 @@
             <p class="image is-64x64">
               <img
                 v-lazy="project.content.image.filename"
-                :alt="project.content.title + ' image'"
+                :alt="project.content.name + ' logo'"
+                :class="$style.image"
               />
             </p>
           </figure>
@@ -62,4 +63,7 @@ export default {
 <style lang="sass" module>
 .card
     // min-height: 100%
+.image
+  height: 64px
+  object-fit: contain
 </style>
