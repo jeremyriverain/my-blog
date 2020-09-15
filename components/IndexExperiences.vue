@@ -2,18 +2,12 @@
   <section class="section">
     <div class="container">
       <div class="columns" :class="$style.container">
-        <div>
-          <div class="has-background-dark px-3 py-3 has-text-white">
-            <div class="is-size-5 has-text-weight-bold">
-              /** My experience as a programmer */
-            </div>
-            <h2 class="is-size-3 has-text-weight-bold has-text-white">
-              let
-              <span class="has-text-primary">experience</span> = () => return [
-            </h2>
-          </div>
-        </div>
-        <experiences class="column is-6" />
+        <geek-title subtitle="My experience as a programmer">
+          let
+          <span class="has-text-primary">experiences</span> = () => return [
+        </geek-title>
+
+        <experiences class="column is-6" data-aos="fade-right" />
       </div>
     </div>
   </section>
