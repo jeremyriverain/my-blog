@@ -22,6 +22,7 @@
               auto-insert-css
               content-type="html"
               strings-element="#typed-strings"
+              data-aos="fade-right"
             >
               <h1
                 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"

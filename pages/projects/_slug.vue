@@ -2,7 +2,7 @@
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
-      <article class="media mb-0">
+      <article class="media mb-0" data-aos="fade-up">
         <figure class="media-left">
           <p class="image is-48x48">
             <img
@@ -18,7 +18,9 @@
           <tags :tags="tags" />
         </div>
       </article>
-      <p class="my-2 is-size-5">{{ project.content.short_description }}</p>
+      <p class="my-2 is-size-5">
+        {{ project.content.short_description }}
+      </p>
 
       <portfolio-links
         v-if="hasAnyLink"
@@ -45,9 +47,11 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep'
 import get from 'lodash/get'
+import aosMixin from '~/mixins/aos'
 
 export default {
   name: 'PagePortfolioItem',
+  mixins: [aosMixin],
   // scrollToTop: true,
   asyncData(context) {
     return context.app.$storyapi
