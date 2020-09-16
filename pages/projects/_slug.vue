@@ -2,7 +2,7 @@
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
-      <article class="media mb-0" data-aos="fade-up">
+      <article class="media mb-0">
         <figure class="media-left">
           <p class="image is-48x48">
             <img
@@ -47,11 +47,9 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep'
 import get from 'lodash/get'
-import aosMixin from '~/mixins/aos'
 
 export default {
   name: 'PagePortfolioItem',
-  mixins: [aosMixin],
   // scrollToTop: true,
   asyncData(context) {
     return context.app.$storyapi
