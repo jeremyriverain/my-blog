@@ -1,7 +1,7 @@
 <template>
   <span
     class="tag"
-    :class="[color, $style.tag]"
+    :class="[localColor, $style.tag]"
     data-aos="fade-left"
     @click="$emit('click')"
     ><slot
@@ -15,6 +15,25 @@ export default {
     color: {
       type: String,
       default: ''
+    }
+  },
+  data() {
+    return {
+      localColor: ''
+    }
+  },
+  watch: {
+    color: {
+      immediate: false,
+      handler: 'setLocalColor'
+    }
+  },
+  created() {
+    this.localColor = this.color
+  },
+  methods: {
+    setLocalColor() {
+      this.localColor = this.color + ' aos-init aos-animate'
     }
   }
 }
