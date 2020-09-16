@@ -4,7 +4,7 @@
       <div class="columns" :class="$style.container">
         <geek-title subtitle="Some projects I contributed to">
           let
-          <span class="has-text-primary">portfolio</span> = () => return [
+          <span class="has-text-primary">portfolio</span> = () =>
         </geek-title>
         <div class="column">
           <project-list :projects="projects" class="mt-3" />

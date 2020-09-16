@@ -43,6 +43,7 @@
           >
             <h1
               class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+              :class="$style.title"
             ></h1
           ></vue-typed-js>
           <contact-form class="mt-3" />
@@ -71,4 +72,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" module>
+.title
+  @media screen and (max-width: 550px)
+    font-size: 1.6rem!important
+</style>

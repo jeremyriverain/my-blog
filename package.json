@@ -1,7 +1,7 @@
 {
-  "name": "geekco-nuxt",
+  "name": "geekco",
   "version": "1.0.0",
-  "description": "My fabulous Nuxt.js project",
+  "description": "Website of Jérémy Riverain, developer",
   "author": "Jérémy Riverain",
   "private": true,
   "scripts": {

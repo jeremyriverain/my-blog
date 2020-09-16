@@ -4,7 +4,7 @@
       <div class="columns" :class="$style.container">
         <geek-title subtitle="My experience as a programmer">
           let
-          <span class="has-text-primary">experiences</span> = () => return [
+          <span class="has-text-primary">experiences</span> = () =>
         </geek-title>
 
         <experiences class="column is-6" />
