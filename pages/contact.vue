@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-two-fifths">
-          <div class="media">
+          <div class="media" data-aos="fade-right">
             <figure class="media-left">
               <p class="image is-48x48">
                 <img
@@ -45,7 +45,7 @@
               class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
             ></h1
           ></vue-typed-js>
-          <contact-form class="mt-3" data-aos="fade-up" />
+          <contact-form class="mt-3" />
         </div>
       </div>
     </div>
