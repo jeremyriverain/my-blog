@@ -45,7 +45,7 @@
               class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
             ></h1
           ></vue-typed-js>
-          <contact-form class="mt-3" />
+          <contact-form class="mt-3" data-aos="fade-up" />
         </div>
       </div>
     </div>
@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 import ContactForm from '~/components/ContactForm'
 import SocialLinks from '~/components/SocialLinks'
 export default {
@@ -61,6 +62,7 @@ export default {
     ContactForm,
     SocialLinks
   },
+  mixins: [aosMixin],
   head() {
     return {
       title: 'Contact - Jérémy Riverain - Developer'

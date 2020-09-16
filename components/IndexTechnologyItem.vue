@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-down-left">
+  <div>
     <div class="card">
       <div class="card-content">
         <div class="has-text-centered pt-2">
