@@ -47,7 +47,21 @@
               and progressive web apps.
             </div>
 
-            <social-links />
+            <div class="columns is-mobile is-vcentered">
+              <social-links class="column" />
+              <div class="column has-text-right">
+                <button class="button">
+                  <span class="icon">
+                    <span class="material-icons">
+                      picture_as_pdf
+                    </span>
+                  </span>
+                  <span class="ml-1">
+                    Resume
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
