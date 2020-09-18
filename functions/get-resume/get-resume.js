@@ -3,6 +3,15 @@ const pdfLib = require('pdf-lib')
 
 const generatePdf = async () => {
   const pdfDoc = await pdfLib.PDFDocument.create()
+  const author = 'Jérémy Riverain'
+  pdfDoc.setAuthor(author)
+  pdfDoc.setCreator(author)
+  pdfDoc.setSubject("Jérémy Riverain's resume")
+  pdfDoc.setKeywords(['resume'])
+  pdfDoc.setTitle("Jérémy Riverain's resume")
+  pdfDoc.setLanguage('en')
+  pdfDoc.setCreationDate(new Date())
+
   const page = pdfDoc.addPage(pdfLib.PageSizes.A4)
   const { height } = page.getSize()
   page.moveTo(40, height - 40)
