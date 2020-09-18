@@ -1,5 +1,6 @@
 [build]
   environment = { BASE_URL = "https://geekco.netlify.app" }
+  functions = "functions/"
 
 [[redirects]]
   from = "/blog/deployer-un-site-symfony3-sur-ovh"
