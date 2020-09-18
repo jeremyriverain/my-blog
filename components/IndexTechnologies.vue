@@ -2,7 +2,10 @@
   <div class="section">
     <div class="container">
       <div class="columns" :class="$style.container">
-        <geek-title subtitle="Technologies I like to work with">
+        <geek-title
+          subtitle="Technologies I like to work with"
+          data-aos="fade-up-right"
+        >
           let
           <span class="has-text-primary">technologies</span> = () =>
         </geek-title>
