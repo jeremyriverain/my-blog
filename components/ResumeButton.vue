@@ -1,5 +1,5 @@
 <template>
-  <button class="button" @click="onClick">
+  <a class="button" @click="onClick">
     <span class="icon">
       <span class="material-icons">
         picture_as_pdf
@@ -8,10 +8,12 @@
     <span class="ml-1">
       Resume
     </span>
-  </button>
+  </a>
 </template>
 
 <script>
+import { saveAs } from 'file-saver'
+
 export default {
   name: 'ResumeButton',
   data() {
@@ -21,14 +23,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$axios
-        .$get(this.endpoint)
-        .then((r) => {
-          console.log(r)
-        })
-        .catch((e) => {
-          console.log(e)
-        })
+      saveAs(this.endpoint)
     }
   }
 }
