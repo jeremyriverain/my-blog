@@ -1,8 +1,7 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const pdfLib = require('pdf-lib')
 
-const generatePdf = async () => {
-  const pdfDoc = await pdfLib.PDFDocument.create()
+const metadataPdf = (pdfDoc) => {
   const author = 'Jérémy Riverain'
   pdfDoc.setAuthor(author)
   pdfDoc.setCreator(author)
@@ -11,11 +10,21 @@ const generatePdf = async () => {
   pdfDoc.setTitle("Jérémy Riverain's resume")
   pdfDoc.setLanguage('en')
   pdfDoc.setCreationDate(new Date())
+}
+
+const generatePdf = async () => {
+  const pdfDoc = await pdfLib.PDFDocument.create()
+  metadataPdf(pdfDoc)
 
   const page = pdfDoc.addPage(pdfLib.PageSizes.A4)
+  const helveticaFont = await pdfDoc.embedFont(pdfLib.StandardFonts.Helvetica)
+  page.setFont(helveticaFont)
+  page.setFontSize(12)
+
   const { height } = page.getSize()
   page.moveTo(40, height - 40)
   page.drawText('Hello World!')
+
   // const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true })
   const pdfBytes = await pdfDoc.save()
   return pdfBytes
