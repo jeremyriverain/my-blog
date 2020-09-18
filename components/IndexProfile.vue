@@ -47,19 +47,10 @@
               and progressive web apps.
             </div>
 
-            <div class="columns is-mobile is-vcentered">
+            <div class="columns is-mobile is-vcentered mt-1">
               <social-links class="column" />
               <div class="column has-text-right">
-                <button class="button">
-                  <span class="icon">
-                    <span class="material-icons">
-                      picture_as_pdf
-                    </span>
-                  </span>
-                  <span class="ml-1">
-                    Resume
-                  </span>
-                </button>
+                <resume-button />
               </div>
             </div>
           </div>
