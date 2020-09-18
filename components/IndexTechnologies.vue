@@ -2,18 +2,14 @@
   <div class="section">
     <div class="container">
       <div class="columns" :class="$style.container">
-        <div>
-          <div class="has-background-dark px-3 py-3 has-text-white">
-            <div class="is-size-5 has-text-weight-bold">
-              /** Technologies I like to work with */
-            </div>
-            <h2 class="is-size-3 has-text-weight-bold has-text-white">
-              let
-              <span class="has-text-primary">technologies</span> = () => return
-              [
-            </h2>
-          </div>
-        </div>
+        <geek-title
+          subtitle="Technologies I like to work with"
+          data-aos="fade-up-right"
+        >
+          let
+          <span class="has-text-primary">technologies</span> = () =>
+        </geek-title>
+
         <div class="column">
           <!--<div
             class="columns is-mobile is-multiline my-3 is-centered"

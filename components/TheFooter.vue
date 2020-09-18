@@ -18,23 +18,23 @@
             </div>
           </div>
           <p class="has-text-grey has-text-centered">
-            Made with
-            <a href="https://bulma.io/" class="is-underline has-text-grey"
-              >Bulma</a
-            >,
-            <a href="https://nuxtjs.org/" class="is-underline has-text-grey"
-              >Nuxt</a
-            >,
+            Content fetched from
             <a
               href="https://www.storyblok.com/"
               class="is-underline has-text-grey"
               >Storyblok</a
-            >, hosted on
+            >.
+            <br />
+            Made with
+            <a href="https://nuxtjs.org/" class="is-underline has-text-grey"
+              >Nuxt</a
+            >
+            and deployed on
             <a
               href="https://www.netlify.com/"
               class="is-underline has-text-grey"
               >Netlify</a
-            >
+            >.
             <br />
             <a href="https://jamstack.wtf/" class="is-underline has-text-grey"
               >#JAMstack</a

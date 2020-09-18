@@ -46,6 +46,7 @@
         <div
           v-if="post.content.body"
           class="has-text-justified"
+          :class="$style.teaser"
           v-html="$md.render(post.content.teaser)"
         />
       </div>
@@ -85,4 +86,7 @@ export default {
     max-width: 80px!important
     width: 80px!important
     height: auto!important
+.teaser
+  a
+    text-decoration: underline
 </style>

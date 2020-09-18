@@ -8,8 +8,10 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
   name: 'PageIndex',
+  mixins: [aosMixin],
   asyncData(context) {
     const stories = context.app.$storyapi.get(
       'cdn/stories?starts_with=projects/&per_page=8',

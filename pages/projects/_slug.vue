@@ -18,7 +18,9 @@
           <tags :tags="tags" />
         </div>
       </article>
-      <p class="my-2 is-size-5">{{ project.content.short_description }}</p>
+      <p class="my-2 is-size-5">
+        {{ project.content.short_description }}
+      </p>
 
       <portfolio-links
         v-if="hasAnyLink"

@@ -11,6 +11,7 @@
       >
         <h1
           class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+          :class="$style.title"
         ></h1
       ></vue-typed-js>
 
@@ -31,10 +32,12 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 import ProjectList from '~/components/ProjectList'
 export default {
   name: 'PagePortfolio',
   components: { ProjectList },
+  mixins: [aosMixin],
   async asyncData(context) {
     const [projectsRes, tagsRes] = await Promise.all([
       context.app.$storyapi.get('cdn/stories?starts_with=projects/', {
@@ -83,6 +86,9 @@ export default {
 </script>
 
 <style lang="sass" module>
+.title
+  @media screen and (max-width: 550px)
+    font-size: 1.6rem!important
 .container
   max-width: 768px
 </style>

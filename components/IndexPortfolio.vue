@@ -2,17 +2,13 @@
   <div class="section">
     <div class="container">
       <div class="columns" :class="$style.container">
-        <div>
-          <div class="has-background-dark px-3 py-3 has-text-white">
-            <div class="is-size-5 has-text-weight-bold">
-              /** Some projects I contributed to */
-            </div>
-            <h2 class="is-size-3 has-text-weight-bold has-text-white">
-              let
-              <span class="has-text-primary">portfolio</span> = () => return [
-            </h2>
-          </div>
-        </div>
+        <geek-title
+          subtitle="Some projects I contributed to"
+          data-aos="fade-up-right"
+        >
+          let
+          <span class="has-text-primary">portfolio</span> = () =>
+        </geek-title>
         <div class="column">
           <project-list :projects="projects" class="mt-3" />
           <div class="has-text-centered">

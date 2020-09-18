@@ -8,6 +8,8 @@
           :post="post"
           :right-icon="i % 2 === 0"
           class="mb-4"
+          data-aos="fade-up"
+          data-aos-offset="0"
         />
       </div>
     </div>
@@ -15,9 +17,11 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
   name: 'PagePosts',
   components: {},
+  mixins: [aosMixin],
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories', {

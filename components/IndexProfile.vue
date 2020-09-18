@@ -25,6 +25,7 @@
             >
               <h1
                 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+                :class="$style.title"
               ></h1
             ></vue-typed-js>
 
@@ -46,7 +47,21 @@
               and progressive web apps.
             </div>
 
-            <social-links />
+            <div class="columns is-mobile is-vcentered">
+              <social-links class="column" />
+              <div class="column has-text-right">
+                <button class="button">
+                  <span class="icon">
+                    <span class="material-icons">
+                      picture_as_pdf
+                    </span>
+                  </span>
+                  <span class="ml-1">
+                    Resume
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,6 +84,9 @@ export default {
 </script>
 
 <style lang="sass" module>
+.title
+  @media screen and (max-width: 550px)
+    font-size: 1.6rem!important
 .imageContainer
   max-width: 120px
 @media screen and (max-width: $tablet)

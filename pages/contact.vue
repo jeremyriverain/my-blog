@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-two-fifths">
-          <div class="media">
+          <div class="media" data-aos="fade-right">
             <figure class="media-left">
               <p class="image is-48x48">
                 <img
@@ -43,6 +43,7 @@
           >
             <h1
               class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+              :class="$style.title"
             ></h1
           ></vue-typed-js>
           <contact-form class="mt-3" />
@@ -53,6 +54,7 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 import ContactForm from '~/components/ContactForm'
 import SocialLinks from '~/components/SocialLinks'
 export default {
@@ -61,6 +63,7 @@ export default {
     ContactForm,
     SocialLinks
   },
+  mixins: [aosMixin],
   head() {
     return {
       title: 'Contact - Jérémy Riverain - Developer'
@@ -69,4 +72,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" module>
+.title
+  @media screen and (max-width: 550px)
+    font-size: 1.6rem!important
+</style>
