@@ -1,5 +1,9 @@
 <template>
-  <a class="button" @click="onClick">
+  <a
+    class="button"
+    href="https://a.storyblok.com/f/88570/x/4caa184ebb/jeremy_riverain_resume.pdf"
+    target="_blank"
+  >
     <span class="icon">
       <span class="material-icons">
         picture_as_pdf
