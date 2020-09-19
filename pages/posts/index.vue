@@ -8,6 +8,7 @@
           :post="post"
           :right-icon="i % 2 === 0"
           class="mb-4"
+          data-aos="fade-up"
         />
       </div>
     </div>
