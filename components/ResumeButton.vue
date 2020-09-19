@@ -1,7 +1,7 @@
 <template>
   <a
     class="button"
-    href="https://a.storyblok.com/f/88570/x/4caa184ebb/jeremy_riverain_resume.pdf"
+    href="https://a.storyblok.com/f/88570/x/34fcbac541/jeremy_riverain_resume_web.pdf"
     target="_blank"
   >
     <span class="icon">
