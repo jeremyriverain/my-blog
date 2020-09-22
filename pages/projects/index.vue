@@ -10,7 +10,7 @@
         Check out some projects I contributed to.
       </p>
       <filter-tags
-        class="my-4"
+        class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
         @input="activeTag = $event"

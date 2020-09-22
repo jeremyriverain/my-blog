@@ -8,7 +8,7 @@
         I use regularly.
       </p>
       <filter-tags
-        class="my-4"
+        class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
         @input="activeTag = $event"
@@ -20,7 +20,6 @@
           :post="post"
           :right-icon="i % 2 === 0"
           class="mb-4"
-          data-aos="fade-up"
         />
       </div>
     </div>
