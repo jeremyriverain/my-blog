@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
-      <title-typed :strings="['Blog']"></title-typed>
+      <title-typed> <span>Blog</span></title-typed>
 
       <p class="mt-3">
         Blog posts about programming with PHP, Javascript and other technologies
@@ -11,6 +11,7 @@
         class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
+        data-aos="fade-left"
         @input="activeTag = $event"
       />
       <div>

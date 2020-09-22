@@ -2,7 +2,11 @@
   <section class="section">
     <!--<div class="container mx-auto" :class="$style.container">-->
     <div class="container mx-auto">
-      <title-typed :strings="['My portfolio']"> ></title-typed>
+      <title-typed>
+        <span>
+          My portfolio
+        </span>
+      </title-typed>
 
       <p class="mt-3">
         From web to mobile applications, essentially made with Vue.JS, Quasar,
@@ -13,6 +17,7 @@
         class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
+        data-aos="fade-left"
         @input="activeTag = $event"
       />
       <project-list :projects="projects" />

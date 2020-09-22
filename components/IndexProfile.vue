@@ -16,12 +16,10 @@
             class="column is-6-tablet is-12-mobile"
             :class="$style.textContainer"
           >
-            <title-typed
-              :strings="[
-                '<span>Hello world !</span>',
-                '<span class=\'is-size-4\'>I\'m Jérémy Riverain</span>'
-              ]"
-            />
+            <title-typed>
+              <span>Hello world !</span>
+              <span class="is-size-4">I'm Jérémy Riverain</span>
+            </title-typed>
 
             <div>
               Fullstack developer, working a lot with PHP, Javascript,
@@ -35,9 +33,9 @@
 
             <div class="columns is-mobile is-vcentered mt-1">
               <social-links class="column" />
-              <div class="column has-text-right">
+              <!-- <div class="column has-text-right">
                 <resume-button />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

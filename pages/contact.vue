@@ -34,7 +34,9 @@
             Contact
           </h1> -->
 
-          <title-typed :strings="['Contact']"> ></title-typed>
+          <title-typed>
+            <span>Contact</span>
+          </title-typed>
           <contact-form class="mt-3" />
         </div>
       </div>

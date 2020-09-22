@@ -1,9 +1,5 @@
 <template>
-  <span
-    class="tag"
-    :class="[localColor, $style.tag]"
-    data-aos="fade-left"
-    @click="$emit('click')"
+  <span class="tag" :class="[localColor, $style.tag]" @click="$emit('click')"
     ><slot
   /></span>
 </template>
