@@ -1,6 +1,18 @@
 <template>
-  <div class="section mt-5">
+  <div class="section">
     <div class="container mx-auto" :class="$style.container">
+      <title-typed :strings="['Blog']"></title-typed>
+
+      <p class="mt-3">
+        Blog posts about programming with PHP, Javascript and other technologies
+        I use regularly.
+      </p>
+      <filter-tags
+        class="my-4"
+        :tags="tags"
+        :active-tag="activeTag"
+        @input="activeTag = $event"
+      />
       <div>
         <posts-item
           v-for="(post, i) in posts"
@@ -21,35 +33,37 @@ export default {
   name: 'PagePosts',
   components: {},
   mixins: [aosMixin],
-  asyncData(context) {
-    return context.app.$storyapi
-      .get('cdn/stories', {
+  async asyncData(context) {
+    const [postsRes, tagsRes] = await Promise.all([
+      context.app.$storyapi.get('cdn/stories', {
         version: 'published',
         starts_with: 'posts/',
         sort_by: 'first_published_at:desc'
+      }),
+      context.app.$storyapi.get('cdn/tags', {
+        starts_with: 'posts/'
       })
-      .then((res) => {
-        return { posts: res.data.stories }
-      })
-      .catch((res) => {
-        if (!res.response) {
-          console.error(res)
-          context.error({
-            statusCode: 404,
-            message: 'Failed to receive content form api'
-          })
-        } else {
-          console.error(res.response.data)
-          context.error({
-            statusCode: res.response.status,
-            message: res.response.data
-          })
-        }
-      })
+    ])
+
+    return {
+      stories: postsRes.data.stories,
+      tags: tagsRes.data.tags
+    }
   },
   data() {
     return {
-      posts: []
+      stories: [],
+      tags: [],
+      activeTag: null
+    }
+  },
+  computed: {
+    posts() {
+      if (!this.activeTag) {
+        return this.stories
+      }
+
+      return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
     }
   },
   head() {
