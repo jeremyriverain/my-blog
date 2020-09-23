@@ -244,7 +244,7 @@ export default {
   sitemap: [
     {
       hostname: process.env.BASE_URL,
-      path: '/sitemap.xml'
+      path: '/sitemap-general.xml'
     },
     {
       hostname: process.env.BASE_URL,
@@ -287,10 +287,10 @@ export default {
     },
     {
       hostname: process.env.BASE_URL,
-      path: '/sitemapindex.xml',
+      path: '/sitemap.xml',
       sitemaps: [
         {
-          path: '/sitemap.xml'
+          path: '/sitemap-general.xml'
         },
         {
           path: '/sitemap-posts.xml'
@@ -323,7 +323,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) { }
   },
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL
