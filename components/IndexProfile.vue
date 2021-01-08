@@ -16,10 +16,10 @@
             class="column is-6-tablet is-12-mobile"
             :class="$style.textContainer"
           >
-            <title-typed>
-              <span>Hello world !</span>
-              <span class="is-size-4">I'm Jérémy Riverain</span>
-            </title-typed>
+            <!-- <title-typed> -->
+            <!-- <span>Hello world !</span> -->
+            <span class="is-size-4">I'm Jérémy Riverain</span>
+            <!-- </title-typed> -->
 
             <div>
               Fullstack developer, working a lot with PHP, Javascript,
