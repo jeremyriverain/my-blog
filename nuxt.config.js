@@ -221,7 +221,6 @@ export default {
     '@nuxtjs/markdownit',
     'nuxt-i18n',
     '@nuxtjs/pwa',
-    ['nuxt-matomo', { matomoUrl: 'https://stats.geekco.fr/', siteId: 8 }],
     [
       'storyblok-nuxt',
       {
