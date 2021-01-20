@@ -1,6 +1,19 @@
 [build]
-  environment = { BASE_URL = "https://geekco.netlify.app" }
+  environment = { BASE_URL = "https://www.geekco.fr" }
   functions = "functions/"
+
+git@github.com:jeremyriverain/geekco-nuxt.git
+[[redirects]]
+  from = "https://geekco.netlify.app/*"
+  to = "https://www.geekco.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://geekco.netlify.app/*"
+  to = "https://www.geekco.fr/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/blog/deployer-un-site-symfony3-sur-ovh"
