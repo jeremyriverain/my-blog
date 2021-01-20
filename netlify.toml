@@ -2,7 +2,6 @@
   environment = { BASE_URL = "https://www.geekco.fr" }
   functions = "functions/"
 
-git@github.com:jeremyriverain/geekco-nuxt.git
 [[redirects]]
   from = "https://geekco.netlify.app/*"
   to = "https://www.geekco.fr/:splat"
