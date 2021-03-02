@@ -6,8 +6,8 @@ const Storyblok = new StoryblokClient({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   cache: {
     clear: 'auto',
-    type: 'memory'
-  }
+    type: 'memory',
+  },
 })
 
 const title = 'Jérémy Riverain - Developer'
@@ -25,114 +25,114 @@ export default {
     title,
     meta: [
       {
-        charset: 'utf-8'
+        charset: 'utf-8',
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1',
       },
       {
         hid: 'description',
         name: 'description',
-        content: description
+        content: description,
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: title
+        content: title,
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'Geekco'
+        content: 'Geekco',
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: description
+        content: description,
       },
       {
         hid: 'og:locale',
         property: 'og:locale',
-        content: 'en'
+        content: 'en',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: process.env.BASE_URL + '/jeremy_riverain.png'
+        content: process.env.BASE_URL + '/bg_post.jpg',
       },
       {
         hid: 'og:type',
         property: 'og:type',
-        content: 'website'
+        content: 'website',
       },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: process.env.BASE_URL
+        content: process.env.BASE_URL,
       },
       {
         hid: 'profile:first_name',
         property: 'profile:first_name',
-        content: 'Jérémy'
+        content: 'Jérémy',
       },
       {
         hid: 'profile:last_name',
         property: 'profile:last_name',
-        content: 'Riverain'
+        content: 'Riverain',
       },
       {
         hid: 'profile:gender',
         property: 'profile:gender',
-        content: 'male'
+        content: 'male',
       },
       {
         hid: 'fb:app_id',
         property: 'fb:app_id',
-        content: process.env.FB_APP_ID
+        content: process.env.FB_APP_ID,
       },
       {
         hid: 'twitter:card',
         name: 'twitter:card',
-        content: 'summary_large_image'
+        content: 'summary_large_image',
       },
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@jeremy_riverain'
+        content: '@jeremy_riverain',
       },
       {
         hid: 'twitter:creator',
         name: 'twitter:creator',
-        content: '@jeremy_riverain'
+        content: '@jeremy_riverain',
       },
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: title
+        content: title,
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: description
+        content: description,
       },
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: process.env.BASE_URL + '/bg_post.jpg'
-      }
+        content: process.env.BASE_URL + '/bg_post.jpg',
+      },
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: '/favicon.ico',
       },
       {
         // https://material.io/resources/icons/?icon=mail_outline&style=baseline
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-      }
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
     ],
     script: [
       {
@@ -151,18 +151,18 @@ export default {
             '@type': 'ContactPoint',
             telephone: '+33769141322',
             email: 'jeremy@geekco.fr',
-            contactType: 'Customer service'
-          }
+            contactType: 'Customer service',
+          },
         },
-        type: 'application/ld+json'
-      }
-    ]
+        type: 'application/ld+json',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: '#fff',
   },
   /*
    ** Global CSS
@@ -180,12 +180,12 @@ export default {
     // },
     {
       src: '~/node_modules/highlight.js/styles/night-owl.css',
-      lang: 'css'
+      lang: 'css',
     },
-    '~/assets/main.sass'
+    '~/assets/main.sass',
   ],
   styleResources: {
-    sass: './assets/vars/*.sass'
+    sass: './assets/vars/*.sass',
   },
   /*
    ** Plugins to load before mounting the App
@@ -198,7 +198,7 @@ export default {
     { src: '@/plugins/pwa.client.js', mode: 'client' },
     { src: '@/plugins/vue-ripple-directive', mode: 'client' },
     { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~/plugins/vue-agile' }
+    { src: '~/plugins/vue-agile' },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -208,7 +208,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
   ],
   /*
    ** Nuxt.js modules
@@ -226,24 +226,24 @@ export default {
       {
         accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
         cacheProvider: 'memory',
-        customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP' // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
-      }
+        customParent: 'YOUR_URL_WHERE_RUN_STORYBLOK_APP', // optional https://www.storyblok.com/docs/Guides/storyblok-latest-js#storyblokinitconfig
+      },
     ],
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap' // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
+    '@nuxtjs/sitemap', // If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
   ],
   robots: {
-    Sitemap: process.env.BASE_URL + '/sitemapindex.xml'
+    Sitemap: process.env.BASE_URL + '/sitemapindex.xml',
   },
   markdownit: {
     injected: true,
     breaks: true,
-    use: ['markdown-it-highlightjs']
+    use: ['markdown-it-highlightjs'],
   },
   sitemap: [
     {
       hostname: process.env.BASE_URL,
-      path: '/sitemap-general.xml'
+      path: '/sitemap-general.xml',
     },
     {
       hostname: process.env.BASE_URL,
@@ -253,17 +253,17 @@ export default {
           token: process.env.STORYBLOK_ACCESS_TOKEN,
           version: 'published',
           starts_with: 'posts/',
-          sort_by: 'first_published_at:desc'
+          sort_by: 'first_published_at:desc',
         })
 
         return data.stories.map((story) => {
           return {
             url: story.full_slug,
-            lastmod: story.published_at
+            lastmod: story.published_at,
           }
         })
       },
-      exclude: ['/**']
+      exclude: ['/**'],
     },
     {
       hostname: process.env.BASE_URL,
@@ -272,40 +272,40 @@ export default {
         const { data } = await Storyblok.get('cdn/stories', {
           token: process.env.STORYBLOK_ACCESS_TOKEN,
           version: 'published',
-          starts_with: 'projects/'
+          starts_with: 'projects/',
         })
 
         return data.stories.map((story) => {
           return {
             url: story.full_slug,
-            lastmod: story.published_at
+            lastmod: story.published_at,
           }
         })
       },
-      exclude: ['/**']
+      exclude: ['/**'],
     },
     {
       hostname: process.env.BASE_URL,
       path: '/sitemap.xml',
       sitemaps: [
         {
-          path: '/sitemap-general.xml'
+          path: '/sitemap-general.xml',
         },
         {
-          path: '/sitemap-posts.xml'
+          path: '/sitemap-posts.xml',
         },
         {
-          path: '/sitemap-portfolio.xml'
-        }
-      ]
-    }
+          path: '/sitemap-portfolio.xml',
+        },
+      ],
+    },
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true
+    proxy: true,
   },
   /*
    ** Build configuration
@@ -314,18 +314,18 @@ export default {
     postcss: {
       preset: {
         features: {
-          customProperties: false
-        }
-      }
+          customProperties: false,
+        },
+      },
     },
     transpile: ['vue-agile'],
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) { }
+    extend(config, ctx) {},
   },
   publicRuntimeConfig: {
-    baseUrl: process.env.BASE_URL
+    baseUrl: process.env.BASE_URL,
   },
   privateRuntimeConfig: {},
   i18n: {
@@ -338,16 +338,16 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
       dateTimeFormats,
-      messages
-    }
+      messages,
+    },
   },
   router: {
-    trailingSlash: false
+    trailingSlash: false,
   },
   proxy: {
     '/.netlify': {
       target: 'http://localhost:9000',
-      pathRewrite: { '^/.netlify/functions': '' }
-    }
-  }
+      pathRewrite: { '^/.netlify/functions': '' },
+    },
+  },
 }
