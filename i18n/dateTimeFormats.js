@@ -1,12 +1,16 @@
 export default {
-  'fr': {
+  fr: {
     short: {
-      year: 'numeric', month: 'short', day: 'numeric'
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
     }
   },
-  'en': {
+  en: {
     short: {
-      year: 'numeric', month: 'short', day: 'numeric'
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
     }
   }
 }
