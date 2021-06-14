@@ -1,7 +1,7 @@
 <template>
   <div>
     <index-profile />
-    <index-experiences class="my-3" />
+    <index-experiences :experiences="experiences" class="my-3" />
     <index-technologies :technologies="technologies" class="my-3" />
     <index-portfolio :projects="stories" class="my-3" />
   </div>
@@ -27,11 +27,19 @@ export default {
       }
     )
 
-    return Promise.all([stories, technologies])
+    const experiences = context.app.$storyapi.get(
+      'cdn/stories?starts_with=jobs/',
+      {
+        version: 'published'
+      }
+    )
+
+    return Promise.all([stories, technologies, experiences])
       .then((r) => {
         return {
           stories: r[0].data.stories,
-          technologies: r[1].data.stories
+          technologies: r[1].data.stories,
+          experiences: r[2].data.stories
         }
       })
       .catch((res) => {
