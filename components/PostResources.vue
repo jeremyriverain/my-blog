@@ -6,7 +6,9 @@
     <div class="message-body has-text-black">
       <ul :class="$style.list">
         <li v-for="resource in resources" :key="resource._uid">
-          <a :href="resource.value.url" target="_blank">{{ resource.label }}</a>
+          <a :href="resource.value.url" target="_blank" rel="noopener">{{
+            resource.label
+          }}</a>
         </li>
       </ul>
     </div>

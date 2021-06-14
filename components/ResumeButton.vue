@@ -3,6 +3,7 @@
     class="button"
     href="https://a.storyblok.com/f/88570/x/0c6ff16a11/jeremy_riverain_resume.pdf"
     target="_blank"
+    rel="noopener"
   >
     <span class="icon">
       <span class="material-icons">

@@ -1,6 +1,12 @@
 <template>
   <div :class="$style.container">
-    <a v-if="appLink" :href="appLink" target="_blank" class="button mx-1 my-1">
+    <a
+      v-if="appLink"
+      :href="appLink"
+      target="_blank"
+      rel="noopener"
+      class="button mx-1 my-1"
+    >
       <span class="icon">
         <span class="material-icons">
           launch
@@ -15,6 +21,7 @@
         v-if="appleStoreLink"
         :href="appleStoreLink"
         target="_blank"
+        rel="noopener"
         :class="$style.store"
         class="mx-1 my-1"
         ><img width="140" src="/apple-store.svg" alt="link download app"
@@ -23,6 +30,7 @@
         v-if="playStoreLink"
         :href="playStoreLink"
         target="_blank"
+        rel="noopener"
         :class="$style.store"
         class="mx-1 my-1"
         ><img width="160" src="/play-store.png" alt="link download app"
