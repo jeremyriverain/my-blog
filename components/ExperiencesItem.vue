@@ -11,6 +11,7 @@
         <img
           v-if="experience.content.image.id"
           v-lazy="experience.content.image.filename"
+          :alt="experience.content.image.alt"
         />
       </component>
     </figure>

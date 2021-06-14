@@ -24,7 +24,7 @@
         rel="noopener"
         :class="$style.store"
         class="mx-1 my-1"
-        ><img width="140" src="/apple-store.svg" alt="link download app"
+        ><img width="140" src="/apple-store.svg" alt=""
       /></a>
       <a
         v-if="playStoreLink"
@@ -33,7 +33,7 @@
         rel="noopener"
         :class="$style.store"
         class="mx-1 my-1"
-        ><img width="160" src="/play-store.png" alt="link download app"
+        ><img width="160" src="/play-store.png" alt=""
       /></a>
     </div>
   </div>

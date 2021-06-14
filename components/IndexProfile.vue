@@ -3,23 +3,11 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns">
-          <!-- <div
-            class="column is-narrow is-mobile is-hidden-mobile"
-            :class="$style.imageContainer"
-          >
-            <div :class="$style.image">
-              <img src="~/assets/images/avatar.png" />
-            </div>
-          </div> -->
-
           <div
             class="column is-6-tablet is-12-mobile"
             :class="$style.textContainer"
           >
-            <!-- <title-typed> -->
-            <!-- <span>Hello world !</span> -->
             <span class="is-size-4">I'm Jérémy Riverain</span>
-            <!-- </title-typed> -->
 
             <div>
               Fullstack developer, working a lot with PHP, Javascript,

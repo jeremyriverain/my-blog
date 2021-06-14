@@ -5,16 +5,17 @@
         :src="
           require('~/assets/images/github' + (light ? '-light' : '') + '.svg')
         "
+        alt=""
       />
     </a>
     <a :class="$style.link" href="https://twitter.com/jeremy_riverain">
-      <img src="~/assets/images/twitter.svg" />
+      <img src="~/assets/images/twitter.svg" alt="" />
     </a>
     <a
       :class="$style.link"
       href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-riverain-789462168/"
     >
-      <img src="~/assets/images/linkedin.svg" />
+      <img src="~/assets/images/linkedin.svg" alt="" />
     </a>
   </div>
 </template>

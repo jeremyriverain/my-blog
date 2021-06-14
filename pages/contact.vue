@@ -8,7 +8,7 @@
               <p class="image is-48x48">
                 <img
                   src="~/assets/images/avatar.png"
-                  alt="portrait Jérémy Riverain "
+                  alt="portrait Jérémy Riverain"
                 />
               </p>
             </figure>
