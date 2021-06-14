@@ -1,24 +1,31 @@
 <template>
   <article class="media has-background-white-ter px-3 py-3">
     <figure class="media-left">
-      <p class="image is-64x64">
+      <component
+        :is="link ? 'a' : 'p'"
+        :href="link"
+        :target="link ? '_blank' : null"
+        class="image is-64x64"
+      >
         <img
-          v-if="experience.image"
-          v-lazy="require('~/assets/images/' + experience.image)"
+          v-if="experience.content.image.id"
+          v-lazy="experience.content.image.filename"
         />
-      </p>
+      </component>
     </figure>
     <div class="media-content">
       <div class="content">
         <p>
-          <strong>{{ experience.jobName }}</strong>
+          <strong>{{ experience.content.jobName }}</strong>
           <br />
-          <span v-if="experience.company">{{ experience.company }}</span>
-          <br v-if="experience.company" />
-          <small>{{ experience.date }}</small>
+          <span v-if="experience.content.company">{{
+            experience.content.company
+          }}</span>
+          <br v-if="experience.content.company" />
+          <small>{{ experience.content.date }}</small>
           <br />
           <small>
-            {{ experience.location }}
+            {{ experience.content.location }}
           </small>
         </p>
       </div>
@@ -33,6 +40,13 @@ export default {
     experience: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    link() {
+      return this.experience.content.link.url.length > 0
+        ? this.experience.content.link.url
+        : null
     }
   }
 }

@@ -7,7 +7,7 @@
           <span class="has-text-primary">experiences</span> = () =>
         </geek-title>
 
-        <experiences class="column is-6" />
+        <experiences class="column is-6" :experiences="experiences" />
       </div>
     </div>
   </section>
@@ -15,7 +15,13 @@
 
 <script>
 export default {
-  name: 'IndexExperiences'
+  name: 'IndexExperiences',
+  props: {
+    experiences: {
+      type: Array,
+      default: () => []
+    }
+  }
 }
 </script>
 <style lang="sass" module>
