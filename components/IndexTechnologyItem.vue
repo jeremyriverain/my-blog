@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-content">
         <div class="has-text-centered pt-2">
-          <a :href="technology.content.link.url" target="_blank">
+          <a :href="technology.content.link.url" target="_blank" rel="noopener">
             <img
               v-lazy="imgResized(100)"
               :data-srcset="

@@ -5,6 +5,7 @@
         :is="link ? 'a' : 'p'"
         :href="link"
         :target="link ? '_blank' : null"
+        :rel="link ? 'noopener' : null"
         class="image is-64x64"
       >
         <img
