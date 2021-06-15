@@ -3,7 +3,7 @@
 ## Recommended environment
 
 - yarn
-- node 12.x
+- node 14.x
 
 ## Development workflow
 
