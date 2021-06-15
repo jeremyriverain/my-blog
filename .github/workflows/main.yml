@@ -3,9 +3,13 @@ name: Node.js CI
 on: [push]
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
-
+    env:
+      FB_APP_ID: ${{ secrets.FB_APP_ID }}
+      STORYBLOK_ACCESS_TOKEN: ${{ secrets.STORYBLOK_ACCESS_TOKEN }}
+      BASE_URL: 'http://localhost:3000'
+      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -16,3 +20,9 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: lint
         run: yarn lint
+      - name: build
+        run: yarn generate
+      - name: lighthouse
+        run: |
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
