@@ -12,11 +12,7 @@
         <div class="column">
           <project-list :projects="projects" class="mt-3" />
           <div class="has-text-centered">
-            <nuxt-link
-              v-ripple
-              to="/projects"
-              class="button is-primary is-outlined mt-4"
-            >
+            <nuxt-link v-ripple to="/projects" class="button mt-4">
               <span>
                 View more projects
               </span>

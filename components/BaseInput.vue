@@ -69,3 +69,8 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="sass">
+.field .icon
+  color: #4a4a4a
+</style>

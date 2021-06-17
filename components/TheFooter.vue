@@ -17,28 +17,19 @@
               <social-links />
             </div>
           </div>
-          <p class="has-text-grey has-text-centered">
+          <p class=" has-text-centered">
             Content fetched from
-            <a
-              href="https://www.storyblok.com/"
-              class="is-underline has-text-grey"
+            <a href="https://www.storyblok.com/" class="is-underline "
               >Storyblok</a
             >.
             <br />
             Made with
-            <a href="https://nuxtjs.org/" class="is-underline has-text-grey"
-              >Nuxt</a
-            >
+            <a href="https://nuxtjs.org/" class="is-underline ">Nuxt</a>
             and deployed on
-            <a
-              href="https://www.netlify.com/"
-              class="is-underline has-text-grey"
-              >Netlify</a
+            <a href="https://www.netlify.com/" class="is-underline ">Netlify</a
             >.
             <br />
-            <a href="https://jamstack.wtf/" class="is-underline has-text-grey"
-              >#JAMstack</a
-            >
+            <a href="https://jamstack.wtf/" class="is-underline ">#JAMstack</a>
           </p>
         </div>
       </div>

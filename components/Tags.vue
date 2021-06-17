@@ -1,10 +1,10 @@
 <template>
   <div class="tags">
     <base-tag
-      v-for="(tag, i) in tags"
+      v-for="tag in tags"
       :key="tag"
       :label="'#' + tag"
-      :color-class="i % 2 === 0 ? 'is-info is-light' : 'is-primary is-light'"
+      color-class="is-info is-light"
     />
   </div>
 </template>

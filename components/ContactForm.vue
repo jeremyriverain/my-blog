@@ -114,9 +114,13 @@
         </template>
       </base-input>
 
-      <div class="field">
+      <div class="field mt-5">
         <div class="control">
-          <button v-ripple class="button is-primary is-outlined" type="submit">
+          <button
+            v-ripple
+            class="button is-info is-outlined is-light"
+            type="submit"
+          >
             Send
           </button>
         </div>

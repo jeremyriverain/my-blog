@@ -11,7 +11,6 @@ module.exports = {
       preset: 'lighthouse:recommended',
       assertions: {
         bypass: 'off',
-        'color-contrast': 'off',
         'errors-in-console': 'off',
         'first-contentful-paint': 'off',
         'first-cpu-idle': 'off',

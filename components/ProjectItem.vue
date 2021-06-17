@@ -22,22 +22,12 @@
                 {{ project.content.name }}
               </strong>
             </nuxt-link>
-            <!-- <tags v-if="project.tag_list.length > 0" :tags="tags" class="mb-0 mt-1" /> -->
             <div>
               <small>{{ project.content.short_description }}</small>
             </div>
           </div>
         </article>
       </div>
-      <!--<footer class="card-footer">
-        <nuxt-link
-          v-ripple
-          class="card-footer-item"
-          :to="'/projects/' + project.slug"
-        >
-          <small>+ Read more</small>
-        </nuxt-link>
-      </footer>-->
     </div>
   </div>
 </template>
