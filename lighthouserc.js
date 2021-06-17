@@ -17,7 +17,6 @@ module.exports = {
         'first-cpu-idle': 'off',
         'first-meaningful-paint': 'off',
         'font-display': 'off',
-        'image-alt': 'off',
         interactive: 'off',
         label: 'off',
         'largest-contentful-paint': 'off',
