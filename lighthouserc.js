@@ -22,7 +22,6 @@ module.exports = {
         label: 'off',
         'largest-contentful-paint': 'off',
         'legacy-javascript': 'off',
-        'link-name': 'off',
         'max-potential-fid': 'off',
         'non-composited-animations': 'off',
         'render-blocking-resources': 'off',
