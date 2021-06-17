@@ -18,7 +18,7 @@
               class="button is-primary is-outlined mt-4"
             >
               <span>
-                View more
+                View more projects
               </span>
             </nuxt-link>
           </div>

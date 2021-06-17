@@ -23,7 +23,6 @@ module.exports = {
         'largest-contentful-paint': 'off',
         'legacy-javascript': 'off',
         'link-name': 'off',
-        'link-text': 'off',
         'max-potential-fid': 'off',
         'non-composited-animations': 'off',
         'render-blocking-resources': 'off',
