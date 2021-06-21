@@ -9,6 +9,8 @@
                 <img
                   src="~/assets/images/avatar.png"
                   alt="portrait Jérémy Riverain"
+                  width="48"
+                  height="48"
                 />
               </p>
             </figure>

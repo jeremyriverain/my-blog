@@ -6,16 +6,28 @@
           require('~/assets/images/github' + (light ? '-light' : '') + '.svg')
         "
         alt="github"
+        width="22"
+        height="22"
       />
     </a>
     <a :class="$style.link" href="https://twitter.com/jeremy_riverain">
-      <img src="~/assets/images/twitter.svg" alt="twitter" />
+      <img
+        src="~/assets/images/twitter.svg"
+        alt="twitter"
+        width="22"
+        height="22"
+      />
     </a>
     <a
       :class="$style.link"
       href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-riverain-789462168/"
     >
-      <img src="~/assets/images/linkedin.svg" alt="linkedin" />
+      <img
+        src="~/assets/images/linkedin.svg"
+        alt="linkedin"
+        width="22"
+        height="22"
+      />
     </a>
   </div>
 </template>

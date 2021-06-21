@@ -8,7 +8,7 @@
         <span class="has-text-white">
           Geek
         </span>
-        <img src="~/assets/images/lizard.svg" width="32" alt="" />
+        <img src="~/assets/images/lizard.svg" width="32" height="28" alt="" />
         <span class="has-text-white">
           Co
         </span>

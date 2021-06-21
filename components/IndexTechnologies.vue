@@ -11,11 +11,6 @@
         </geek-title>
 
         <div class="column">
-          <!--<div
-            class="columns is-mobile is-multiline my-3 is-centered"
-            :class="$style.technologies"
-            >-->
-
           <div
             v-masonry
             transition-duration=".5s"
@@ -32,7 +27,6 @@
               :class="$style.item"
             />
           </div>
-          <!--</div>-->
         </div>
       </div>
     </div>
