@@ -179,8 +179,8 @@ export default {
     //   lang: 'css'
     // },
     {
-      src: '~/node_modules/highlight.js/styles/night-owl.css',
-      lang: 'css'
+      src: '~/node_modules/highlight.js/scss/night-owl.scss',
+      lang: 'scss'
     },
     '~/assets/main.sass'
   ],
@@ -207,7 +207,16 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    [
+      'nuxt-purgecss',
+      {
+        styleExtensions: ['.sass', '.scss'],
+        // safelist: [/^agile_/, /^hljs/]
+        whitelist: ['code', 'pre'],
+        whitelistPatterns: [/^agile/, /^hljs/]
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules
@@ -318,6 +327,8 @@ export default {
       }
     },
     transpile: ['vue-agile'],
+    // extractCSS: true,
+
     /*
      ** You can extend webpack config here
      */
