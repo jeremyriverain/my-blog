@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <label class="label">{{ label }}</label>
+    <label class="label" :for="name">{{ label }}</label>
     <div
       class="control"
       :class="[
@@ -10,6 +10,7 @@
     >
       <input
         v-if="type !== 'textarea'"
+        :id="name"
         :value="value"
         class="input"
         :class="error ? 'is-danger' : ''"
@@ -20,6 +21,7 @@
       />
       <textarea
         v-else
+        :id="name"
         :value="value"
         :class="error ? 'is-danger' : ''"
         class="textarea"

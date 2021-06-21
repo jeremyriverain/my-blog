@@ -17,7 +17,7 @@ module.exports = {
         'first-meaningful-paint': 'off',
         'font-display': 'off',
         interactive: 'off',
-        label: 'off',
+        'mainthread-work-breakdown': 'off',
         'largest-contentful-paint': 'off',
         'legacy-javascript': 'off',
         'max-potential-fid': 'off',
