@@ -7,11 +7,10 @@
             class="column is-6-tablet is-12-mobile"
             :class="$style.textContainer"
           >
-            <span class="is-size-4">I'm Jérémy Riverain</span>
+            <h1 class="is-size-4">I'm Jérémy Riverain, a french developer</h1>
 
             <div>
-              Fullstack developer, working a lot with PHP, Javascript,
-              especially
+              Working a lot with PHP, Javascript, especially
               <a href="https://symfony.com/">Symfony</a>
               and
               <a href="https://vuejs.org/">Vuejs</a>.<br />

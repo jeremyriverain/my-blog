@@ -9,7 +9,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e:ci": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -41,13 +44,16 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
     "babel-eslint": "^10.0.1",
+    "cypress": "^7.5.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "sass-loader": "^9.0.1",
+    "start-server-and-test": "^1.12.5",
     "stylelint": "^10.1.0"
   }
 }
