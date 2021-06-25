@@ -13,7 +13,6 @@
         class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
-        data-aos="fade-left"
         @input="activeTag = $event"
       />
       <div>
@@ -30,11 +29,9 @@
 </template>
 
 <script>
-import aosMixin from '~/mixins/aos'
 export default {
   name: 'PagePosts',
   components: {},
-  mixins: [aosMixin],
   async asyncData(context) {
     const [postsRes, tagsRes] = await Promise.all([
       context.app.$storyapi.get('cdn/stories', {

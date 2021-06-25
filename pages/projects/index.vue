@@ -15,7 +15,6 @@
         class="mt-4 mb-2"
         :tags="tags"
         :active-tag="activeTag"
-        data-aos="fade-left"
         @input="activeTag = $event"
       />
       <project-list :projects="projects" />
@@ -24,12 +23,10 @@
 </template>
 
 <script>
-import aosMixin from '~/mixins/aos'
 import ProjectList from '~/components/ProjectList'
 export default {
   name: 'PagePortfolio',
   components: { ProjectList },
-  mixins: [aosMixin],
   async asyncData(context) {
     const [projectsRes, tagsRes] = await Promise.all([
       context.app.$storyapi.get('cdn/stories?starts_with=projects/', {

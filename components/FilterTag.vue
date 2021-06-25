@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     setLocalColor() {
-      this.localColor = this.color + ' aos-init aos-animate'
+      this.localColor = this.color
     }
   }
 }

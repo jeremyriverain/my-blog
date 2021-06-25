@@ -22,14 +22,14 @@ context('portfolio', () => {
       .should('contain.text', 'JetAndCo')
   })
 
-  it('filters projects', () => {
+  it.only('filters projects', () => {
     cy.get('[data-cy=filter-tag]')
       .contains('Quasar')
       .click()
 
     cy.get('[data-cy=portfolio-item]')
       .contains('Hÿapp')
-      .should('have.length', 0)
+      .should('not.be.visible')
 
     cy.get('[data-cy=portfolio-item]')
       .contains('Klubin')

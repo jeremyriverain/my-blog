@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-two-fifths">
-          <div class="media" data-aos="fade-right">
+          <div class="media">
             <figure class="media-left">
               <p class="image is-48x48">
                 <img
@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import aosMixin from '~/mixins/aos'
 import ContactForm from '~/components/ContactForm'
 import SocialLinks from '~/components/SocialLinks'
 export default {
@@ -54,7 +53,6 @@ export default {
     ContactForm,
     SocialLinks
   },
-  mixins: [aosMixin],
   head() {
     return {
       title: 'Contact - Jérémy Riverain - Developer'
