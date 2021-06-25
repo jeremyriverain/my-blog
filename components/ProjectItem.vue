@@ -3,6 +3,7 @@
     <div
       class="card cursor-pointer"
       :class="$style.card"
+      data-cy="portfolio-item"
       @click.prevent="$router.push('/projects/' + project.slug)"
     >
       <div class="card-content" style="min-height:90px">

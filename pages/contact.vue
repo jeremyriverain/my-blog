@@ -32,13 +32,11 @@
           </div>
         </div>
         <div class="column ">
-          <!-- <h1 class="is-size-4 has-text-weight-bold title-black-block">
-            Contact
-          </h1> -->
-
-          <title-typed>
+          <h1
+            class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
+          >
             <span>Contact</span>
-          </title-typed>
+          </h1>
           <contact-form class="mt-3" />
         </div>
       </div>

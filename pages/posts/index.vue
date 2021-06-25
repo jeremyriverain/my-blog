@@ -1,7 +1,9 @@
 <template>
   <div class="section">
     <div class="container mx-auto" :class="$style.container">
-      <title-typed> <span>Blog</span></title-typed>
+      <h1 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block">
+        <span>Blog</span>
+      </h1>
 
       <p class="mt-3">
         Blog posts about programming with PHP, Javascript and other technologies

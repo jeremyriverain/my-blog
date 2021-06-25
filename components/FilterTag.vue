@@ -1,5 +1,9 @@
 <template>
-  <span class="tag" :class="[localColor, $style.tag]" @click="$emit('click')"
+  <span
+    class="tag"
+    :class="[localColor, $style.tag]"
+    data-cy="filter-tag"
+    @click="$emit('click')"
     ><slot
   /></span>
 </template>

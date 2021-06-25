@@ -1,8 +1,16 @@
 <template>
   <div>
     <index-profile />
-    <index-experiences :experiences="experiences" class="my-3" />
-    <index-technologies :technologies="technologies" class="my-3" />
+    <index-experiences
+      :experiences="experiences"
+      class="my-3"
+      data-cy="experiences"
+    />
+    <index-technologies
+      :technologies="technologies"
+      class="my-3"
+      data-cy="technologies"
+    />
     <index-portfolio :projects="stories" class="my-3" />
   </div>
 </template>

@@ -195,7 +195,6 @@ export default {
     '@/plugins/filters/transform-image.js',
     '@/plugins/vuelidate.js',
     '@/plugins/vue-lazyload.js',
-    '@/plugins/vue-typed-js.js',
     { src: '@/plugins/pwa.client.js', mode: 'client' },
     { src: '@/plugins/vue-ripple-directive', mode: 'client' },
     { src: '~/plugins/vue-masonry', ssr: false },

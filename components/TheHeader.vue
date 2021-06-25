@@ -20,6 +20,7 @@
         aria-label="menu"
         aria-expanded="false"
         data-target="navbarMenu"
+        data-cy="menu-burger"
         @click="isActive = !isActive"
       >
         <span aria-hidden="true"></span>
@@ -28,7 +29,12 @@
       </a>
     </div>
 
-    <div id="navbarMenu" class="navbar-menu" :class="{ 'is-active': isActive }">
+    <div
+      id="navbarMenu"
+      class="navbar-menu"
+      :class="{ 'is-active': isActive }"
+      data-cy="menu"
+    >
       <div class="navbar-end">
         <nuxt-link
           to="/"

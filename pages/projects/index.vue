@@ -2,11 +2,9 @@
   <section class="section">
     <!--<div class="container mx-auto" :class="$style.container">-->
     <div class="container mx-auto">
-      <title-typed>
-        <span>
-          My portfolio
-        </span>
-      </title-typed>
+      <h1 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block">
+        <span>My portfolio</span>
+      </h1>
 
       <p class="mt-3">
         From web to mobile applications, essentially made with Vue.JS, Quasar,

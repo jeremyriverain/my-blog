@@ -6,6 +6,7 @@
     class="masonry-container"
     fit-width
     horizontal-order
+    data-cy="portfolio"
   >
     <project-item
       v-for="project in projects"
