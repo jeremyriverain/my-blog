@@ -1,6 +1,7 @@
 <template>
   <div>
     <flash-message
+      data-cy="form-message"
       :show="message.show"
       :title="message.title"
       :body="message.body"
@@ -19,6 +20,7 @@
 
       <base-input
         v-model.trim="$v.form.firstName.$model"
+        data-cy="firstName-input"
         label="First name"
         :error="$v.form.firstName.$dirty && $v.form.firstName.$invalid"
         name="firstName"
@@ -35,6 +37,7 @@
 
       <base-input
         v-model.trim="$v.form.lastName.$model"
+        data-cy="lastName-input"
         label="Last name"
         name="lastName"
         :error="$v.form.lastName.$dirty && $v.form.lastName.$invalid"
@@ -51,6 +54,7 @@
 
       <base-input
         v-model.trim="$v.form.email.$model"
+        data-cy="email-input"
         label="Email"
         name="email"
         :error="$v.form.email.$dirty && $v.form.email.$invalid"
@@ -78,6 +82,7 @@
 
       <base-input
         v-model.trim="$v.form.phoneNumber.$model"
+        data-cy="phoneNumber-input"
         label="Phone number"
         name="phoneNumber"
         :error="$v.form.phoneNumber.$dirty && $v.form.phoneNumber.$invalid"
@@ -102,6 +107,7 @@
 
       <base-input
         v-model.trim="$v.form.message.$model"
+        data-cy="message-input"
         label="Message"
         name="message"
         type="textarea"
