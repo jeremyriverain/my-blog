@@ -11,6 +11,7 @@ module.exports = {
       preset: 'lighthouse:recommended',
       assertions: {
         bypass: 'off',
+        'csp-xss': 'off',
         'errors-in-console': 'off',
         'first-contentful-paint': 'off',
         'first-cpu-idle': 'off',
@@ -27,6 +28,8 @@ module.exports = {
         'unused-css-rules': 'off',
         'unused-javascript': 'off',
         'speed-index': 'off',
+        'splash-screen': 'off',
+        'themed-omnibox': 'off',
         'uses-responsive-images': 'off',
         'uses-webp-images': 'off',
         'valid-source-maps': 'off'
