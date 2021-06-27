@@ -1,5 +1,5 @@
 <template>
-  <div class="section" :class="$style.post">
+  <div class="section">
     <div class="container mx-auto" :class="$style.container">
       <breadcrumb :links="links" class="has-text-right" />
       <div
@@ -202,39 +202,7 @@ export default {
 
 <style lang="sass" module>
 .container
-  max-width: 768px
-// .post
-  // a
-    // text-decoration: underline
-  // p
-    // margin-top: $size-normal
-    // margin-bottom: $size-normal
-  // h3, h4, h5
-    // font-weight: bold
-    // text-align: left
-  // h3
-    // margin-top: $size-3
-    // font-size: $size-3
-    // line-height: 1.2
-  // h4
-    // margin-top: $size-large
-    // font-size: $size-5
-  // h5
-    // margin-top: $size-large
-    // font-size: $size-6
-  // pre
-    // padding: 0
-    // margin-top: $size-normal
-    // margin-bottom: $size-normal
-  // ul
-    // padding-left: 1rem
-    // margin-top: $size-normal
-    // margin-bottom: $size-normal
-    // li
-      // list-style-type: square
-  // blockquote
-    // & > *
-      // margin: 0
+  max-width: 768px!important
 .image
   display: flex
   justify-content: center

@@ -75,5 +75,5 @@ export default {
 
 <style lang="sass" module>
 .container
-  max-width: 768px
+  max-width: 768px!important
 </style>

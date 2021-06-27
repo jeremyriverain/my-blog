@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'vue/no-v-html': 'off',
-    'vue/require-default-prop': 'off'
+    'vue/require-default-prop': 'off',
+    'vue/comment-directive': 'off'
   }
 }
