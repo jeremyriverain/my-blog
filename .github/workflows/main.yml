@@ -23,8 +23,6 @@ jobs:
       - name: build
         run: yarn generate
       - name: lighthouse
-        run: |
-          npm install -g @lhci/cli@0.8.x
-          lhci autorun
+        run: yarn run lhci
       - name: e2e tests
         run: yarn run test:e2e:ci
