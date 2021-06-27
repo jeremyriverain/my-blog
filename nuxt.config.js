@@ -341,9 +341,7 @@ export default {
       messages
     }
   },
-  router: {
-    trailingSlash: false
-  },
+  router: {},
   proxy: {
     '/.netlify': {
       target: 'http://localhost:9000',
