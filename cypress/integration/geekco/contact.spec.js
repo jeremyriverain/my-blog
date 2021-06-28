@@ -1,15 +1,11 @@
 describe('contact form', () => {
   beforeEach(() => {
-    cy.visit('/contact')
+    cy.visit('contact')
     cy.get('input#firstName').type('Johnny')
     cy.get('input#lastName').type('Appleseed')
     cy.get('input#email').type('johnny@appleseed.com')
     cy.get('input#phoneNumber').type('0000')
     cy.get('textarea#message').type('Hello world')
-  })
-
-  it('contact', () => {
-    cy.percySnapshot()
   })
 
   it('has netlify form attributes', () => {

@@ -31,6 +31,7 @@
             :to="post.full_slug"
             class="is-size-4 has-text-weight-bold text-primary"
             :class="$style.title"
+            data-cy="post-item-link"
           >
             <strong>{{ post.content.title }}</strong>
           </nuxt-link>
