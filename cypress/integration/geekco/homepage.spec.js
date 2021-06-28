@@ -5,6 +5,10 @@ context('homepage', () => {
     cy.visit('')
   })
 
+  it('homepage', () => {
+    cy.percySnapshot()
+  })
+
   it('title includes my name and my job', () => {
     // https://on.cypress.io/title
     cy.title().should('include', 'Jérémy Riverain - Developer')

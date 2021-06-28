@@ -8,6 +8,10 @@ describe('contact form', () => {
     cy.get('textarea#message').type('Hello world')
   })
 
+  it('contact', () => {
+    cy.percySnapshot()
+  })
+
   it('has netlify form attributes', () => {
     cy.get('form')
       .invoke('attr', 'data-netlify')
