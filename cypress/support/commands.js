@@ -23,10 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('makePercySnapshot', (label) => {
-  //   // eslint-disable-next-line cypress/no-unnecessary-waiting
-  //   cy.wait(5000)
-  //   cy.scrollTo('bottom')
-  cy.get('h1').should('be.visible')
-  cy.percySnapshot(label ?? null)
-})

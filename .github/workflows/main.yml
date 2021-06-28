@@ -27,3 +27,5 @@ jobs:
         run: yarn run lhci
       - name: e2e tests
         run: yarn run test:e2e:ci
+      - name: percy
+        run: yarn run percy:ci
