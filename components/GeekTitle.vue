@@ -1,13 +1,8 @@
 <template>
   <div>
-    <div class="has-background-dark px-3 py-3 has-text-white">
-      <div class="is-size-5 has-text-weight-bold" :class="$style.subtitle">
-        /** {{ subtitle }} */
-      </div>
-      <h2
-        class="is-size-3 has-text-weight-bold has-text-white"
-        :class="$style.title"
-      >
+    <div class="has-background-dark px-3 py-3 has-text-white g-subtitle">
+      <div class="is-size-5 has-text-weight-bold">/** {{ subtitle }} */</div>
+      <h2 class="is-size-3 has-text-weight-bold has-text-white g-title">
         <slot />
       </h2>
     </div>
@@ -26,12 +21,12 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.subtitle
+<style lang="sass" scoped>
+.g-subtitle
   @media screen and (max-width: 550px)
     font-size: 1rem!important
 
-.title
+.g-title
   @media screen and (max-width: 550px)
     font-size: 1.5rem!important
 </style>

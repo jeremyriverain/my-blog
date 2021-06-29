@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="columns" :class="$style.container">
+      <div class="columns g-container">
         <geek-title subtitle="My experience as a programmer">
           let
           <span class="has-text-primary">experiences</span> = () =>
@@ -24,8 +24,8 @@ export default {
   }
 }
 </script>
-<style lang="sass" module>
-.container
+<style lang="sass" scoped>
+.g-container
   @media screen and (max-width:1215px)
     display: block!important
 </style>

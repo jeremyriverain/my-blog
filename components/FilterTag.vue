@@ -1,7 +1,7 @@
 <template>
   <span
-    class="tag"
-    :class="[localColor, $style.tag]"
+    class="tag g-tag"
+    :class="[localColor]"
     data-cy="filter-tag"
     @click="$emit('click')"
     ><slot
@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.tag.tag
+<style lang="sass" scoped>
+.tag.g-tag
   font-size: 0.9rem
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div :class="$style.content">
+  <div class="g-content">
     <TheHeader />
-    <div :class="$style.body">
+    <div class="g-body">
       <transition name="page" mode="out-in" appear>
         <nuxt />
       </transition>
@@ -22,13 +22,13 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.content
+<style lang="sass" scoped>
+.g-content
   display: flex
   flex-direction: column
   min-height: 100vh
   max-width: 100vw
-  .body
+  .g-body
     max-width: 100vw
     flex: 1 0 0%
 </style>

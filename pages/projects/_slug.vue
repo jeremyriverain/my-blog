@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="container mx-auto" :class="$style.container">
+    <div class="container mx-auto g-container">
       <breadcrumb :links="links" class="has-text-right" />
       <article class="media mb-0">
         <figure class="media-left">
@@ -174,7 +174,7 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.container
+<style lang="sass" scoped>
+.g-container
   max-width: 768px
 </style>

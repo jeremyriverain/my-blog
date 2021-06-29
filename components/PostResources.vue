@@ -4,7 +4,7 @@
       Resources
     </div>
     <div class="message-body has-text-black">
-      <ul :class="$style.list">
+      <ul class="g-list">
         <li v-for="resource in resources" :key="resource._uid">
           <a :href="resource.value.url" target="_blank" rel="noopener">{{
             resource.label
@@ -26,8 +26,8 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-ul.list
+<style lang="sass" scoped>
+ul.g-list
   margin: 0
   padding: 0
 </style>

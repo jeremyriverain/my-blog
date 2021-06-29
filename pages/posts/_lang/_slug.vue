@@ -1,11 +1,10 @@
 <template>
   <div class="section">
-    <div class="container mx-auto" :class="$style.container">
+    <div class="container mx-auto g-container">
       <breadcrumb :links="links" class="has-text-right" />
       <div
         v-if="post.content.image"
-        class="has-text-centered is-hidden-tablet"
-        :class="$style.image"
+        class="has-text-centered is-hidden-tablet g-image"
       >
         <div>
           <img
@@ -200,10 +199,10 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.container
+<style lang="sass" scoped>
+.g-container
   max-width: 768px!important
-.image
+.g-image
   display: flex
   justify-content: center
   img

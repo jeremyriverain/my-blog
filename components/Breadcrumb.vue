@@ -1,12 +1,8 @@
 <template>
-  <nav
-    class="breadcrumb is-small"
-    aria-label="breadcrumbs"
-    :class="$style.breadcrumb"
-  >
+  <nav class="breadcrumb is-small g-breadcrumb" aria-label="breadcrumbs">
     <ul>
       <li v-for="(link, i) in links" :key="i">
-        <nuxt-link :to="link.value" :class="$style.link">
+        <nuxt-link :to="link.value" class="g-link">
           <span v-if="link.icon" class="icon is-small">
             <span class="material-icons">
               {{ link.icon }}
@@ -30,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.breadcrumb .link
+<style lang="sass" scoped>
+.g-breadcrumb .g-link
     text-decoration: none
 </style>

@@ -213,7 +213,39 @@ export default {
       {
         styleExtensions: ['.sass', '.scss'],
         // safelist: [/^agile_/, /^hljs/]
-        whitelist: ['code', 'pre'],
+        whitelist: [
+          // 'html',
+          // 'body',
+          // 'p',
+          // 'ol',
+          // 'ul',
+          // 'li',
+          // 'dl',
+          // 'dt',
+          // 'dd',
+          // 'blockquote',
+          // 'figure',
+          // 'fieldset',
+          // 'legend',
+          // 'textarea',
+          // 'pre',
+          // 'code'
+          // 'iframe',
+          // 'hr',
+          // 'h1',
+          // 'h2',
+          // 'h3',
+          // 'h4',
+          // 'h5',
+          // 'h6',
+          // 'article',
+          // 'aside',
+          // 'figure',
+          // 'footer',
+          // 'header',
+          // 'hgroup',
+          // 'section'
+        ],
         whitelistPatterns: [/^agile/, /^hljs/]
       }
     ]

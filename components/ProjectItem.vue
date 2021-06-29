@@ -2,7 +2,6 @@
   <div>
     <div
       class="card cursor-pointer"
-      :class="$style.card"
       data-cy="portfolio-item"
       @click.prevent="$router.push('/projects/' + project.slug)"
     >
@@ -13,7 +12,6 @@
               <img
                 v-lazy="project.content.image.filename"
                 :alt="project.content.name + ' logo'"
-                :class="$style.image"
               />
             </p>
           </figure>
@@ -50,11 +48,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" module>
-.card
-    // min-height: 100%
-.image
-  // height: 64px
-  // object-fit: contain
-</style>

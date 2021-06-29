@@ -1,6 +1,6 @@
 <template>
-  <div :class="$style.links">
-    <a :class="$style.link" href="https://github.com/jeremyriverain">
+  <div class="g-links">
+    <a class="g-link" href="https://github.com/jeremyriverain">
       <img
         :src="
           require('~/assets/images/github' + (light ? '-light' : '') + '.svg')
@@ -10,7 +10,7 @@
         height="22"
       />
     </a>
-    <a :class="$style.link" href="https://twitter.com/jeremy_riverain">
+    <a class="g-link" href="https://twitter.com/jeremy_riverain">
       <img
         src="~/assets/images/twitter.svg"
         alt="twitter"
@@ -19,7 +19,7 @@
       />
     </a>
     <a
-      :class="$style.link"
+      class="g-link"
       href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-riverain-789462168/"
     >
       <img
@@ -44,11 +44,11 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.links
+<style lang="sass" scoped>
+.g-links
     margin-top: 0.7rem
-    .link + .link
+    .g-link + .g-link
         margin-left: 0.3rem
-    .link img
+    .g-link img
         width: 22px
 </style>

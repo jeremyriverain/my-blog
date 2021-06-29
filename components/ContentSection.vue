@@ -1,9 +1,5 @@
 <template>
-  <div
-    :class="$style.content"
-    class="has-text-justified content"
-    v-html="content"
-  />
+  <div class="has-text-justified content g-content" v-html="content" />
 </template>
 
 <script>
@@ -17,8 +13,8 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.content
+<style lang="sass" scoped>
+.g-content.content >>>
   a
     text-decoration: underline
   p

@@ -9,8 +9,7 @@
       strings-element="#typed-strings"
     >
       <h1
-        class="is-size-3 has-text-weight-bold mb-1 typing title-black-block"
-        :class="$style.title"
+        class="is-size-3 has-text-weight-bold mb-1 typing title-black-block g-title"
       ></h1
     ></vue-typed-js>
 
@@ -29,8 +28,8 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.title
+<style lang="sass" scoped>
+.g-title
   letter-spacing: 0.08rem
   min-height: 48px
   @media screen and (max-width: 550px)

@@ -1,6 +1,5 @@
 <template>
   <section class="section">
-    <!--<div class="container mx-auto" :class="$style.container">-->
     <div class="container mx-auto">
       <h1 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block">
         <span>My portfolio</span>
@@ -73,8 +72,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" module>
-.container
-  max-width: 768px
-</style>

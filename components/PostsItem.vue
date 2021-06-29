@@ -8,8 +8,7 @@
     <div class="media-content">
       <div
         v-if="post.content.image"
-        class="has-text-centered is-hidden-tablet"
-        :class="$style.image"
+        class="has-text-centered is-hidden-tablet g-image"
       >
         <div>
           <img
@@ -29,8 +28,7 @@
         <h2 class="mb-1 mt-0">
           <nuxt-link
             :to="post.full_slug"
-            class="is-size-4 has-text-weight-bold text-primary"
-            :class="$style.title"
+            class="is-size-4 has-text-weight-bold text-primary g-title"
             data-cy="post-item-link"
           >
             <strong>{{ post.content.title }}</strong>
@@ -46,8 +44,7 @@
         </div>
         <div
           v-if="post.content.body"
-          class="has-text-justified"
-          :class="$style.teaser"
+          class="has-text-justified g-teaser"
           v-html="$md.render(post.content.teaser)"
         />
       </div>
@@ -79,15 +76,15 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.image
+<style lang="sass" scoped>
+.g-image
   display: flex
   justify-content: center
   img
     max-width: 80px!important
     width: 80px!important
     height: auto!important
-.teaser
+.g-teaser
   a
     text-decoration: underline
 </style>

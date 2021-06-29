@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="container mx-auto" :class="$style.container">
+    <div class="container mx-auto g-container">
       <h1 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block">
         <span>Blog</span>
       </h1>
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.container
+<style lang="sass" scoped>
+.g-container
   max-width: 768px!important
 </style>

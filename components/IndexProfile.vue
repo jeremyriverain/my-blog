@@ -3,10 +3,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns">
-          <div
-            class="column is-6-tablet is-12-mobile"
-            :class="$style.textContainer"
-          >
+          <div class="column is-6-tablet is-12-mobile g-textContainer">
             <h1 class="is-size-4">I'm Jérémy Riverain, developer</h1>
 
             <div>
@@ -20,9 +17,6 @@
 
             <div class="columns is-mobile is-vcentered mt-1">
               <social-links class="column" />
-              <!-- <div class="column has-text-right">
-                <resume-button />
-              </div> -->
             </div>
           </div>
         </div>
@@ -45,21 +39,8 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.title
-  @media screen and (max-width: 550px)
-    font-size: 1.6rem!important
-.imageContainer
-  max-width: 120px
+<style lang="sass" scoped>
 @media screen and (max-width: $tablet)
-  .textContainer
+  .g-textContainer
     padding-top: 0
-  .imageContainer
-    max-width: 96px
-    height: 96px
-    max-height: 96px
-    padding-bottom: 0
-    .image
-      max-width: 100%
-      height: auto
 </style>

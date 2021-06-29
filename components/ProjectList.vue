@@ -13,8 +13,7 @@
       :key="project.id"
       v-masonry-tile
       :project="project"
-      class="item py-2 px-2"
-      :class="$style.item"
+      class="item py-2 px-2 g-item"
     />
   </div>
 </template>
@@ -41,19 +40,14 @@ export default {
 
 <style scoped></style>
 
-<style lang="sass" module>
-@media screen and (max-width:500px)
-  .container
-    // display: block !important
-    .item
-      // width: 100% !important
-.item
+<style lang="sass" scoped>
+.g-item
 	width: calc(100%/3)
 	max-width: 100%
 @media screen and (max-width:768px)
-  .item
+  .g-item
     width: 50%
 @media screen and (max-width:500px)
-  .item
+  .g-item
     width: 100%
 </style>

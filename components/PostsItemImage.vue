@@ -10,7 +10,7 @@
             )
           "
           :alt="image.alt"
-          :class="$style.image"
+          class="g-image"
         />
       </nuxt-link>
     </p>
@@ -39,8 +39,8 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.image
+<style lang="sass" scoped>
+.g-image
   max-width: 80px
   height: auto
 </style>

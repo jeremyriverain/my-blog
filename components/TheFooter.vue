@@ -1,19 +1,19 @@
 <template>
   <div>
-    <footer class="footer has-background-white-ter" :class="$style.footer">
+    <footer class="g-footer footer has-background-white-ter">
       <div class="container">
         <div class="content">
           <div class="columns">
-            <div class="column" :class="$style.left">
+            <div class="column g-left">
               &copy;2020 Developed by Jérémy Riverain
             </div>
-            <div class="column" :class="$style.middle">
+            <div class="column g-middle">
               <nuxt-link to="/" class="px-1">About me</nuxt-link>
               <nuxt-link to="/projects" class="px-1">Portfolio</nuxt-link>
               <nuxt-link to="/contact" class="px-1">Contact</nuxt-link>
               <nuxt-link to="/posts" class="px-1">Blog</nuxt-link>
             </div>
-            <div class="column" :class="$style.right">
+            <div class="column g-right">
               <social-links />
             </div>
           </div>
@@ -41,14 +41,14 @@
 export default {}
 </script>
 
-<style lang="sass" module>
-.footer
+<style lang="sass" scoped>
+.g-footer
   // padding: 1rem 2rem 1.5rem
-  .middle
+  .g-middle
     text-align: center
-  .right
+  .g-right
     text-align: right
   @media screen and (max-width: $tablet)
-    .left, .right, .middle
+    .g-left, .g-right, .g-middle
       text-align: center
 </style>
