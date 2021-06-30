@@ -95,6 +95,7 @@ cypress/videos
 cypress/screenshots
 
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins
