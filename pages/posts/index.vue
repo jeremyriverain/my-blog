@@ -56,6 +56,11 @@ export default {
       activeTag: null
     }
   },
+  head() {
+    return {
+      title: 'Blog | Geekco'
+    }
+  },
   computed: {
     posts() {
       if (!this.activeTag) {
@@ -63,11 +68,6 @@ export default {
       }
 
       return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
-    }
-  },
-  head() {
-    return {
-      title: 'Blog | Geekco'
     }
   }
 }

@@ -83,44 +83,6 @@ export default {
       ]
     }
   },
-  computed: {
-    hasCarousel() {
-      const carousel = this.project.content.carousel
-      return Array.isArray(carousel) && carousel.length > 0
-    },
-    appLink() {
-      return get(this.project.content, 'app_link.url', null)
-    },
-    hasAppLink() {
-      return this.appLink && this.appLink.length > 0
-    },
-    appleStoreLink() {
-      return get(this.project.content, 'apple_store_link.url', null)
-    },
-    hasAppleStoreLink() {
-      return this.appleStoreLink && this.appleStoreLink.length > 0
-    },
-    playStoreLink() {
-      return get(this.project.content, 'play_store_link.url', null)
-    },
-    hasPlayStoreLink() {
-      return this.playStoreLink && this.playStoreLink.length > 0
-    },
-    hasAnyLink() {
-      return this.hasAppLink || this.hasAppleStoreLink || this.hasPlayStoreLink
-    },
-    tags() {
-      const tags = cloneDeep(this.project.tag_list)
-      tags.sort((a, b) => {
-        return a.localeCompare(b)
-      })
-
-      return tags
-    },
-    title() {
-      return this.project.content.name + ' | Portfolio Geekco'
-    }
-  },
   head() {
     return {
       title: this.title,
@@ -169,6 +131,44 @@ export default {
           content: this.project.content.short_description
         }
       ]
+    }
+  },
+  computed: {
+    hasCarousel() {
+      const carousel = this.project.content.carousel
+      return Array.isArray(carousel) && carousel.length > 0
+    },
+    appLink() {
+      return get(this.project.content, 'app_link.url', null)
+    },
+    hasAppLink() {
+      return this.appLink && this.appLink.length > 0
+    },
+    appleStoreLink() {
+      return get(this.project.content, 'apple_store_link.url', null)
+    },
+    hasAppleStoreLink() {
+      return this.appleStoreLink && this.appleStoreLink.length > 0
+    },
+    playStoreLink() {
+      return get(this.project.content, 'play_store_link.url', null)
+    },
+    hasPlayStoreLink() {
+      return this.playStoreLink && this.playStoreLink.length > 0
+    },
+    hasAnyLink() {
+      return this.hasAppLink || this.hasAppleStoreLink || this.hasPlayStoreLink
+    },
+    tags() {
+      const tags = cloneDeep(this.project.tag_list)
+      tags.sort((a, b) => {
+        return a.localeCompare(b)
+      })
+
+      return tags
+    },
+    title() {
+      return this.project.content.name + ' | Portfolio Geekco'
     }
   }
 }

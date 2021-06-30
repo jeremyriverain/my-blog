@@ -11,12 +11,12 @@
 
 <script>
 export default {
+  layout: 'error',
   props: {
     error: {
       type: Object,
       required: true
     }
-  },
-  layout: 'error'
+  }
 }
 </script>

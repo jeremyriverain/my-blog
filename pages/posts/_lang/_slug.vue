@@ -92,18 +92,6 @@ export default {
       ]
     }
   },
-  computed: {
-    publishedAt() {
-      const date = new Date(this.post.first_published_at)
-      return this.$d(date, 'short', this.$route.params.lang)
-    },
-    lang() {
-      return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
-    },
-    filename() {
-      return this.$options.filters.transformImage(this.post.content.image)
-    }
-  },
   head() {
     return {
       title: this.post.content.title,
@@ -194,6 +182,18 @@ export default {
           type: 'application/ld+json'
         }
       ]
+    }
+  },
+  computed: {
+    publishedAt() {
+      const date = new Date(this.post.first_published_at)
+      return this.$d(date, 'short', this.$route.params.lang)
+    },
+    lang() {
+      return this.post.full_slug.search(/posts\/en\//g) !== -1 ? 'en' : 'fr'
+    },
+    filename() {
+      return this.$options.filters.transformImage(this.post.content.image)
     }
   }
 }

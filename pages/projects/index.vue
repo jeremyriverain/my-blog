@@ -48,15 +48,6 @@ export default {
       activeTag: null
     }
   },
-  computed: {
-    projects() {
-      if (!this.activeTag) {
-        return this.stories
-      }
-
-      return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
-    }
-  },
   head() {
     return {
       title: 'Portfolio - Jérémy Riverain - Developer',
@@ -68,6 +59,15 @@ export default {
             'Portfolio of Jérémy Riverain, developer. Web and mobile applications, essentially made with Vue.JS, Quasar, Symfony or ApiPlatform'
         }
       ]
+    }
+  },
+  computed: {
+    projects() {
+      if (!this.activeTag) {
+        return this.stories
+      }
+
+      return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
     }
   }
 }
