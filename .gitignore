@@ -93,3 +93,11 @@ sw.*
 
 cypress/videos
 cypress/screenshots
+
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
