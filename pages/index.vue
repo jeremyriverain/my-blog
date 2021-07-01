@@ -12,7 +12,6 @@
       data-cy="technologies"
     />
     <index-portfolio :projects="stories" class="my-3" />
-    <div>lorem</div>
   </div>
 </template>
 
