@@ -132,7 +132,13 @@ export default {
         // https://material.io/resources/icons/?icon=mail_outline&style=baseline
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-      }
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://img2.storyblok.com',
+        crossorigin: true
+      },
+      { rel: 'preconnect', href: 'https://a.storyblok.com', crossorigin: true }
     ],
     script: [
       {
@@ -212,40 +218,7 @@ export default {
       'nuxt-purgecss',
       {
         styleExtensions: ['.sass', '.scss'],
-        // safelist: [/^agile_/, /^hljs/]
-        whitelist: [
-          // 'html',
-          // 'body',
-          // 'p',
-          // 'ol',
-          // 'ul',
-          // 'li',
-          // 'dl',
-          // 'dt',
-          // 'dd',
-          // 'blockquote',
-          // 'figure',
-          // 'fieldset',
-          // 'legend',
-          // 'textarea',
-          // 'pre',
-          // 'code'
-          // 'iframe',
-          // 'hr',
-          // 'h1',
-          // 'h2',
-          // 'h3',
-          // 'h4',
-          // 'h5',
-          // 'h6',
-          // 'article',
-          // 'aside',
-          // 'figure',
-          // 'footer',
-          // 'header',
-          // 'hgroup',
-          // 'section'
-        ],
+        whitelist: [],
         whitelistPatterns: [/^agile/, /^hljs/]
       }
     ]

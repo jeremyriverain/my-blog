@@ -1,3 +1,4 @@
+// https://www.dawntraoz.com/blog/my-web-performance-journey-with-nuxt-storyblok-netlify
 module.exports = {
   ci: {
     collect: {
