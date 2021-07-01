@@ -47,7 +47,7 @@ module.exports = {
         'unused-javascript': 'off',
         'uses-long-cache-ttl': 'off',
         'uses-passive-event-listeners': 'off',
-        'uses-rel-preconnect': 'off',
+        // 'uses-rel-preconnect': 'off',
         'uses-responsive-images': 'off',
         'uses-webp-images': 'off',
         'valid-source-maps': 'off'
