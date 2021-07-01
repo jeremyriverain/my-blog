@@ -29,7 +29,6 @@ module.exports = {
         'first-cpu-idle': 'off',
         'first-meaningful-paint': 'off',
         'font-display': 'off',
-        'heading-order': 'off',
         interactive: 'off',
         'mainthread-work-breakdown': 'off',
         'modern-image-formats': 'off',
