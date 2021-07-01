@@ -135,10 +135,10 @@ export default {
       },
       {
         rel: 'preconnect',
-        href: 'https://img2.storyblok.com',
+        href: '//img2.storyblok.com',
         crossorigin: true
       },
-      { rel: 'preconnect', href: 'https://a.storyblok.com', crossorigin: true }
+      { rel: 'preconnect', href: '//a.storyblok.com', crossorigin: true }
     ],
     script: [
       {
