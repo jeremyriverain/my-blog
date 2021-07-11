@@ -1,20 +1,30 @@
 <template>
   <div class="section">
     <div class="container mx-auto g-container">
-      <h1 class="is-size-3 has-text-weight-bold mb-1 typing title-black-block">
-        <span>Blog</span>
-      </h1>
+      <div class="columns is-mobile g-title-container">
+        <div class="g-title-post">
+          <h1
+            class="is-size-3 has-text-weight-bold mb-2 typing title-black-block"
+          >
+            <span>Blog</span>
+          </h1>
+        </div>
 
-      <p class="mt-3">
+        <div>
+          <base-input
+            class="column ml-3 g-input-search"
+            label="Search"
+            :value="term"
+            name="search"
+            @input="term = $event"
+          ></base-input>
+        </div>
+      </div>
+
+      <p class="mt-3 mb-5 is-size-5">
         Blog posts about programming with PHP, Javascript and other technologies
         I use regularly.
       </p>
-      <filter-tags
-        class="mt-4 mb-2"
-        :tags="tags"
-        :active-tag="activeTag"
-        @input="activeTag = $event"
-      />
       <div>
         <posts-item
           v-for="(post, i) in posts"
@@ -53,7 +63,7 @@ export default {
     return {
       stories: [],
       tags: [],
-      activeTag: null
+      term: ''
     }
   },
   head() {
@@ -63,11 +73,15 @@ export default {
   },
   computed: {
     posts() {
-      if (!this.activeTag) {
-        return this.stories
-      }
+      const searchTerm = this.term.toLowerCase()
+      return this.stories.filter((s) => {
+        if (s.content.title.toLowerCase().search(searchTerm) !== -1) {
+          return true
+        }
 
-      return this.stories.filter((s) => s.tag_list.includes(this.activeTag))
+        const tags = s.tag_list.map((m) => m.toLowerCase())
+        return tags.some((t) => t.search(searchTerm) !== -1)
+      })
     }
   }
 }
@@ -76,4 +90,12 @@ export default {
 <style lang="sass" scoped>
 .g-container
   max-width: 768px!important
+.g-title-container
+  justify-content: space-between
+  .g-title-post
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+  .g-input-search
+    max-width: 200px
 </style>

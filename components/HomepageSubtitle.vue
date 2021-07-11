@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'GeekTitle',
+  name: 'HomepageSubtitle',
   props: {
     subtitle: {
       type: String,

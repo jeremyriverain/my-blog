@@ -2,10 +2,10 @@
   <section class="section">
     <div class="container">
       <div class="columns g-container">
-        <geek-title subtitle="My experience as a programmer">
+        <homepage-subtitle subtitle="My experience as a programmer">
           let
           <span class="has-text-primary">experiences</span> = () =>
-        </geek-title>
+        </homepage-subtitle>
 
         <experiences class="column is-6" :experiences="experiences" />
       </div>

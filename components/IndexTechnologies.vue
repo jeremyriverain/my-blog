@@ -2,10 +2,10 @@
   <div class="section">
     <div class="container">
       <div class="columns g-container">
-        <geek-title subtitle="Technologies that I know best">
+        <homepage-subtitle subtitle="Technologies that I know best">
           let
           <span class="has-text-primary">technologies</span> = () =>
-        </geek-title>
+        </homepage-subtitle>
 
         <div class="column">
           <div class="columns is-mobile is-multiline">
