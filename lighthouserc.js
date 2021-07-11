@@ -6,9 +6,7 @@ module.exports = {
         'http://localhost:3000/',
         'http://localhost:3000/contact/',
         'http://localhost:3000/posts/',
-        'http://localhost:3000/posts/en/how-to-use-gitlab-ci-and-php-stan-to-improve-code-quality-in-your-symfony-project/',
-        'http://localhost:3000/projects/',
-        'http://localhost:3000/projects/klubin/'
+        'http://localhost:3000/posts/en/how-to-use-gitlab-ci-and-php-stan-to-improve-code-quality-in-your-symfony-project/'
       ],
       startServerCommand: 'yarn run start'
     },
