@@ -5697,13 +5697,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"desandro-matches-selector@npm:^2.0.0":
-  version: 2.0.2
-  resolution: "desandro-matches-selector@npm:2.0.2"
-  checksum: b16d94b0693e6981652445e55808764df2622033b2cd942163d6e492bb5108c26bef7f68e63973966cb210ec493c4fcc299b48aa50814892e8ebb6692ce84d9b
-  languageName: node
-  linkType: hard
-
 "destr@npm:^1.0.0, destr@npm:^1.1.0":
   version: 1.1.0
   resolution: "destr@npm:1.1.0"
@@ -6031,13 +6024,6 @@ __metadata:
     memory-fs: ^0.5.0
     tapable: ^1.0.0
   checksum: 72e679343f3ca6f2f84b1259460705fa29d46f0b806fa562db96edeb7826357a97ba9ccb61a07cdb05f51c1b4d2f5b544a2e4a6c257d7395a0c9b6e727f86d08
-  languageName: node
-  linkType: hard
-
-"enquire.js@npm:2.1.6":
-  version: 2.1.6
-  resolution: "enquire.js@npm:2.1.6"
-  checksum: b606573cfe49285ef5648ddd7044f2b4bef21a20ca32e48f2f5d10cedef2454c82f5085805f1a966aa65faec1a36eac081c337ae80cb8e74872d7643a5c93c94
   languageName: node
   linkType: hard
 
@@ -6588,13 +6574,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ev-emitter@npm:^1.0.0":
-  version: 1.1.1
-  resolution: "ev-emitter@npm:1.1.1"
-  checksum: c93adf4cfac74892e0eede007d2481b9621d345e97884ea06d1cf5bcfccf7c6a6d5e15aba9369b66c4087967b338694710508eb11253f01bba9e216359811153
-  languageName: node
-  linkType: hard
-
 "event-stream@npm:=3.3.4":
   version: 3.3.4
   resolution: "event-stream@npm:3.3.4"
@@ -7119,15 +7098,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fizzy-ui-utils@npm:^2.0.0":
-  version: 2.0.7
-  resolution: "fizzy-ui-utils@npm:2.0.7"
-  dependencies:
-    desandro-matches-selector: ^2.0.0
-  checksum: a4dd1c4f8cb425e890ae7a9068e3645b9cc01ddc86df961a6383f1aca5c38aae9862d2c08163dd7e693f1bd550adc11892288aa8519ef9618b17e5db8afebabe
-  languageName: node
-  linkType: hard
-
 "flat-cache@npm:^2.0.1":
   version: 2.0.1
   resolution: "flat-cache@npm:2.0.1"
@@ -7447,11 +7417,8 @@ fsevents@~2.3.2:
     storyblok-js-client: ^2.5.2
     storyblok-nuxt: ^1.2.0
     stylelint: ^10.1.0
-    vue-agile: ^1.1.3
     vue-lazyload: ^1.3.3
-    vue-masonry: ^0.11.8
     vue-ripple-directive: ^2.0.1
-    vue-slick-carousel: ^1.0.6
     vuelidate: ^0.7.5
   languageName: unknown
   linkType: soft
@@ -7487,13 +7454,6 @@ fsevents@~2.3.2:
   dependencies:
     fs-memo: ^1.2.0
   checksum: b5f9192a60602c9a71618f5b568fb4e9ca2c3672351386ec84adac30911da1bc215069d967592af489087290d62c549f277074e6ffee0c3134c40087adbe9a74
-  languageName: node
-  linkType: hard
-
-"get-size@npm:^2.0.2":
-  version: 2.0.3
-  resolution: "get-size@npm:2.0.3"
-  checksum: 31c88b42fea7f60e6921a4d67ea2314fc29b815adfccefe1e8ea48fb6f544c04878b90bd213183fb4ff79a7d05070ed29083c44f5d7b8c2460c91ce9ea35d123
   languageName: node
   linkType: hard
 
@@ -8352,15 +8312,6 @@ fsevents@~2.3.2:
   version: 0.2.0
   resolution: "image-ssim@npm:0.2.0"
   checksum: 333e9a98c98742e961336c3573055e9e71b1bc1d04c492a2fcb1d803d4c7bbdc9c1672beb81212f1222a1017152e15720884a872833c3ee2ed0840820856aabc
-  languageName: node
-  linkType: hard
-
-"imagesloaded@npm:4.1.4":
-  version: 4.1.4
-  resolution: "imagesloaded@npm:4.1.4"
-  dependencies:
-    ev-emitter: ^1.0.0
-  checksum: f7542689485c6a9355f139e87af9511a718e68e79cba83154560f356d0b2a333c998ccd0140d9a2d0adbd3deb807ce1de5935fcfe2d0e3216641ddaed267a31d
   languageName: node
   linkType: hard
 
@@ -9423,15 +9374,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"json2mq@npm:0.2.0":
-  version: 0.2.0
-  resolution: "json2mq@npm:0.2.0"
-  dependencies:
-    string-convert: ^0.2.0
-  checksum: 4d017ede2baf2a2b5cd27d311082b49acbabd498020ec1bd1c36a915662c8be011f3a1a7e9629076bb779d8382466a0067e0d442cde6f9b8d09273273424c702
-  languageName: node
-  linkType: hard
-
 "json5@npm:^1.0.1":
   version: 1.0.1
   resolution: "json5@npm:1.0.1"
@@ -9809,13 +9751,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash.assign@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "lodash.assign@npm:4.2.0"
-  checksum: ef1a67138d5276b7df6552e3f83b83f2e0fd801d59bc217bb0cb07c3dc82398654733c6a37d6feb531cda331a741ab9007d1fa7c6d96a5872962b601ea99da06
-  languageName: node
-  linkType: hard
-
 "lodash.camelcase@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.camelcase@npm:4.3.0"
@@ -9893,20 +9828,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash.orderby@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "lodash.orderby@npm:4.6.0"
-  checksum: a25b51d29c8016be620da3c8e80792b717e5c8a16ff94bba799751d4a991e18884a2e0b22b55efb61371d115736a6fc38b91fddb8d1053389ae49bbaffbe60b4
-  languageName: node
-  linkType: hard
-
-"lodash.pick@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "lodash.pick@npm:4.4.0"
-  checksum: 3cf24484b1bd36652bfbe1e925e6955ee0332f1612919331a2d6115d5617bcaaf559e4fb21f4160d51eb2359f7a8dc0e478773da516b4ccc15ef261327064aab
-  languageName: node
-  linkType: hard
-
 "lodash.set@npm:^4.3.2":
   version: 4.3.2
   resolution: "lodash.set@npm:4.3.2"
@@ -9937,13 +9858,6 @@ fsevents@~2.3.2:
   dependencies:
     lodash._reinterpolate: ^3.0.0
   checksum: 45546a5b76376b138ef4f01aa2722813127c639428eb9baef3fbac176b509ee2dab5cb9d1ee8267dbeeef8d49371f9a748af3df83649bf8b75fa54993f65b7aa
-  languageName: node
-  linkType: hard
-
-"lodash.throttle@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "lodash.throttle@npm:4.1.1"
-  checksum: d9107c79033f609f23552f48f5ba93b8a98a07a2b38914745a48d33f18704a4c6a125610ad2bab2a0139974d1da7c5d6a24271243e21571f01e21bf3b2f6b21d
   languageName: node
   linkType: hard
 
@@ -10244,16 +10158,6 @@ fsevents@~2.3.2:
   version: 1.2.2
   resolution: "marky@npm:1.2.2"
   checksum: e0df8df2f5048a0c2cd9b643187a436d99937211a6fc50a3514eb89edb3ffcde2977e854432cdb78fdd64d345a68e4e368690d7e233da853f4b0cf2a7e4c72f3
-  languageName: node
-  linkType: hard
-
-"masonry-layout@npm:^4.2.2":
-  version: 4.2.2
-  resolution: "masonry-layout@npm:4.2.2"
-  dependencies:
-    get-size: ^2.0.2
-    outlayer: ^2.1.0
-  checksum: 0332563f7a4a40f7a0a114240df95dbfcf4eaa6bdef1316e441f7907b9ff3ea5ee20e7e37ff31fc784548792b2f57e868f41be0eaa31f0a6bb1446cc2d61cc10
   languageName: node
   linkType: hard
 
@@ -11467,17 +11371,6 @@ fsevents@~2.3.2:
   version: 1.2.2
   resolution: "ospath@npm:1.2.2"
   checksum: 510a8051a7a70bfe60b323bd4429e10b10f709e87a13cf8e0503e38aab8ba1161beefe27a8c2061f856ca0a35836697b95b9426852b5c6f8c27cc932b90dc399
-  languageName: node
-  linkType: hard
-
-"outlayer@npm:^2.1.0":
-  version: 2.1.1
-  resolution: "outlayer@npm:2.1.1"
-  dependencies:
-    ev-emitter: ^1.0.0
-    fizzy-ui-utils: ^2.0.0
-    get-size: ^2.0.2
-  checksum: ad9902fb15b7db43f13315d41d4abf1b86f90116400027bad811ffd1df6d9a41330b8c88ad65c1ed0f26e8f078770923b9ea76e1ad37194bf8e48e3582effa6c
   languageName: node
   linkType: hard
 
@@ -13866,13 +13759,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"resize-observer-polyfill@npm:1.5.1":
-  version: 1.5.1
-  resolution: "resize-observer-polyfill@npm:1.5.1"
-  checksum: ba14bfaf584eda299eafd6a06233a65c76586bc2bab3cdfdd1edd25fc6479f4270788ddd082e65390049b3ed542558f02bdf1f123bd912624de5b11d48857ac8
-  languageName: node
-  linkType: hard
-
 "resolve-from@npm:^3.0.0":
   version: 3.0.0
   resolution: "resolve-from@npm:3.0.0"
@@ -15038,13 +14924,6 @@ fsevents@~2.3.2:
   version: 2.0.0
   resolution: "strict-uri-encode@npm:2.0.0"
   checksum: 775012e88b9d8dff939d514bf376d615a15e8228a5dd587a94ac3c71fce41aa3635cd808aa796e2c1cd33f3f2fe2fbf89b74ee18a504a1905efa1854311e04bb
-  languageName: node
-  linkType: hard
-
-"string-convert@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "string-convert@npm:0.2.1"
-  checksum: 75d8fa2c6ec50105f232ed394142086e60ae358b4902111be7d93baa0d848b7551ab23db508cb959a33652fdc5808276bb8300e3792f9ec8e02b6736496b4295
   languageName: node
   linkType: hard
 
@@ -16501,16 +16380,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vue-agile@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "vue-agile@npm:1.1.3"
-  dependencies:
-    lodash.orderby: ^4.6.0
-    lodash.throttle: ^4.1.1
-  checksum: 0fa8e172844a37bfdc1c61ddc6ed573eb61c4d5f6c3ac0d72d0639c3db2c32c83587c54fb91242f8f5b1611f0c685ec8dd973c58e224876402e023905ea4a243
-  languageName: node
-  linkType: hard
-
 "vue-client-only@npm:^2.0.0":
   version: 2.1.0
   resolution: "vue-client-only@npm:2.1.0"
@@ -16576,17 +16445,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vue-masonry@npm:^0.11.8":
-  version: 0.11.8
-  resolution: "vue-masonry@npm:0.11.8"
-  dependencies:
-    imagesloaded: 4.1.4
-    masonry-layout: ^4.2.2
-    vue: ^2.0.0
-  checksum: 7196569a3c07bc835ef276bf164eb50719398e86126ec35f4b077d86047c79b39da7e7b1898c34bf8c170b053ecf80bd1129e0a1b87ec771051f127c172e3a14
-  languageName: node
-  linkType: hard
-
 "vue-meta@npm:^2.4.0":
   version: 2.4.0
   resolution: "vue-meta@npm:2.4.0"
@@ -16635,22 +16493,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vue-slick-carousel@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "vue-slick-carousel@npm:1.0.6"
-  dependencies:
-    enquire.js: 2.1.6
-    json2mq: 0.2.0
-    lodash.assign: ^4.2.0
-    lodash.debounce: ^4.0.8
-    lodash.get: ^4.4.2
-    lodash.pick: ^4.4.0
-    resize-observer-polyfill: 1.5.1
-    vue: ^2.6.10
-  checksum: 3d241716d02a9472f4a585d6ff5a9e692e26a13064e281399982eb521e3132aa8faef77b5a5751f2954737a91a0eff992023039e5f1f4f49ca4c0f5970523499
-  languageName: node
-  linkType: hard
-
 "vue-style-loader@npm:^4.1.0, vue-style-loader@npm:^4.1.3":
   version: 4.1.3
   resolution: "vue-style-loader@npm:4.1.3"
@@ -16678,7 +16520,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vue@npm:^2.0.0, vue@npm:^2.2.1, vue@npm:^2.6.10, vue@npm:^2.6.12":
+"vue@npm:^2.2.1, vue@npm:^2.6.12":
   version: 2.6.14
   resolution: "vue@npm:2.6.14"
   checksum: 542787dc830efc5cb8285a8046bba5a81e6f952e70e4e1a308cc8d51c68f152fd02da5edbd47b6a14908437d76fdee048aa3f64341d4777fb37ce231e2d845df

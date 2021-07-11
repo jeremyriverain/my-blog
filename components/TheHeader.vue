@@ -44,11 +44,11 @@
           >About me</nuxt-link
         >
         <nuxt-link
-          to="/projects"
+          to="/posts"
           class="navbar-item"
-          exact-active-class="active-menu-item"
+          active-class="active-menu-item"
           @click.native="isActive = false"
-          >Portfolio</nuxt-link
+          >Blog</nuxt-link
         >
         <nuxt-link
           to="/contact"
@@ -56,13 +56,6 @@
           exact-active-class="active-menu-item"
           @click.native="isActive = false"
           >Contact</nuxt-link
-        >
-        <nuxt-link
-          to="/posts"
-          class="navbar-item"
-          active-class="active-menu-item"
-          @click.native="isActive = false"
-          >Blog</nuxt-link
         >
       </div>
     </div>

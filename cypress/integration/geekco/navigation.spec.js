@@ -12,14 +12,6 @@ context('navigation', () => {
     cy.get('[data-cy=menu]').should('not.be.visible')
   })
 
-  it('goes to the portfolio page', () => {
-    cy.get('[data-cy=menu] a')
-      .contains('Portfolio')
-      .click()
-      .url()
-      .should('eq', Cypress.config('baseUrl') + 'projects')
-  })
-
   it('goes to the contact page', () => {
     cy.get('[data-cy=menu] a')
       .contains('Contact')

@@ -2,25 +2,18 @@
   <div class="section">
     <div class="container">
       <div class="columns g-container">
-        <geek-title subtitle="Technologies I like to work with">
+        <geek-title subtitle="Technologies that I know best">
           let
           <span class="has-text-primary">technologies</span> = () =>
         </geek-title>
 
         <div class="column">
-          <div
-            v-masonry
-            transition-duration=".5s"
-            item-selector=".item"
-            class="masonry-container mt-3 mb-2"
-            fit-width
-            horizontal-order
-          >
+          <div class="columns is-mobile is-multiline">
             <index-technology-item
               v-for="technology in technologies"
               :key="technology.id"
               :technology="technology"
-              class="item py-2 px-2 g-item"
+              class="column is-half-tablet is-one-quarter-desktop"
             />
           </div>
         </div>
@@ -46,18 +39,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.g-container
-  @media screen and (max-width:1215px)
-    display: block!important
-
-.g-item
-	width: calc(100%/3)
-	max-width: 100%
-@media screen and (max-width:768px)
-  .g-item
-    width: 50%
-@media screen and (max-width:430px)
-  .g-item
-    width: 100%
-</style>
+<style lang="sass" scoped></style>

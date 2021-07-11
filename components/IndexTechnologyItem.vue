@@ -1,9 +1,14 @@
 <template>
   <div>
-    <div class="card">
+    <div class="card" style="min-width:120px">
       <div class="card-content">
         <div class="has-text-centered pt-2">
-          <a :href="technology.content.link.url" target="_blank" rel="noopener">
+          <component
+            :is="hasLink ? 'a' : 'div'"
+            :href="hasLink ? technology.content.link.url : false"
+            :target="hasLink ? '_blank' : false"
+            :rel="hasLink ? 'noopener' : false"
+          >
             <img
               v-lazy="imgResized(100)"
               :data-srcset="
@@ -19,14 +24,9 @@
               style="height:60px;width:auto"
               :alt="technology.content.image.alt"
             />
-          </a>
+          </component>
           <div class="has-text-weight-bold mt-1">
             {{ technology.content.name }}
-          </div>
-          <div class="px-3">
-            <small>
-              {{ technology.content.caption }}
-            </small>
           </div>
         </div>
       </div>
@@ -46,6 +46,9 @@ export default {
   computed: {
     filename() {
       return this.$options.filters.transformImage(this.technology.content.image)
+    },
+    hasLink() {
+      return !!this.technology.content?.link?.url
     }
   },
   methods: {

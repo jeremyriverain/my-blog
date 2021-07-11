@@ -201,9 +201,7 @@ export default {
     '@/plugins/vuelidate.js',
     '@/plugins/vue-lazyload.js',
     { src: '@/plugins/pwa.client.js', mode: 'client' },
-    { src: '@/plugins/vue-ripple-directive', mode: 'client' },
-    { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~/plugins/vue-agile' }
+    { src: '@/plugins/vue-ripple-directive', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -280,25 +278,6 @@ export default {
     },
     {
       hostname: process.env.BASE_URL,
-      path: '/sitemap-portfolio.xml',
-      routes: async () => {
-        const { data } = await Storyblok.get('cdn/stories', {
-          token: process.env.STORYBLOK_ACCESS_TOKEN,
-          version: 'published',
-          starts_with: 'projects/'
-        })
-
-        return data.stories.map((story) => {
-          return {
-            url: story.full_slug,
-            lastmod: story.published_at
-          }
-        })
-      },
-      exclude: ['/**']
-    },
-    {
-      hostname: process.env.BASE_URL,
       path: '/sitemap.xml',
       sitemaps: [
         {
@@ -306,9 +285,6 @@ export default {
         },
         {
           path: '/sitemap-posts.xml'
-        },
-        {
-          path: '/sitemap-portfolio.xml'
         }
       ]
     }

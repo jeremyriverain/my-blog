@@ -11,7 +11,6 @@
       class="my-3"
       data-cy="technologies"
     />
-    <index-portfolio :projects="stories" class="my-3" />
   </div>
 </template>
 
@@ -19,13 +18,6 @@
 export default {
   name: 'PageIndex',
   asyncData(context) {
-    const stories = context.app.$storyapi.get(
-      'cdn/stories?starts_with=projects/&per_page=8',
-      {
-        version: 'published'
-      }
-    )
-
     const technologies = context.app.$storyapi.get(
       'cdn/stories?starts_with=technologies/',
       {
@@ -40,12 +32,11 @@ export default {
       }
     )
 
-    return Promise.all([stories, technologies, experiences])
+    return Promise.all([technologies, experiences])
       .then((r) => {
         return {
-          stories: r[0].data.stories,
-          technologies: r[1].data.stories,
-          experiences: r[2].data.stories
+          technologies: r[0].data.stories,
+          experiences: r[1].data.stories
         }
       })
       .catch((res) => {

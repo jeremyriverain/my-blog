@@ -29,17 +29,4 @@ context('homepage', () => {
       .should('contain.text', 'Vue js')
       .should('contain.text', 'Symfony')
   })
-
-  it('displays portfolio', () => {
-    cy.get('[data-cy=portfolio]')
-      .should('contain.text', 'Klubin')
-      .should('contain.text', 'JetAndCo')
-  })
-
-  it('goes to portfolio page when I click to View Projects button', () => {
-    cy.get('a[data-cy=portfolio-link]')
-      .click()
-      .url()
-      .should('eq', Cypress.config('baseUrl') + 'projects')
-  })
 })
