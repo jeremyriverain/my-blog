@@ -21,7 +21,7 @@
                   <small>Fullstack Developer</small><br />
                   Graduated in sport, I have ended up being developer by
                   passion. Essentially autodidact, I worked a lot with Symfony
-                  and Vuejs.<br />
+                  and Vuejs. I recently began to learn Flutter.<br />
                   I have experience in making websites, APIs, mobile apps and
                   PWAs.
                 </p>

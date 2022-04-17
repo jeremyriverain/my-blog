@@ -13,6 +13,8 @@
               <a href="https://vuejs.org/">Vuejs</a>.<br />
               With those technologies, I made some websites, APIs, mobile apps
               and progressive web apps.
+              <br />
+              I recently began to learn Flutter and Dart.
             </div>
 
             <div class="columns is-mobile is-vcentered mt-1">

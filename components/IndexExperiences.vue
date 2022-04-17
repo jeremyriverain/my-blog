@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns g-container">
         <homepage-subtitle subtitle="My experience as a programmer">
-          let
+          const
           <span class="has-text-primary">experiences</span> = () =>
         </homepage-subtitle>
 
