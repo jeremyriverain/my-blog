@@ -1,14 +1,6 @@
-# Alpine Starter
+# My blog
 
-Starter template for [Alpine](https://alpine.nuxt.space).
-
-## Clone
-
-Clone the repository (using `nuxi`):
-
-```bash
-npx nuxi init -t themes/alpine
-```
+Starter template taken from [Alpine](https://alpine.nuxt.space).
 
 ## Setup
 
@@ -54,4 +46,3 @@ pnpm preview
 
 ---
 
-For a detailed explanation of how things work, check out [Alpine](https://alpine.nuxt.space).
