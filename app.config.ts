@@ -1,7 +1,7 @@
 export default defineAppConfig({
   alpine: {
     title: 'Jérémy Riverain',
-    description: 'My blog. Publishing sometimes, talking about programming',
+    description: `Hi, I'm Jérémy. I'm developer, living in France 🇫🇷 . I work for Zenika as a consultant. I like programming with with VueJS, Flutter, Symfony.`,
     image: {
       src: '/social-card-preview.png',
       alt: 'An image showcasing my project.',
@@ -12,9 +12,9 @@ export default defineAppConfig({
     },
     footer: {
       credits: {
-        enabled: false, // possible value are : true | false
+        enabled: false,
       },
-      navigation: true, // possible value are : true | false
+      navigation: false,
       alignment: 'center', // possible value are : 'none' | 'left' | 'center' | 'right'
       message: 'Follow me on' // string that will be displayed in the footer (leave empty or delete to disable)
     },
