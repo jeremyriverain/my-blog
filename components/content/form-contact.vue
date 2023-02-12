@@ -26,15 +26,14 @@ function onSubmit(data: FormData) {
 
   try {
     const config = useRuntimeConfig();
-    fetch(config.app.baseURL + "/contact", {
+    useFetch(config.public.content.host + "/contact/", {
       method: "POST",
       body: payload,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-    });
-
-    console.log('valid', config.app)
+    })
+    console.log('valid', config)
   } catch (error) {
     console.log(error)
     console.log('error')
@@ -44,9 +43,11 @@ function onSubmit(data: FormData) {
 <template>
   <FormKit
     type="form"
+    name="contact"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     @submit="onSubmit"
+    submit-label="Send the message"
   >
     <FormKit type="hidden" name="form-name" value="contact" />
     <FormKit

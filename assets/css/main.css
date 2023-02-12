@@ -10,6 +10,12 @@ html.dark .formkit-message {
     color: white;
 }
 
+html.light .formkit-input[type=submit] {
+    background-color: var(--color-gray-900);
+    color: white;
+    font-weight: 700;
+}
+
 #__nuxt .formkit-input {
     font-family: var(--typography-font-display);
 }
