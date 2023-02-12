@@ -1,0 +1,15 @@
+:root.dark {
+    --fk-color-help: white;
+    --fk-color-input: white;
+    --fk-color-submit: var(--color-gray-900);
+    --fk-bg-submit: white;
+    --fk-color-border-focus: white;
+}
+
+html.dark .formkit-message {
+    color: white;
+}
+
+#__nuxt .formkit-input {
+    font-family: var(--typography-font-display);
+}
