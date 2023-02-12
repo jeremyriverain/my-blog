@@ -19,3 +19,23 @@ html.light .formkit-input[type=submit] {
 #__nuxt .formkit-input {
     font-family: var(--typography-font-display);
 }
+
+html.light .blockquote-success {
+    color: #059669;
+    border-left-color: #059669;
+}
+
+html.dark .blockquote-success {
+    color: #00dc82;
+    border-left-color: #00dc82;
+}
+
+html.light .blockquote-error {
+    color: #e10e00;
+    border-left-color: #e10e00;
+}
+
+html.dark .blockquote-error {
+    color: #ff4c40;
+    border-left-color: #ff4c40;
+}

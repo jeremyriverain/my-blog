@@ -3,5 +3,6 @@ export default defineNuxtConfig({
   modules: ["@formkit/nuxt"],
   css: [
     '@/assets/css/main.css',
+    'nprogress/nprogress.css',
   ]
 });
