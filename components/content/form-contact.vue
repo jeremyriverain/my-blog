@@ -1,5 +1,53 @@
+<script lang="ts" setup>
+interface FormData {
+  email: string;
+  "form-name": "contact";
+  message: string;
+  name: string;
+  phoneNumber: string;
+  subject: string;
+}
+
+function encode(data: FormData) {
+  return Object.keys(data)
+    .map(
+      (key) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(
+          data[key as keyof FormData]
+        )}`
+    )
+    .join("&");
+}
+
+function onSubmit(data: FormData) {
+  console.log(data);
+  const payload = encode(data);
+  console.log("payload", payload);
+
+  try {
+    const config = useRuntimeConfig();
+    fetch(config.app.baseURL + "/contact", {
+      method: "POST",
+      body: payload,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+
+    console.log('valid', config.app)
+  } catch (error) {
+    console.log(error)
+    console.log('error')
+  }
+}
+</script>
 <template>
-  <FormKit type="form" data-netlify="true" data-netlify-honeypot="bot-field">
+  <FormKit
+    type="form"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    @submit="onSubmit"
+  >
     <FormKit type="hidden" name="form-name" value="contact" />
     <FormKit
       type="text"
@@ -36,7 +84,6 @@
       validation="required"
       validation-visibility="dirty"
     />
-
 
     <FormKit
       type="textarea"
