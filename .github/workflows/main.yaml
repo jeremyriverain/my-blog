@@ -25,6 +25,7 @@ jobs:
         if: steps.prepare.outputs.branch == 'main'
         with:
           production-deploy: true
+          publish-dir: '.output/public'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
