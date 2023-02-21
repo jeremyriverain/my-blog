@@ -10,3 +10,6 @@ dist
 sw.*
 .env
 .output
+/test-results/
+/playwright-report/
+/playwright/.cache/

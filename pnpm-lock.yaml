@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@formkit/nuxt': 1.0.0-beta.15
   '@nuxt-themes/alpine': ^1.3.1
+  '@playwright/test': ^1.31.0
   '@types/nprogress': ^0.2.0
   nprogress: ^0.2.0
   nuxt: ^3.1.2
@@ -13,6 +14,7 @@ dependencies:
 
 devDependencies:
   '@nuxt-themes/alpine': 1.3.1
+  '@playwright/test': 1.31.0
   '@types/nprogress': 0.2.0
   nuxt: 3.1.2
 
@@ -1342,6 +1344,17 @@ packages:
       - supports-color
     dev: true
 
+  /@playwright/test/1.31.0:
+    resolution: {integrity: sha512-Ys5s/06Dg9g3zAIdCIb/UOBYim3U7Zjb3DvC6XBtnRmnglH5O47iwYzmtxXu9fhSyzI2Jn28apkXIOD81GgCdw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.14.0
+      playwright-core: 1.31.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /@rollup/plugin-alias/4.0.3_rollup@3.13.0:
     resolution: {integrity: sha512-ZuDWE1q4PQDhvm/zc5Prun8sBpLJy41DMptYrS6MhAy9s9kL/doN1613BWfEchGVfKxzliJ3BjbOPizXX38DbQ==}
     engines: {node: '>=14.0.0'}
@@ -1530,6 +1543,10 @@ packages:
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
+    dev: true
+
+  /@types/node/18.14.0:
+    resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
     dev: true
 
   /@types/nprogress/0.2.0:
@@ -4994,6 +5011,12 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.1.0
       pathe: 1.1.0
+    dev: true
+
+  /playwright-core/1.31.0:
+    resolution: {integrity: sha512-/KquBjS5DcASCh8cGeNVHuC0kyb7c9plKTwaKxgOGtxT7+DZO2fjmFvPDBSXslEIK5CeOO/2kk5rOCktFXKEdA==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /postcss-calc/8.2.4_postcss@8.4.21:
