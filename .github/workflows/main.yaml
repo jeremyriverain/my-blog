@@ -1,0 +1,22 @@
+name: main
+
+on: [push, workflow_dispatch]
+
+jobs:
+  main:
+    name: main
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+      - name: prepare
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF##*/})"
+        id: prepare
+      - name: build
+        run: |
+          npm install --global pnpm
+          pnpm install
+          pnpm run generate
