@@ -20,3 +20,12 @@ jobs:
           npm install --global pnpm
           pnpm install
           pnpm run generate
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        if: steps.prepare.outputs.branch == 'main'
+        with:
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 3
