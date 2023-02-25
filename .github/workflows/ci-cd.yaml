@@ -26,9 +26,6 @@ jobs:
           pnpm install
           pnpm run generate
 
-      - name: lighthouse
-        run: pnpm lhci
-
       - name: Test with Playwright
         run: |
           pnpm exec playwright install 
@@ -44,6 +41,9 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 3
+
+      - name: lighthouse
+        run: pnpm lhci
 
       - uses: actions/upload-artifact@v3
         if: always()
