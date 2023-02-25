@@ -15,17 +15,6 @@ pnpm install
 ```bash
 pnpm dev
 ```
-
-## Edge Side Rendering
-
-Can be deployed to Vercel Functions, Netlify Functions, AWS, and most Node-compatible environments.
-
-Look at all the available presets [here](https://v3.nuxtjs.org/guide/deploy/presets).
-
-```bash
-pnpm build
-```
-
 ## Static Generation
 
 Use the `generate` command to build your application.
@@ -43,6 +32,4 @@ You might want to preview the result of your build locally, to do so, run the fo
 ```bash
 pnpm preview
 ```
-
----
 

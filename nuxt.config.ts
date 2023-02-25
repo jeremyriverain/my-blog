@@ -4,5 +4,12 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/main.css',
     'nprogress/nprogress.css',
-  ]
+  ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  }
 });

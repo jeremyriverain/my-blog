@@ -8,23 +8,32 @@ jobs:
     name: main
     runs-on: ubuntu-22.04
     steps:
+
       - uses: actions/checkout@v3
+
       - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: "18.x"
+
       - name: prepare
         run: echo "branch=$(echo ${GITHUB_REF##*/})" >> $GITHUB_OUTPUT
         id: prepare
+
       - name: build
         run: |
           npm install --global pnpm
           pnpm install
           pnpm run generate
+
+      - name: lighthouse
+        run: pnpm lhci
+
       - name: Test with Playwright
         run: |
           pnpm exec playwright install 
           pnpm exec playwright test --reporter html
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         if: steps.prepare.outputs.branch == 'main'
@@ -35,9 +44,12 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 3
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: playwright-report
-          path: playwright-report/
+          name: test-artifacts
           retention-days: 30
+          path: |
+            playwright-report/
+            lighthouseci/

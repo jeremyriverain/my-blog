@@ -6,13 +6,15 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "preview": "nuxi preview",
+    "lhci": "lhci autorun"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.11.0",
     "@nuxt-themes/alpine": "^1.3.1",
     "@playwright/test": "^1.31.0",
     "@types/nprogress": "^0.2.0",
-    "nuxt": "^3.1.2"
+    "nuxt": "^3.2.2"
   },
   "dependencies": {
     "@formkit/nuxt": "1.0.0-beta.15",
