@@ -39,3 +39,7 @@ html.dark .blockquote-error {
     color: #ff4c40;
     border-left-color: #ff4c40;
 }
+
+#__nuxt article img {
+    object-fit: contain;
+}
