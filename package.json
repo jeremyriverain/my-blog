@@ -7,7 +7,8 @@
     "build": "nuxi build",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "lhci": "lhci autorun"
+    "lhci": "lhci autorun",
+    "test:e2e": "pnpm exec playwright test --reporter html"
   },
   "devDependencies": {
     "@lhci/cli": "^0.11.0",
