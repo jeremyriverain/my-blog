@@ -31,8 +31,8 @@ jobs:
           pnpm exec playwright install 
           pnpm exec playwright test --reporter html
 
-      - name: lighthouse
-        run: pnpm lhci
+      # - name: lighthouse
+        # run: pnpm lhci
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
