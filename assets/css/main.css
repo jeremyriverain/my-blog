@@ -40,6 +40,6 @@ html.dark .blockquote-error {
     border-left-color: #ff4c40;
 }
 
-#__nuxt article img {
-    object-fit: contain!important;
+#__nuxt .articles-list .layout article img {
+    object-fit: contain;
 }
