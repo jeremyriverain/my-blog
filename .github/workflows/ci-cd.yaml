@@ -35,10 +35,11 @@ jobs:
         # run: pnpm lhci
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+        uses: nwtgck/actions-netlify@v2.0
         if: steps.prepare.outputs.branch == 'main'
         with:
           production-deploy: true
+          production-branch: main
           publish-dir: '.output/public'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

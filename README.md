@@ -1,5 +1,7 @@
 # My blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d8b6383e-8167-483e-8d42-8e7e5f8ef288/deploy-status)](https://app.netlify.com/sites/imaginative-alfajores-6614b9/deploys)
+
 Starter template taken from [Alpine](https://alpine.nuxt.space).
 
 ## Setup
