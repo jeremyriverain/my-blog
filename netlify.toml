@@ -1,21 +1,15 @@
-# [build]
-#   environment = { BASE_URL = "https://www.geekco.fr" }
-
-# [[redirects]]
-#   from = "https://geekco.netlify.app/*"
-#   to = "https://www.geekco.fr/:splat"
-#   status = 301
-#   force = true
-
-# [[redirects]]
-#   from = "http://geekco.netlify.app/*"
-#   to = "https://www.geekco.fr/:splat"
-#   status = 301
-#   force = true
+[build]
+  environment = { BASE_URL = "https://www.geekco.fr" }
 
 [[redirects]]
-  from = "/posts/en/how-can-you-translate-the-symfony-response-from-a-frontend-perspective"
-  to = "/posts/how-can-you-translate-the-symfony-response-from-a-frontend-perspective"
+  from = "https://geekco.netlify.app/*"
+  to = "https://www.geekco.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://geekco.netlify.app/*"
+  to = "https://www.geekco.fr/:splat"
   status = 301
   force = true
 
