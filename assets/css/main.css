@@ -43,3 +43,6 @@ html.dark .blockquote-error {
 #__nuxt .articles-list .layout article img {
     object-fit: contain;
 }
+html.dark nav ul a.router-link-active {
+    color: var(--color-primary-100);
+}
