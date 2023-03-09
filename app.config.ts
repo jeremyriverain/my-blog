@@ -3,7 +3,7 @@ export default defineAppConfig({
     title: "Jérémy Riverain",
     description: `Hi, I'm Jérémy. I'm developer, living in France 🇫🇷 . I work for Zenika as a consultant. I like programming with with VueJS, Flutter, Symfony.`,
     image: {
-      src: "/social-card-preview.png",
+      src: "https://www.geekco.fr/alpine-0.webp",
       alt: "An image showcasing my project.",
       width: 400,
       height: 300,
