@@ -16,7 +16,8 @@
     "@nuxt-themes/elements": "^0.8.1",
     "@playwright/test": "^1.31.0",
     "@types/nprogress": "^0.2.0",
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.2.2",
+    "sitemap": "^7.1.1"
   },
   "dependencies": {
     "@formkit/nuxt": "1.0.0-beta.15",
