@@ -34,18 +34,18 @@ jobs:
       # - name: lighthouse
         # run: pnpm lhci
 
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0
-        if: steps.prepare.outputs.branch == 'main'
-        with:
-          production-deploy: true
-          production-branch: main
-          publish-dir: '.output/public'
-          netlify-config-path: ./netlify.toml
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 3
+      # - name: Deploy to Netlify
+      #   uses: nwtgck/actions-netlify@v2.0
+      #   if: steps.prepare.outputs.branch == 'main'
+      #   with:
+      #     production-deploy: true
+      #     production-branch: main
+      #     publish-dir: '.output/public'
+      #     netlify-config-path: ./netlify.toml
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      #   timeout-minutes: 3
 
       - uses: actions/upload-artifact@v3
         if: always()

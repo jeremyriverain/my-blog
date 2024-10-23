@@ -13,18 +13,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/posts/en/how-to-use-gitlab-ci-and-php-stan-to-improve-code-quality-in-your-symfony-project"
-  to = "/posts/how-to-use-gitlab-ci-and-php-stan-to-improve-code-quality-in-your-symfony-project"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/posts/en/how-to-add-flutter-integration-test-in-a-ci-with-github-action"
-  to = "/posts/how-to-add-flutter-integration-test-in-a-ci-with-github-action"
-  status = 301
-  force = true
-
 [[headers]]
   for = "/*"
   [headers.values]
